@@ -2,13 +2,13 @@
 
 **Kripasandhu Sarkar**
 
-1.  [Computer vision components and libraries management #1](/webrobocomp.github.io/gsoc/gsoc05/kripasandhu-sarkar/page1)
+1.  [Computer vision components and libraries management #1](/webrobocomp.github.io/gsoc/2005/kripasandhu-sarkar/page1)
 
-2.  [Computer vision components and libraries management #2](/webrobocomp.github.io/gsoc/gsoc05/kripasandhu-sarkar/page2)
+2.  [Computer vision components and libraries management #2](/webrobocomp.github.io/gsoc/2005/kripasandhu-sarkar/page2)
 
-3.  [Computer vision components and libraries management #3](/webrobocomp.github.io/gsoc/gsoc05/kripasandhu-sarkar/page3)
+3.  [Computer vision components and libraries management #3](/webrobocomp.github.io/gsoc/2005/kripasandhu-sarkar/page3)
 
-4.  [Computer vision components and libraries management #4](/webrobocomp.github.io/gsoc/gsoc05/kripasandhu-sarkar/page4)
+4.  [Computer vision components and libraries management #4](/webrobocomp.github.io/gsoc/2005/kripasandhu-sarkar/page4)
 
 **Nithin Murali**
 
