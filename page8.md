@@ -16,7 +16,7 @@
 
 **ikGraphGenerator, an alternative to ik** : As the project has progressed, many improvements have emerged. One of them is the new component, `ikGraphGenerator`. This component has been developed by Professor Luis Manso, and its goal is to remove weight to the inverse kinematics in the process of handling objects with a robotic effector.
 
-One of the problems of the inverse kinematics is that, given a target for a particular end-effector, it can calculate different solutions or values for each motor of the kinematic chain. For example, to pick up a cup, the IK can position the end effector at the target extending his arm more or less forcing or not the elbow or or separating more or less the shoulder. It doesnít matter that the final position of the chain be more forced or more natural, the goal is reached and the solution is accepted.
+One of the problems of the inverse kinematics is that, given a target for a particular end-effector, it can calculate different solutions or values for each motor of the kinematic chain. For example, to pick up a cup, the IK can position the end effector at the target extending his arm more or less forcing or not the elbow or or separating more or less the shoulder. It doesn‚Äôt matter that the final position of the chain be more forced or more natural, the goal is reached and the solution is accepted.
 
 This is not convenient, since there is no way to control the trajectory of the arm. The control on the trajectory arm is crucial at certain times, for example when the robot avoids collisions between his arm and another objects (tables, chairs, walls, including his own body). The current `inversekinematics` component does not allow us this control, so that we need the `ikGraphGenerator` component.
 
@@ -29,7 +29,7 @@ The main concept is to create a spatial graph where each node stores the pose of
 Basically the `ikGraphGenerator` realizes two functions:
 
 1.  It calculates the graph with random poses and their respective angular values. To do this, first it defines a spatial cube that represents the workspace of the robot arm. In this space a set of poses are selected and are sent to the `inversekinematic` component as targets. The poses that are not achievable by the ik are automatically deleted. The resultant graph is stored in a file in order to use it in later calculations.
-2.  Once the graph has been calculated and stored, we can send a target to the `ikGraphGenerator`. First the component searches the node `A` whose pose is closest to the initial end effector pose and the node `B` whose pose is closest to the target position (to do this, the `ikGraphGenerator` uses a fast low-dimension k-d tree). Then, the component calculates a path between node A and node B through the graph using Dijkstraís algorithm, so that the arm moves through the graph from the position marked by node A to the position marked by the node B. Finally, in order to achieve the final target, the `inversekinematic` component is called to compute the final values of the joints, starting from the position marked by the node B.
+2.  Once the graph has been calculated and stored, we can send a target to the `ikGraphGenerator`. First the component searches the node `A` whose pose is closest to the initial end effector pose and the node `B` whose pose is closest to the target position (to do this, the `ikGraphGenerator` uses a fast low-dimension k-d tree). Then, the component calculates a path between node A and node B through the graph using Dijkstra‚Äôs algorithm, so that the arm moves through the graph from the position marked by node A to the position marked by the node B. Finally, in order to achieve the final target, the `inversekinematic` component is called to compute the final values of the joints, starting from the position marked by the node B.
 
 ![Alt text](https://github.com/robocomp/robocomp-ursus/blob/master/components/ikGraphGenerator/etc/GIK.png?raw=true)
 
@@ -45,7 +45,7 @@ Bye!
 
 <span class="post-date">08 Aug 2015</span>
 
-Hi all , In this post i will talk about what i have been working on after midterm evaluation. I have spend my time working mostly on packaging supporting libraries for Robocomp.This includes FCL and libccd. FCL is a library for performing three types of proximity queries on a pair of geometric models composed of triangles. libccd is a library for collision detection between two convex shapes.Technically Robocomp is only using FCL but libccd is an dependency of fcl, as i couldnít find an updated ppa for it i decided to package it too. you can see those packages [here](https://launchpad.net/~imnmfotmal)
+Hi all , In this post i will talk about what i have been working on after midterm evaluation. I have spend my time working mostly on packaging supporting libraries for Robocomp.This includes FCL and libccd. FCL is a library for performing three types of proximity queries on a pair of geometric models composed of triangles. libccd is a library for collision detection between two convex shapes.Technically Robocomp is only using FCL but libccd is an dependency of fcl, as i couldn‚Äôt find an updated ppa for it i decided to package it too. you can see those packages [here](https://launchpad.net/~imnmfotmal)
 
 Also i added ability for generating robocomp source packages for different distributions. Initially i added the option only for trusty, now we could generate packages for any distribution.I worked a bit on build tools also. Currently if someone created an workspace and made a github repo of it, some one else cant use it as we store the repo names in ~/.config directory, so i added an option to reinit an repo.
 
@@ -73,11 +73,11 @@ After creating an launchpad account First you need to create and publish an OPEN
 
 **Step 2** Select File > New, select PGP Key and then follow the on-screen instructions.
 
-Now youíll see your new key listed in the Passwords and Encryption Keys tool. (it may take some time)
+Now you‚Äôll see your new key listed in the Passwords and Encryption Keys tool. (it may take some time)
 
 ###Publishing your key
 
-Your key is useful only if other people can verify items that you sign. By publishing your key to a keyserver, which acts as a directory of peopleís public keys, you can make your public key available to anyone else.Before you add your key to Launchpad, you need to push it to the Ubuntu keyserver.
+Your key is useful only if other people can verify items that you sign. By publishing your key to a keyserver, which acts as a directory of people‚Äôs public keys, you can make your public key available to anyone else.Before you add your key to Launchpad, you need to push it to the Ubuntu keyserver.
 
 **Step 1** Open Passwords and Encryption Keys.
 
@@ -85,7 +85,7 @@ Your key is useful only if other people can verify items that you sign. By publi
 
 **Step 3** Select Remote > Sync and Publish Keys from the menu. Choose the Sync button. (You may need to add htp://keyserver.ubuntu.com to your key servers if you are not using Ubuntu.)
 
-It can take up to thirty minutes before your key is available to Launchpad. After that time, youíre ready to import your new key into Launchpad!
+It can take up to thirty minutes before your key is available to Launchpad. After that time, you‚Äôre ready to import your new key into Launchpad!
 
 OR you can direclty to go `http://keyserver.ubuntu.com/` on your browser and add the PGP key there
 
@@ -131,7 +131,7 @@ If you are uploading a new version of robocomp, change the version number accord
 
 ###Note:
 
-If you want to upload another source package to ppa which doesnít have any changes in the source but maybe in the debian files. you can build the spackage after commenting out `set(DEB_SOURCE_CHANGES "CHANGED" CACHE STRING "source changed since last upload")` in [package_details.cmake](../cmake/package_details.cmake#L27) so that the the script will only increase the ppa version number and wonít include the source package for uploading to ppa (which otherwise will give an error).
+If you want to upload another source package to ppa which doesn‚Äôt have any changes in the source but maybe in the debian files. you can build the spackage after commenting out `set(DEB_SOURCE_CHANGES "CHANGED" CACHE STRING "source changed since last upload")` in [package_details.cmake](../cmake/package_details.cmake#L27) so that the the script will only increase the ppa version number and won‚Äôt include the source package for uploading to ppa (which otherwise will give an error).
 
 ##Installing robocomp from ppa
 
@@ -170,7 +170,7 @@ Nithin Murali
 
 ##Computer vision components and libraries management
 
-The project is about designing and implementing a system for object detection and recognition in 3D point clouds and 2D images, and come up with a structured library with a good and easy-to-use APIs. There has been a good amount of research in this direction and my work was to cherry-pick important ideas and present them as usable components. Iíll now explain in details the various methods I chose to use as a part of this project.
+The project is about designing and implementing a system for object detection and recognition in 3D point clouds and 2D images, and come up with a structured library with a good and easy-to-use APIs. There has been a good amount of research in this direction and my work was to cherry-pick important ideas and present them as usable components. I‚Äôll now explain in details the various methods I chose to use as a part of this project.
 
 ###Local feature based on 2D images The idea is the find local features (like SIFT/SURF/ORB etc) in images of the object to be detected and the given test image. If enough matches are found between the descriptors of the to images an object is defined to be found. Important assumption is that the object to be detected must have textures. Advantage is that we get the complete 6 DOF of the object which might be useful for grasping. This comes in several flavors.
 
@@ -192,11 +192,11 @@ The project is about designing and implementing a system for object detection an
 
 2.  Object matching using classifiers: Global features readily available in PCL and found it to have similar results to a current benchmark but faster (10 seconds for classification testing in the benchmark [2] which uses sliding window based classification on all scales using HOG like descriptors).
 
-##The library - Open Detection It was decided later to have an independent library for Object Detection instead of integrating everything to Robocomp. The result is the inception of a separate library ëOpen Detectioní. The details of the design of the library is discussed in the next blog.
+##The library - Open Detection It was decided later to have an independent library for Object Detection instead of integrating everything to Robocomp. The result is the inception of a separate library ‚ÄòOpen Detection‚Äô. The details of the design of the library is discussed in the next blog.
 
 * * *
 
-[1] I. Gordon and D. G. Lowe, ìWhat and where: 3d object recognition with accurate pose,î in Toward Category-Level Object Recognition, ser. Lecture Notes in Computer Science, J. Ponce, M. Hebert, C. Schmid, and A. Zisserman, Eds., vol. 4170\. Springer, 2006, pp. 67ñ82. [2] MOPED: A Scalable and Low Latency Object Recognition and Pose Estimation System [3] Object Detection with Discriminatively Trained Part Based Models [4] Aldoma, A.; Marton, Zoltan-Csaba; Tombari, F.; Wohlkinger, W.; Potthast, C.; Zeisl, B.; Rusu, R.B.; Gedikli, S.; Vincze, M., ìTutorial: Point Cloud Library: Three-Dimensional Object Recognition and 6 DOF Pose Estimation,î Robotics & Automation Magazine, IEEE , vol.19, no.3,
+[1] I. Gordon and D. G. Lowe, ‚ÄúWhat and where: 3d object recognition with accurate pose,‚Äù in Toward Category-Level Object Recognition, ser. Lecture Notes in Computer Science, J. Ponce, M. Hebert, C. Schmid, and A. Zisserman, Eds., vol. 4170\. Springer, 2006, pp. 67‚Äì82. [2] MOPED: A Scalable and Low Latency Object Recognition and Pose Estimation System [3] Object Detection with Discriminatively Trained Part Based Models [4] Aldoma, A.; Marton, Zoltan-Csaba; Tombari, F.; Wohlkinger, W.; Potthast, C.; Zeisl, B.; Rusu, R.B.; Gedikli, S.; Vincze, M., ‚ÄúTutorial: Point Cloud Library: Three-Dimensional Object Recognition and 6 DOF Pose Estimation,‚Äù Robotics & Automation Magazine, IEEE , vol.19, no.3,
 
 </div>
 
@@ -210,13 +210,13 @@ The project is about designing and implementing a system for object detection an
 
 <span class="post-date">02 Jul 2015</span>
 
-**Open Detection:** Following the idea that it is better to have an independent library for Object Detection than contributing directly to Robocomp, I created the new library ëOpen Detectioní. It is available now in the following links
+**Open Detection:** Following the idea that it is better to have an independent library for Object Detection than contributing directly to Robocomp, I created the new library ‚ÄòOpen Detection‚Äô. It is available now in the following links
 
 *   Github link: https://github.com/krips89/opendetection
 
 *   Documentation link: http://krips89.github.io/opendetection_docs/index.html
 
-I have tried to document/provide tutorial inside the library whenever possible. So instead of writing everything here in the blog Iíll just post links to the tutorials/documentations.
+I have tried to document/provide tutorial inside the library whenever possible. So instead of writing everything here in the blog I‚Äôll just post links to the tutorials/documentations.
 
 ###Installation Instructions
 
@@ -248,7 +248,7 @@ The class diagrams providing a good reference is provided here:
 
 7.  Few other Utility classes which fits the needs and design for the library.
 
-###Milestones and things learnt: In the next blog Iíll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
+###Milestones and things learnt: In the next blog I‚Äôll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
 
 * * *
 
