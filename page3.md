@@ -8,7 +8,7 @@
 
 # [State Machine Code Generation in C++](/website/2016/06/21/ibarbechWeek3/)
 
-<span class="post-date">21 Jun 2016</span>
+<span class="post-date">21 Jun 2016</span> 
 
 # Definition Language
 

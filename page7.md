@@ -8,7 +8,7 @@
 
 # [_GSoC,_ After Midterms](/website/2015/08/20/rajath3/)
 
-<span class="post-date">20 Aug 2015</span>
+<span class="post-date">20 Aug 2015</span> 
 
 At the start of the second term, I finished developing the version-2 of the website.
 

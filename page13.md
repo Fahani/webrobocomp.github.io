@@ -49,7 +49,7 @@ Component prueba
     };
     language cpp;
     gui Qt(QWidget);
-};
+}; 
 
 ```
 

@@ -21,7 +21,7 @@ So, with the inverse kinematics component that we have implemented in Robocomp, 
 ##’Looking’, then ‘moving’
 
 As Hutchinson, Hager and Corke reflect in their work:
-
+ 
 > Vision is a useful robotic sensor since it mimics the human sense of vision and allows for non-contact measurement of the environment. […] Typically visual sensing and manipulation are combined in a open-loop fashion, ‘looking’ then ‘moving’.
 
 So the goal of `Visual servo control` is to control the movement and location of the robot using visual techniques (detection and recognition of objects in an image). To get an idea how it works, we must have clear some fundamental concepts in this field

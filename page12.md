@@ -52,7 +52,7 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
 
     </div>
 
-    <div class="highlighter-rouge">
+    <div class="highlighter-rouge"> 
 
     ```
          - The first line is the name of the chroot thatis going to be created.

@@ -8,7 +8,7 @@
 
 # [Google Summer of Code 2017 Ideas](/website/2017/02/07/gsoc17ideas/)
 
-<span class="post-date">07 Feb 2017</span>
+<span class="post-date">07 Feb 2017</span> 
 
 ## General information on applications
 

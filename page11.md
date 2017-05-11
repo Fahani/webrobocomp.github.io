@@ -22,7 +22,7 @@ switch to `gh-pages` branch You can do this via github client or on the command 
 ```
 
 </div>
-
+ 
 After checking out to the github pages branch in your navigate to the `_posts` directory. Here you will find all the posts.
 
 To write a new post. Create a new file and save it as `XYZ.md`

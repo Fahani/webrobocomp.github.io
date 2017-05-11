@@ -8,7 +8,7 @@
 
 # [Cog and PyParsing](/website/2016/07/14/dgallegosWeek7/)
 
-<span class="post-date">14 Jul 2016</span>
+<span class="post-date">14 Jul 2016</span> 
 
 Let’s go to know how RoboCompDSL works.
 

@@ -7,7 +7,7 @@
 <div class="post">
 
 # [Top-Hat filter based object proposal generation](/website/2016/06/15/HaritWeek4/)
-
+ 
 <span class="post-date">15 Jun 2016</span>
 
 # Top-Hat filter based object proposal generation:

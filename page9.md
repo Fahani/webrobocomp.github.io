@@ -19,7 +19,7 @@ rc_init_ws [path]
 
 ```
 
-</div>
+</div> 
 
 ###rcbuild When invoked form workspace without any arguments if not inside source path, it will build all the non-ignored components inside the workspace, if inside any component source directory it will build only that component. But if a component is specified it will build it.
 
