@@ -12,25 +12,25 @@
 
 **Nithin Murali**
 
-1.  [Building and deployment system design](http://robocomp.github.io/website/2015/05/23/nithin2/)
+1.  [Building and deployment system design](/webrobocomp.github.io/gsoc/2005/nithin-murali/page1)
 
-2.  [Debian Packaging 1](http://robocomp.github.io/website/2015/05/23/nithin1/)
+2.  [Debian Packaging 1](/webrobocomp.github.io/gsoc/2005/nithin-murali/page2)
 
-3.  [Debian Packaging 2](http://robocomp.github.io/website/2015/06/12/nithin8/)
+3.  [Debian Packaging 2](/webrobocomp.github.io/gsoc/2005/nithin-murali/page3)
 
-4.  [Setting up ppa](http://robocomp.github.io/website/2015/07/25/nithin10/)
+4.  [Setting up ppa](/webrobocomp.github.io/gsoc/2005/nithin-murali/page4)
 
-5.  [New build system and workspace model in Robocomp #1](http://robocomp.github.io/website/2015/06/20/nithin4/)
+5.  [New build system and workspace model in Robocomp #1](/webrobocomp.github.io/gsoc/2005/nithin-murali/page5)
 
-6.  [New build system and workspace model in Robocomp #2](http://robocomp.github.io/website/2015/06/25/nithin5/)
+6.  [New build system and workspace model in Robocomp #2](/webrobocomp.github.io/gsoc/2005/nithin-murali/page6)
 
-7.  [Build Tools (tutorial)](http://robocomp.github.io/website/2015/06/26/nithin6/)
+7.  [Build Tools (tutorial)](/webrobocomp.github.io/gsoc/2005/nithin-murali/page7)
 
-8.  [Packaging RoboComp (tutorial)](http://robocomp.github.io/website/2015/05/23/nithin3/)
+8.  [Packaging RoboComp (tutorial)](/webrobocomp.github.io/gsoc/2005/nithin-murali/page8)
 
-9.  [Till now, after midterms](http://robocomp.github.io/website/2015/08/08/nithin9/)
+9.  [Till now, after midterms](/webrobocomp.github.io/gsoc/2005/nithin-murali/page9)
 
-10.  [Packaging libccd and FCL (tutorial)](http://robocomp.github.io/website/2015/08/21/nithin11/)
+10.  [Packaging libccd and FCL (tutorial)](/webrobocomp.github.io/gsoc/2005/nithin-murali/page10)
 
 **Rajath Kumar M.P.**
 
