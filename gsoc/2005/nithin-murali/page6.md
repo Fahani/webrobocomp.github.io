@@ -17,7 +17,7 @@ For more information about the utilities see the [tutorial](http://robocomp.gith
 
 ##Future work
 
-One useful feature that needs to be implemented is auto complete for the arguments. It would be a very useful feature as we don’t need need to know the exact component name, etc. Also some work on the manifest.xml has to be done. It was planned to contain basic info on packages like name, maintainer, dependencies etc. I didn’t do it right now because i was not really sure about the component dependencies, i will need to discuss about it a bit.
+One useful feature that needs to be implemented is auto complete for the arguments. It would be a very useful feature as we donâ€™t need need to know the exact component name, etc. Also some work on the manifest.xml has to be done. It was planned to contain basic info on packages like name, maintainer, dependencies etc. I didnâ€™t do it right now because i was not really sure about the component dependencies, i will need to discuss about it a bit.
 
 * * *
 

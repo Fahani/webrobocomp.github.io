@@ -12,11 +12,11 @@ After creating an launchpad account First you need to create and publish an OPEN
 
 **Step 2** Select File > New, select PGP Key and then follow the on-screen instructions.
 
-Now you’ll see your new key listed in the Passwords and Encryption Keys tool. (it may take some time)
+Now youâ€™ll see your new key listed in the Passwords and Encryption Keys tool. (it may take some time)
 
 ###Publishing your key
 
-Your key is useful only if other people can verify items that you sign. By publishing your key to a keyserver, which acts as a directory of people’s public keys, you can make your public key available to anyone else.Before you add your key to Launchpad, you need to push it to the Ubuntu keyserver.
+Your key is useful only if other people can verify items that you sign. By publishing your key to a keyserver, which acts as a directory of peopleâ€™s public keys, you can make your public key available to anyone else.Before you add your key to Launchpad, you need to push it to the Ubuntu keyserver.
 
 **Step 1** Open Passwords and Encryption Keys.
 
@@ -24,7 +24,7 @@ Your key is useful only if other people can verify items that you sign. By publi
 
 **Step 3** Select Remote > Sync and Publish Keys from the menu. Choose the Sync button. (You may need to add htp://keyserver.ubuntu.com to your key servers if you are not using Ubuntu.)
 
-It can take up to thirty minutes before your key is available to Launchpad. After that time, you’re ready to import your new key into Launchpad!
+It can take up to thirty minutes before your key is available to Launchpad. After that time, youâ€™re ready to import your new key into Launchpad!
 
 OR you can direclty to go `http://keyserver.ubuntu.com/` on your browser and add the PGP key there
 
@@ -70,7 +70,7 @@ If you are uploading a new version of robocomp, change the version number accord
 
 ###Note:
 
-If you want to upload another source package to ppa which doesn’t have any changes in the source but maybe in the debian files. you can build the spackage after commenting out `set(DEB_SOURCE_CHANGES "CHANGED" CACHE STRING "source changed since last upload")` in [package_details.cmake](../cmake/package_details.cmake#L27) so that the the script will only increase the ppa version number and won’t include the source package for uploading to ppa (which otherwise will give an error).
+If you want to upload another source package to ppa which doesnâ€™t have any changes in the source but maybe in the debian files. you can build the spackage after commenting out `set(DEB_SOURCE_CHANGES "CHANGED" CACHE STRING "source changed since last upload")` in [package_details.cmake](../cmake/package_details.cmake#L27) so that the the script will only increase the ppa version number and wonâ€™t include the source package for uploading to ppa (which otherwise will give an error).
 
 ##Installing robocomp from ppa
 

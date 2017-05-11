@@ -12,7 +12,7 @@ Now lets assume that you are going to upload the package for the first time into
 *   Crate a .tar.gz compressed file of the source directory, and place it outside source directory
 *   Rename the compressed file into <project_name>_<version>.orig.tar.gz</version></project_name>
 *   Now run `debuild -k<gpg_key> -S -sa` if you want to include the whole source tar in upload
-*   Or run `debuild -k<gpg_key> -S -sd` if you don’t want to include the whole source tar in upload
+*   Or run `debuild -k<gpg_key> -S -sd` if you donâ€™t want to include the whole source tar in upload
 
 ###So when should you upload the source? when you are uploading for the first time (obviously) and whenever you make some changes to your source code. but as launchpad wont allow files with same name, you should increase your version number so that the source tar get a new name. For increasing the version number you should increase it in changelog for example in this case `fcl (1.0-0ppa0) vivid; urgency=low` increase 1.0-0ppa0 to 1.1-0ppa0 also remember to rename all names accordingly (source folder and source tar)
 
