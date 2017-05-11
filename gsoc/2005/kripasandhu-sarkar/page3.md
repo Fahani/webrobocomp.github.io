@@ -20,9 +20,9 @@ That concluded the functionality of whatever planned for this summer of code. Ot
 
     a. _detectOmni_ : This is the function whose purpose is to detect an object in an entire scene. Thus, other than the type of detection we also have information about the _location_ of the detection w.r.t. the scene. This was the only function previously implemented.
 
-    b. _detect_ : The purpose of this function is to perform detection on a segmented scene or an ‘object candidate’. i.e. the entire scene is considered as an ‘object’ or an detection. This function was an extra addition for most of the classes. For global descriptor based classes like ODHOGDetector this function came very naturally.
+    b. _detect_ : The purpose of this function is to perform detection on a segmented scene or an â€˜object candidateâ€™. i.e. the entire scene is considered as an â€˜objectâ€™ or an detection. This function was an extra addition for most of the classes. For global descriptor based classes like ODHOGDetector this function came very naturally.
 
-*   **Standardized the training database**:. Each detection class identifies its own database (which is a unique folder as of now). Training data of all classes are now put together under a single ‘trained_data’ directory and the rest is resolved by the class automatically.
+*   **Standardized the training database**:. Each detection class identifies its own database (which is a unique folder as of now). Training data of all classes are now put together under a single â€˜trained_dataâ€™ directory and the rest is resolved by the class automatically.
 
 *   The class **ODDetectorMultiAlgo**: This is one of the most interesting class and interesting contribution in this project. The idea is to run multiple detection algorithm on a same segmented or unsegmented scene (i.e. run both _detect_ and _detectOmni_ function) and provide the result. That is, using this class one can do object detection/recognition using multiple algorithms and provide outcome of detections (eg. people detected by HOG, face detected by Cascade, bottle detected PnPRansac in a same image). Because of the nice polymorphic design of the detection classes, one can use the concept easily with any number of detection classes with their own parameters, but with _ODDetectorMultiAlgo_ one can only take benefit of the default parameters of the included classes.
 
@@ -30,6 +30,6 @@ That concluded the functionality of whatever planned for this summer of code. Ot
 
 ## Design changes, learning resources, and overall learning experiences:
 
-In the next blog I’ll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
+In the next blog Iâ€™ll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
 
 * * *

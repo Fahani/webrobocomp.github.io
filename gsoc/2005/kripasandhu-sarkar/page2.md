@@ -4,13 +4,13 @@
 
 <span class="post-date">02 Jul 2015</span>
 
-**Open Detection:** Following the idea that it is better to have an independent library for Object Detection than contributing directly to Robocomp, I created the new library ‘Open Detection’. It is available now in the following links
+**Open Detection:** Following the idea that it is better to have an independent library for Object Detection than contributing directly to Robocomp, I created the new library â€˜Open Detectionâ€™. It is available now in the following links
 
 *   Github link: https://github.com/krips89/opendetection
 
 *   Documentation link: http://krips89.github.io/opendetection_docs/index.html
 
-I have tried to document/provide tutorial inside the library whenever possible. So instead of writing everything here in the blog I’ll just post links to the tutorials/documentations.
+I have tried to document/provide tutorial inside the library whenever possible. So instead of writing everything here in the blog Iâ€™ll just post links to the tutorials/documentations.
 
 ###Installation Instructions
 
@@ -42,7 +42,7 @@ The class diagrams providing a good reference is provided here:
 
 7.  Few other Utility classes which fits the needs and design for the library.
 
-###Milestones and things learnt: In the next blog I’ll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
+###Milestones and things learnt: In the next blog Iâ€™ll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
 
 * * *
 
