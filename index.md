@@ -2,10 +2,6 @@ _**RoboComp** is an open-source Robotics framework providing the tools to create
 
 * * *
 
-<div class="posts">
-
-<div class="post">
-
 # [Google Summer of Code 2017 Ideas](/website/2017/02/07/gsoc17ideas/)
 
 <span class="post-date">07 Feb 2017</span> 
@@ -178,9 +174,7 @@ pilarbATunexDOTes
 Professor, RoboLab,
 University of Extremadura
 
-</div>
 
-<div class="post">
 
 # [final week updates](/website/2016/08/20/yashWeek16/)
 
@@ -209,7 +203,7 @@ Here I will describe how to generate a sample component and how to run it
 
 First write the cdsl description of the component client1.cdsl
 
-<div class="highlighter-rouge">
+
 
 ```
 import "/robocomp/interfaces/IDSLs/RCMaster.idsl";
@@ -226,13 +220,13 @@ Component client1{
 
 ```
 
-</div>
+
 
 Now generate the component by running `robocompdsl client1.cdsl ./`
 
 Now generate another component client2.cdsl by running `robocompdsl client2.cdsl ./`
 
-<div class="highlighter-rouge">
+
 
 ```
 import "/robocomp/interfaces/IDSLs/RCMaster.idsl";
@@ -248,11 +242,11 @@ Component client2{
 
 ```
 
-</div>
+
 
 Edit the client to `src/specificworker.py` in client 2 and add the below code in the compute function.
 
-<div class="highlighter-rouge">
+
 
 ```
 try:
@@ -262,44 +256,43 @@ try:
 
 ```
 
-</div>
+
 
 Now edit the printmsg() in `src/specificworker` to add the below line
 
-<div class="highlighter-rouge">
+
 
 ```
 print message
 
 ```
 
-</div>
 
 Now we can run all the components.
 
 First start the RCMaster and then the components
 
-<div class="highlighter-rouge">
+
 
 ```
 src/rcmaster.py    This will start RCMaster.    Now start client2 , then you can see that the client 2 is waiting for client1
 
 ```
 
-</div>
+
 
 src/client2.py –Ice.Config=etc/config
 
 Now start client1
 
-<div class="highlighter-rouge">
+
 
 ```
     src/client1.py --Ice.Config=etc/config
 
 ```
 
-</div>
+
 
 Now you can see the client1 printing “Hello from Client2” periodically. Play around
 
@@ -323,9 +316,7 @@ Regards,
 
 Yash Sanap
 
-</div>
 
-<div class="post">
 
 # [RoboCompDSL's Tests](/website/2016/08/01/dgallegosWeek9/)
 
@@ -357,9 +348,6 @@ If you select first or second option, tests.sh will generate and run your compon
 
 Of course, this script works with [Yakuake](https://yakuake.kde.org), and uses it to offer a much more pleasant and familiar test environment. It will create and divide tabs for each test.
 
-</div>
-
-<div class="post">
 
 # [Information of interest](/website/2016/07/22/dgallegosWeek8/)
 
@@ -377,9 +365,6 @@ It is very common to use domain-specific languages ​​(Domain-Specific Langua
 
 There are many possible solutions that can be given for the same problem, choose one or the other will always depend on the quality of the result and the cost to get it. The domain-specific languages ​​can reduce the cost of carrying out a project without affecting the result. A clear example would be given in many cases where we have component-oriented routine code that could be specified once and reused the rest of the time schedule. DSLs are widely used in many projects such as SQL or HTML5.
 
-</div>
-
-<div class="post">
 
 # [State Machine Code Generation in Python](/website/2016/07/19/ibarbechWeek7/)
 
@@ -412,7 +397,7 @@ This file containd the code that is executed when the state machine active a sta
 
 Example genericworker.py:
 
-<div class="highlighter-rouge">
+
 
 ```
 #
@@ -627,13 +612,13 @@ class GenericWorker(QtCore.QObject):
 
 ```
 
-</div>
+
 
 *   **specificworker.py**
 
 Example specificworker.py:
 
-<div class="highlighter-rouge">
+
 
 ```
 #
@@ -798,23 +783,18 @@ class SpecificWorker(GenericWorker):
 
 ```
 
-</div>
+
 
 # Emit Signal
 
 For realice a transition between states we has emit the corresponding signal. The signal is emit as follows:
 
-<div class="highlighter-rouge">
+
 
 ```
 self.statesrctostatedst.emit
 
 ```
 
-</div>
 
-</div>
-
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page2) <span class="pagination-item newer">Newer</span></div>
+[Older](/webrobocomp.github.io/page2)
