@@ -50,11 +50,11 @@
 
 8.  [Interfaces Documentation, Laser.idsl](http://robocomp.readthedocs.org/en/latest/interfaces/Laser/)
 
-9.  [Write a post for robocomp, A step by step guide.](http://robocomp.github.io/website/2015/05/23/post_on_webpage/)
+9.  [Write a post for robocomp, A step by step guide.](/webrobocomp.github.io/gsoc/2005/rajath-kumar-m-p/page9)
 
-10.  [GSoC, Before Midterms](http://robocomp.github.io/website/2015/06/25/rajath1/)
+10.  [GSoC, Before Midterms](/webrobocomp.github.io/gsoc/2005/rajath-kumar-m-p/page10)
 
-11.  [GSoC, After Midterms](http://robocomp.github.io/website/2015/08/20/rajath3/)
+11.  [GSoC, After Midterms](/webrobocomp.github.io/gsoc/2005/rajath-kumar-m-p/page11)
 
 **Mercedes Palotelli**
 
