@@ -18,11 +18,11 @@
 
 So, with the inverse kinematics component that we have implemented in Robocomp, we had the problem of inaccuracies and gaps in the robotic arm motors, problems that made the robot believed reach the target position without having actually achieved it. To solve this problem it was decided to implement a solution inside the visual field (which is what concerns us throughout this project), whose aim is to provide the inverse kinematics component a visual feedback that allows correct its mistakes. The operation of the algorithm is very simple and takes as its starting point the investigations of Seth Hutchinson, Greg Hager and Peter Corke, collected in `A Tutorial on Visual Servo Control` [1].
 
-##íLookingí, then ëmovingí
+##‚ÄôLooking‚Äô, then ‚Äòmoving‚Äô
 
 As Hutchinson, Hager and Corke reflect in their work:
 
-> Vision is a useful robotic sensor since it mimics the human sense of vision and allows for non-contact measurement of the environment. [Ö] Typically visual sensing and manipulation are combined in a open-loop fashion, ëlookingí then ëmovingí.
+> Vision is a useful robotic sensor since it mimics the human sense of vision and allows for non-contact measurement of the environment. [‚Ä¶] Typically visual sensing and manipulation are combined in a open-loop fashion, ‚Äòlooking‚Äô then ‚Äòmoving‚Äô.
 
 So the goal of `Visual servo control` is to control the movement and location of the robot using visual techniques (detection and recognition of objects in an image). To get an idea how it works, we must have clear some fundamental concepts in this field
 
@@ -32,14 +32,14 @@ We need to know what a kinematic chain is, what reference system and transformat
 
 If we link the kinematic chains concept with visual techniques (ie, now, in addition to the chain formed by the motors of the robotic arm, we have a camera in the chain looking one of the chain ends), we have two types of systems:
 
-1.  Endpoint open-loop (EOL): Systems which only observed the target object. These systems donít need to look at his end effector so normally the camera is on the end effector (hand-eye).
+1.  Endpoint open-loop (EOL): Systems which only observed the target object. These systems don‚Äôt need to look at his end effector so normally the camera is on the end effector (hand-eye).
 2.  Endpoint closed-loop (ECL): Systems which observed the target object and the end effector of the arm.
 
 The visual inverse kinematics that we implemented in Robocomp uses this last configuration because is independent of hand-eye calibration errors (precisely, the clearances errors and inaccuracies that bother us in the inverse kinematics), although often requires solution of a more demanding vision problem, because we need to track the end effector.
 
 ###Camera Projection Models
 
-We need to understand the geometric aspects of the imaging process if we want to understand how the information provided by the vision system is used to control the movement of the robot. The first thing to consider is that an image taken by a camera is always in 2D, so weíre losing spatial information (the depth of the scene).
+We need to understand the geometric aspects of the imaging process if we want to understand how the information provided by the vision system is used to control the movement of the robot. The first thing to consider is that an image taken by a camera is always in 2D, so we‚Äôre losing spatial information (the depth of the scene).
 
 ![Alt text](http://masters.donntu.org/2012/etf/nikitin/library/article10.files/image10.01.png)
 
@@ -74,7 +74,7 @@ Bye!
 
 * * *
 
-[1] Hutchinson, S., Hager, G., Corke, P. `A Tutorial on Visual Servo Control`, IEEE Trans. Robot. Automat., 12(5):651ñ670, Oct. 1996\. Download in http://www-cvr.ai.uiuc.edu/~seth/ResPages/pdfs/HutHagCor96.pdf
+[1] Hutchinson, S., Hager, G., Corke, P. `A Tutorial on Visual Servo Control`, IEEE Trans. Robot. Automat., 12(5):651‚Äì670, Oct. 1996\. Download in http://www-cvr.ai.uiuc.edu/~seth/ResPages/pdfs/HutHagCor96.pdf
 
 [2] OLson, E. `AprilTag: A robust and flexible visual fiducial system`, Robotics and Automation (ICRA), 2011 IEEE International Conference on, 3400-3407
 
@@ -90,7 +90,7 @@ Bye!
 
 <span class="post-date">15 Jun 2015</span>
 
-**What is inverse kinematics?** : In this second post, although it may seem begin the house from the roof, letís talk about how a robot moves its arms and hands in order to manipulate daily objects.
+**What is inverse kinematics?** : In this second post, although it may seem begin the house from the roof, let‚Äôs talk about how a robot moves its arms and hands in order to manipulate daily objects.
 
 The ultimate goal of this work is make the robot to be able to recognize certain daily objects in a house (for example a mug), and to manipulate these objects with its effectors (hands). To do this, one of the things we need to implement is the inverse kinematics of the robot. Although this is the last step, we start by inverse kinematics to be easier and more intuitive than object recognition (besides that we have almost finalized the cinematic component in Robocomp).
 
@@ -115,7 +115,7 @@ An example of kinematic chain in robotic is the arm of the robot, that is compos
 
 ####Reference systems and Transformation coordinate.
 
-One of the problems of robot manipulators is to know where their structural elements are arranged in the space in which they move. We therefore need a referral system that puts or position the elements of the robot in the workspace. So, a `reference system` is a set of agreements or conventions used by an observer to measure positions, rotations and other physical parameters of the system being studied. In our case, the arm of the robot is into the three-dimensional workspace (R≥, with the axis X, Y and Z), where each components (for example, each joint) has one traslation (tx, ty, tz) and one rotation (rx, ry, rz). Therefore, the position of each component is given by a vector of six elements: `P=[tx, ty, tz, rx, ry, rz]` (the first three translational and three rotational recent). Normally, we represent the poses by homogeneous trasnformation matrices, which are of the form:
+One of the problems of robot manipulators is to know where their structural elements are arranged in the space in which they move. We therefore need a referral system that puts or position the elements of the robot in the workspace. So, a `reference system` is a set of agreements or conventions used by an observer to measure positions, rotations and other physical parameters of the system being studied. In our case, the arm of the robot is into the three-dimensional workspace (R¬≥, with the axis X, Y and Z), where each components (for example, each joint) has one traslation (tx, ty, tz) and one rotation (rx, ry, rz). Therefore, the position of each component is given by a vector of six elements: `P=[tx, ty, tz, rx, ry, rz]` (the first three translational and three rotational recent). Normally, we represent the poses by homogeneous trasnformation matrices, which are of the form:
 
 <div class="highlighter-rouge">
 
@@ -175,27 +175,27 @@ Input: A vector functon f: R^m ? R^n with n=m, a measurement vector x ? R^n and 
 Output: A vector p+ ? R^m minimizing ||x-f(p)||^2.
 Algorithm:
     k:=0;                 v:=2;                     p:=p0;
-    A:=transposed(J)∑J;   error:=x-f(p);            g:=transposed(J)∑error;
-    stop:=(||g||8 = e1);  µ:=t*max_i=1,...,m (Aii)
+    A:=transposed(J)¬∑J;   error:=x-f(p);            g:=transposed(J)¬∑error;
+    stop:=(||g||8 = e1);  ¬µ:=t*max_i=1,...,m (Aii)
 
     while(!stop) and (k<k_max)
          k:=k+1;
          repeat
-               SOLVE (A+µ∑I)∑d_p=g;
-               if(||d_p||= e2∑(||p||+e2))
+               SOLVE (A+¬µ¬∑I)¬∑d_p=g;
+               if(||d_p||= e2¬∑(||p||+e2))
                     stop:=true;
                else
                     p_new:=p+d_p
-                    ?:=(||error||^2-||x-f(p_new)||^2)/(transposed(d_p)∑(µ∑d_p+g));
+                    ?:=(||error||^2-||x-f(p_new)||^2)/(transposed(d_p)¬∑(¬µ¬∑d_p+g));
                     if ?>0
-                        stop:=(||error||-||x-f(p_new)||<e4∑||error||);
+                        stop:=(||error||-||x-f(p_new)||<e4¬∑||error||);
                         p:=p_new;
-                        A:=transposed(J)∑J;    error:=x-f(p);    g:=transposed(J)∑error;
+                        A:=transposed(J)¬∑J;    error:=x-f(p);    g:=transposed(J)¬∑error;
                         stop:=(stop) or (||g||8 = e1);
-                        µ:=µ*max(1/3, 1-(2∑?-1)^3);
+                        ¬µ:=¬µ*max(1/3, 1-(2¬∑?-1)^3);
                         v:=2;
                     else
-                        µ:=µ*v;
+                        ¬µ:=¬µ*v;
                         v:=2*v;
                     endif
                endif
@@ -208,29 +208,29 @@ Algorithm:
 
 </div>
 
-Where `A` is the hessian matrix, `J` is the jacobian matrix, `g` is the gradient descent, `d_p` is the increments, `?` is the ratio of profit that tells us if we are approaching a minimum or not, `µ` is the damping factor, and `t` and `e1, e2, e3, e4` are different thresholds. But the IK component of Robocomp adds several concepts to the original L-M algorithm, in order to complete the proper operation of the component:
+Where `A` is the hessian matrix, `J` is the jacobian matrix, `g` is the gradient descent, `d_p` is the increments, `?` is the ratio of profit that tells us if we are approaching a minimum or not, `¬µ` is the damping factor, and `t` and `e1, e2, e3, e4` are different thresholds. But the IK component of Robocomp adds several concepts to the original L-M algorithm, in order to complete the proper operation of the component:
 
-1.  Weight matrix: that controls the relevance between the translations (in meters) and rotations (in radians) of the target. So, where `g` was calculated as `transposed(J)∑error`, now `g` is `transposed(J)∑(W∑error)`
+1.  Weight matrix: that controls the relevance between the translations (in meters) and rotations (in radians) of the target. So, where `g` was calculated as `transposed(J)¬∑error`, now `g` is `transposed(J)¬∑(W¬∑error)`
 2.  Motors lock: when a motor reachs its minimun or maximun limit, we modified the jacobian matrix.
 
 The new version of the inverse kinematics component simplifies the code of the old version and adds some more functionality:
 
-1.  Executes more than once a target. The inverse kinematic result is not the same if the start point of the effector is the robotís home or a point B near tho the goal point.
+1.  Executes more than once a target. The inverse kinematic result is not the same if the start point of the effector is the robot‚Äôs home or a point B near tho the goal point.
 2.  Executes the traslations without the motors of the wrisht (only for Ursus). This makes possible to move the arm with stiff wrist, and then we can rotate easely the wrist when the end effectos is near the target.
 
-Another improvement being studied is to include a small planner responsible for planning the trajectories of the robot arm, in order to facilitate the work of the IK component and reduce its execution time. However, one of the problems that the inverse kinematics can not solve by itself is the problem of gaps and imperfections of the robot. These gaps and inaccuracies make the robot move its arm toward the target position improperly, so that the robot ìthinksî that the end effector has reached the target but in reality has fallen far short of the target pose.
+Another improvement being studied is to include a small planner responsible for planning the trajectories of the robot arm, in order to facilitate the work of the IK component and reduce its execution time. However, one of the problems that the inverse kinematics can not solve by itself is the problem of gaps and imperfections of the robot. These gaps and inaccuracies make the robot move its arm toward the target position improperly, so that the robot ‚Äúthinks‚Äù that the end effector has reached the target but in reality has fallen far short of the target pose.
 
-In order to solve this last problem, we need visual feedback to correct the errors and mistakes introduced for the gaps and inaccuracies in the kinematic chain. The visualBIK component, developed during this project, is responsible for solve this visual feedback and correct the inverse kinematic, but weíll talk about it in the next post.
+In order to solve this last problem, we need visual feedback to correct the errors and mistakes introduced for the gaps and inaccuracies in the kinematic chain. The visualBIK component, developed during this project, is responsible for solve this visual feedback and correct the inverse kinematic, but we‚Äôll talk about it in the next post.
 
 Bye!
 
 * * *
 
-[1] Master Thesis, Universidad de Extremadura, Escuela PolitÈcnica de C·ceres. Mercedes Paoletti ¡vila. `Cinem·tica Inversa en Robots Sociales`. Directed by Pablo Bustos and Luis Vicente Calderita. July 2014\. Download in https://robolab.unex.es/index.php?option=com_remository&Itemid=53&func=startdown&id=143
+[1] Master Thesis, Universidad de Extremadura, Escuela Polit√©cnica de C√°ceres. Mercedes Paoletti √Åvila. `Cinem√°tica Inversa en Robots Sociales`. Directed by Pablo Bustos and Luis Vicente Calderita. July 2014\. Download in https://robolab.unex.es/index.php?option=com_remository&Itemid=53&func=startdown&id=143
 
 [2] inverse kinematics component repository: https://github.com/robocomp/robocomp-ursus/tree/master/components/inversekinematics
 
-[3] C. Su·rez MejÌas, C. EchevarrÌa, P. N˙Òez, L. Manso, P. Bustos, S. Leal and C. Parra. `Ursus: A Robotic Assistant for Training of Patients with Motor Impairments`. Book, Converging Clinical and Engineering Research on Neurorehabilitation, Springer series on BioSystems and BioRobotics, Editors, J.L Pons, D. Torricelli and Marta Pajaro. Springer, ISBN 978-3-642-34545-6, pages 249-254\. January 2012\. Download in https://robolab.unex.es/index.php?option=com_remository&Itemid=53&func=startdown&id=128
+[3] C. Su√°rez Mej√≠as, C. Echevarr√≠a, P. N√∫√±ez, L. Manso, P. Bustos, S. Leal and C. Parra. `Ursus: A Robotic Assistant for Training of Patients with Motor Impairments`. Book, Converging Clinical and Engineering Research on Neurorehabilitation, Springer series on BioSystems and BioRobotics, Editors, J.L Pons, D. Torricelli and Marta Pajaro. Springer, ISBN 978-3-642-34545-6, pages 249-254\. January 2012\. Download in https://robolab.unex.es/index.php?option=com_remository&Itemid=53&func=startdown&id=128
 
 [4] Lourakis, M. I., Argyros, A. (2009). `SBA: A Software Package for Generic Sparse Bundle Adjustment`. Article of ACM Transactions on Mathematical Software, volume 36, issue 1, pages 1-30\. Download in http://doi.acm.org/10.1145/1486527
 
@@ -278,13 +278,13 @@ Nithin Murali
 
 <span class="post-date">12 Jun 2015</span>
 
-**About Me** : Hello! My name is Mercedes Paoletti ¡vila, and I would like to introduce me a little in this first post. Iím graduate in engineering from the University of Extremadura, and currently I study the Master in computer engineering and ICT management in the same University. Over the past two years I have been working in the Robotics Laboratory of the UEx, Robolab. There I developed my end grade work, ìinverse kinematics in social robotsî, using the robotic framework implemented by the laboratory, Robocomp, and now Iím doing my Masterís Thesis, that is about robots planners and is part of the project of LJ Manso, AGM.
+**About Me** : Hello! My name is Mercedes Paoletti √Åvila, and I would like to introduce me a little in this first post. I‚Äôm graduate in engineering from the University of Extremadura, and currently I study the Master in computer engineering and ICT management in the same University. Over the past two years I have been working in the Robotics Laboratory of the UEx, Robolab. There I developed my end grade work, ‚Äúinverse kinematics in social robots‚Äù, using the robotic framework implemented by the laboratory, Robocomp, and now I‚Äôm doing my Master‚Äôs Thesis, that is about robots planners and is part of the project of LJ Manso, AGM.
 
 And just following this course of action, this project combines the two concepts (planning and inverse kinematics) for recognizing and manipulating objects, using the framework Robocomp.
 
 ##Symbolic planning techniques for recognizing objects domestic
 
-The main object of this project is the application of symbolic techniques to build efficient pipelines in order to improve computer vision techniques, recognition and interpretation of domestic objects, to be finally executed on a domestic robot, so that the robot is able to move around a house and identify and interact with any objects located inside. The goal is that given a high-level task (eg. ìgrab a mugî), we can use symbolic planning techniques to build a pipeline of visual processing.
+The main object of this project is the application of symbolic techniques to build efficient pipelines in order to improve computer vision techniques, recognition and interpretation of domestic objects, to be finally executed on a domestic robot, so that the robot is able to move around a house and identify and interact with any objects located inside. The goal is that given a high-level task (eg. ‚Äúgrab a mug‚Äù), we can use symbolic planning techniques to build a pipeline of visual processing.
 
 In order to reach this goal, we need some previous concepts:
 

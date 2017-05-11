@@ -120,7 +120,7 @@ For more information about the utilities see the [tutorial](http://robocomp.gith
 
 ##Future work
 
-One useful feature that needs to be implemented is auto complete for the arguments. It would be a very useful feature as we don’t need need to know the exact component name, etc. Also some work on the manifest.xml has to be done. It was planned to contain basic info on packages like name, maintainer, dependencies etc. I didn’t do it right now because i was not really sure about the component dependencies, i will need to discuss about it a bit.
+One useful feature that needs to be implemented is auto complete for the arguments. It would be a very useful feature as we donâ€™t need need to know the exact component name, etc. Also some work on the manifest.xml has to be done. It was planned to contain basic info on packages like name, maintainer, dependencies etc. I didnâ€™t do it right now because i was not really sure about the component dependencies, i will need to discuss about it a bit.
 
 * * *
 
@@ -134,11 +134,11 @@ Nithin Murali
 
 <span class="post-date">22 Jun 2015</span>
 
-1.- **RoboComp tutorial, social management and documentation**: RoboComp’ sources has been ported to GitHub and we are building a new documentation repository there. We are using GitHub markdown language (GFM) write new docs and turorials. We want to build a set of short tutorials that guide the new users along several interconnected topics, such as component oriented programming, robotics, computer vision, robotics software modules integrating heterogeneous sources, cognitive architectures and testing and validating, all from inside RoboComp. These new tutorials will be developed using RoboComp’s robotics simulator, RCIS, so interactive examples can be created and used in the explanations. This package also includes work on automated installation scripts using CMake. Generic knowledge of linux systems, website and wiki administration is needed. This is a key task for our project as it would bring more attention to it as it will open the development to new people interested in the field.
+1.- **RoboComp tutorial, social management and documentation**: RoboCompâ€™ sources has been ported to GitHub and we are building a new documentation repository there. We are using GitHub markdown language (GFM) write new docs and turorials. We want to build a set of short tutorials that guide the new users along several interconnected topics, such as component oriented programming, robotics, computer vision, robotics software modules integrating heterogeneous sources, cognitive architectures and testing and validating, all from inside RoboComp. These new tutorials will be developed using RoboCompâ€™s robotics simulator, RCIS, so interactive examples can be created and used in the explanations. This package also includes work on automated installation scripts using CMake. Generic knowledge of linux systems, website and wiki administration is needed. This is a key task for our project as it would bring more attention to it as it will open the development to new people interested in the field.
 
 Required student level: intermediate programming and systems administration.
 
-2.- **Computer vision components and libraries management**: RoboComp is being used to build a new cognitive architecture called RoboCog. Among the different modules already in progress, the object detection module is crucially important. We are pursuing an efficient 2D/3D vision pipeline that, working with the robot body control module, is able to localize, recognize, fit a pre-existing model and track a series of daily objects that the robot might encounter. Grasping would be one target of this pipeline, or even a means to complete recognition. There are currently many components implementing computer vision algorithms and intensive work done in pipeline construction. The key tasks on this idea would be to collaborate in the creation of high level tools to organize, document and test different pipelines for an specific task. These tools will be designed in collaboration with the mentors and tested in RoboComp’s RCIS simulator and real robots.
+2.- **Computer vision components and libraries management**: RoboComp is being used to build a new cognitive architecture called RoboCog. Among the different modules already in progress, the object detection module is crucially important. We are pursuing an efficient 2D/3D vision pipeline that, working with the robot body control module, is able to localize, recognize, fit a pre-existing model and track a series of daily objects that the robot might encounter. Grasping would be one target of this pipeline, or even a means to complete recognition. There are currently many components implementing computer vision algorithms and intensive work done in pipeline construction. The key tasks on this idea would be to collaborate in the creation of high level tools to organize, document and test different pipelines for an specific task. These tools will be designed in collaboration with the mentors and tested in RoboCompâ€™s RCIS simulator and real robots.
 
 Required student level: intermediate computer vision knowledge, C++ programming, basic CMake knowledge
 
@@ -150,7 +150,7 @@ Required student level: intermediate CMake knowledge, programming in C++, basic 
 
 Required student level: intermediate programming with Python and introductory knowledge of formal languages
 
-For any questions, proposals, or comments please contact RoboComp’s org admin at: marcogunex.es
+For any questions, proposals, or comments please contact RoboCompâ€™s org admin at: marcogunex.es
 
 </div>
 
@@ -177,7 +177,7 @@ Referring to other similar workspace models i came up with the following model.
 
 ##Elements of workspace
 
-###Workspace The workspace is the folder inside which you are going to be actively developing components. Keeping things in a folder with connected development helps keep separation of development models. In simple words, a workspace can be thought of as a group different components, for example Robocomp has some default components, you may as well create some components so in this case you Robocomp’s components can be in a workspace while your components in another. The config file in ~/.config/RoboComp/rc_worksapce.config maintains a list of all the registered workspaces.
+###Workspace The workspace is the folder inside which you are going to be actively developing components. Keeping things in a folder with connected development helps keep separation of development models. In simple words, a workspace can be thought of as a group different components, for example Robocomp has some default components, you may as well create some components so in this case you Robocompâ€™s components can be in a workspace while your components in another. The config file in ~/.config/RoboComp/rc_worksapce.config maintains a list of all the registered workspaces.
 
 ###Source space The source space (a folder inside workspace) contains the source code of all the components in the workspace or this is where you will be developing. The source space is the folder where build tools will look for components. This folder is easily identified as it is where the toplevel.cmake is linked Robocomp installed folder and the name `src`. Each component should be in a direct subdirectory. If the directory contains a file named _IGNORE_COMP_ the component will be ignored while building the workspace.
 

@@ -12,9 +12,9 @@
 
 # INTRODUCTION
 
-Hi all,My name is Basil M Varghese.I am doing my Btech on Electrical Engineering from Indian Institute of Technology Ropar.I am a participant on Google Summer of Codes 2016 under the Organization Robocomp.Before continuing this page I insist you to read about the [robocomp platform](http://robocomp.github.io/website/) if you haven’t.
+Hi all,My name is Basil M Varghese.I am doing my Btech on Electrical Engineering from Indian Institute of Technology Ropar.I am a participant on Google Summer of Codes 2016 under the Organization Robocomp.Before continuing this page I insist you to read about the [robocomp platform](http://robocomp.github.io/website/) if you havenâ€™t.
 
-My aim is to built a GUI tool to deploy and control all the components in a component graph tree created by the framework.The framework already have a similar tool for deploying the components and control them through [yakuake](https://apps.ubuntu.com/cat/applications/precise/yakuake/) tabs for every component.It is currently using Qpainter Widget for drawing the component tree and to select the functionalities.I will be putting the QtGraphicsView framework for the job as it uses Binary space partitioning which will drastically increase the tool’s capacity and functionalities.My job also include building a method to control the deployed components from within the tool itself.
+My aim is to built a GUI tool to deploy and control all the components in a component graph tree created by the framework.The framework already have a similar tool for deploying the components and control them through [yakuake](https://apps.ubuntu.com/cat/applications/precise/yakuake/) tabs for every component.It is currently using Qpainter Widget for drawing the component tree and to select the functionalities.I will be putting the QtGraphicsView framework for the job as it uses Binary space partitioning which will drastically increase the toolâ€™s capacity and functionalities.My job also include building a method to control the deployed components from within the tool itself.
 
 I have divided my work plan into differnt milestones.I have listed it below.
 
@@ -38,17 +38,17 @@ Basil M Varghese
 
 <span class="post-date">16 May 2016</span>
 
-Hello! My name is Daniel Gallego Sánchez, and I’m going to introduce me in this post. My date of birth is 11/08/1994, I’m ending computer engineering from the University of Extremadura, and actually I am refining my final degree project. Since last year, I have been working in the Robotics Laboratory of the UEx, Robolab. Today, I am using the robotic framework implemented by the laboratory, Robocomp, to perform my degree project which consists in improvement to robocompDSL tool.
+Hello! My name is Daniel Gallego SÃ¡nchez, and Iâ€™m going to introduce me in this post. My date of birth is 11/08/1994, Iâ€™m ending computer engineering from the University of Extremadura, and actually I am refining my final degree project. Since last year, I have been working in the Robotics Laboratory of the UEx, Robolab. Today, I am using the robotic framework implemented by the laboratory, Robocomp, to perform my degree project which consists in improvement to robocompDSL tool.
 
-Since I am familiar with my organization and mentors, I have started to work in my GSoC project with one of the most basic steps for any teamwork, creating a branch of RoboComp called robocompdslROS. Here I will update all changes and improvement to robocompDSL tool and finally, in August, when all tests are satisfactory I’ll do the **Pull-request**.
+Since I am familiar with my organization and mentors, I have started to work in my GSoC project with one of the most basic steps for any teamwork, creating a branch of RoboComp called robocompdslROS. Here I will update all changes and improvement to robocompDSL tool and finally, in August, when all tests are satisfactory Iâ€™ll do the **Pull-request**.
 
-My plan to work is spend 1 or 2 hours a day during the month of May and the first week of June, because I haven’t finished my studies. Once I finished (in the first week of June), I’m going to try to keep school hours, working in the mornings and some afternoons if it’s necessary. My main idea is to finish as soon as possible to spend the remaining time testing and fixing bugs that emerge. It would also be very useful for my project to make an user manual robocompDSL tool with the new improvements.
+My plan to work is spend 1 or 2 hours a day during the month of May and the first week of June, because I havenâ€™t finished my studies. Once I finished (in the first week of June), Iâ€™m going to try to keep school hours, working in the mornings and some afternoons if itâ€™s necessary. My main idea is to finish as soon as possible to spend the remaining time testing and fixing bugs that emerge. It would also be very useful for my project to make an user manual robocompDSL tool with the new improvements.
 
 Main idea of this project is the intercompatibility between ROS and RoboComp frameworks. This will required to know about their middlewares, architecture, code generators and know their main differences and similarities. With this intercompatibility you will be able to develop components with Robocomp which may communicate with components **(nodes)** developed with ROS. This offers a wide range of possibilities that benefits both users who often use ROS as those using Robocomp.
 
 What do you need to understand my GSoC project? Well, I will work with **DSL** (domain-specific language), **ROS**, **RoboComp**, **Python**, **C++**, and some **Python modules and tools** called _Cog_, _PyParsing_, etc. Below this post, you will be able to find some links with documentation about this knowledge required.
 
-I will not really use ROS, but it’s necessary to know how it works to carry out the project.
+I will not really use ROS, but itâ€™s necessary to know how it works to carry out the project.
 
 Cog: https://www.python.org/about/success/cog/
 
@@ -56,7 +56,7 @@ PyParsing: http://pyparsing.wikispaces.com/
 
 DSL: https://en.wikipedia.org/wiki/Domain-specific_language
 
-RoboComp’s repository: https://github.com/robocomp
+RoboCompâ€™s repository: https://github.com/robocomp
 
 </div>
 
@@ -92,11 +92,11 @@ Swapnil Sharma
 
 <span class="post-date">25 Apr 2016</span>
 
-## RoboComp’s DSL based code generator
+## RoboCompâ€™s DSL based code generator
 
-RoboComp’s components are automatically generated using a tool named robocompdsl which takes as input a text file written in a domain-specific language (DSL) named (Component Description Specific Language). These files describe several characteristics of the components such as the network connections to other components, the programming language in which it is going to be written (currently C++ and Python languages are supported), the kind of user interface it will have (if any) and other options such as if the component will make use of third-party libraries. Given a CDSL file and a path, robocompdsl generates a source code tree ready to be compiled for the component described in the file. In this source code tree there are files which the user will not need to modify (these are called generic files) and files in which the user is supposed to type the code (specific files). Once a component has been generated, only generic files are overwritten upon re-generation, new specific files are created with an additional ‘.new’ extension. This tool allows users to create components very quickly, avoids frequent errors and contributes to keep high quality coding standards.
+RoboCompâ€™s components are automatically generated using a tool named robocompdsl which takes as input a text file written in a domain-specific language (DSL) named (Component Description Specific Language). These files describe several characteristics of the components such as the network connections to other components, the programming language in which it is going to be written (currently C++ and Python languages are supported), the kind of user interface it will have (if any) and other options such as if the component will make use of third-party libraries. Given a CDSL file and a path, robocompdsl generates a source code tree ready to be compiled for the component described in the file. In this source code tree there are files which the user will not need to modify (these are called generic files) and files in which the user is supposed to type the code (specific files). Once a component has been generated, only generic files are overwritten upon re-generation, new specific files are created with an additional â€˜.newâ€™ extension. This tool allows users to create components very quickly, avoids frequent errors and contributes to keep high quality coding standards.
 
-Despite the undeniable benefits brought by robocompdsl, there are some important updates to make and new features to introduce. This is one of the goals of this GSoC’16 proposal. In particular, we propose these first three new features:
+Despite the undeniable benefits brought by robocompdsl, there are some important updates to make and new features to introduce. This is one of the goals of this GSoCâ€™16 proposal. In particular, we propose these first three new features:
 
 ## 1\. Qt5 and ROS support
 
@@ -106,17 +106,17 @@ ROS support (currently underway). ROS support is a pressing issue mainly due to 
 
 Technologies involved: C++, Python, Qt5, ROS
 
-Mentor: Luis J. Manso Backup mentor: Marco A. Gutiérrez
+Mentor: Luis J. Manso Backup mentor: Marco A. GutiÃ©rrez
 
 ## 2\. Javascript support
 
-NodeJS component code generation. An interesting diversion from current robotics technologies based on C++ and Python would be the use of Javascript as the language to code some highly concurrent components. Most components combine push-pull and RPC communication models to talk to other components in their graph of processes. Additionally, several more threads are normally used to handle the component’s internal workings. In this activity, the code generator will be extended to include Javascript running in a server as a new target language for components. The main restriction here is that ZeroC releases a version of the Ice middleware running on Node, since the web browser version is already out.
+NodeJS component code generation. An interesting diversion from current robotics technologies based on C++ and Python would be the use of Javascript as the language to code some highly concurrent components. Most components combine push-pull and RPC communication models to talk to other components in their graph of processes. Additionally, several more threads are normally used to handle the componentâ€™s internal workings. In this activity, the code generator will be extended to include Javascript running in a server as a new target language for components. The main restriction here is that ZeroC releases a version of the Ice middleware running on Node, since the web browser version is already out.
 
 _Technologies involved: C++, Python, Qt5, OSG_
 
 Mentor: Luis J. Manso
 
-Backup mentor: Marco A. Gutiérrez
+Backup mentor: Marco A. GutiÃ©rrez
 
 ## 3\. Automatic code generation for State Machines
 
@@ -126,7 +126,7 @@ _Technologies involved: C++, Python, Qt_
 
 Mentor: Pablo Bustos Backup mentor: Luis J. Manso
 
-## Interesting improvements for RoboComp’s inner workings dealing with installation, deployment, math libraries, etc.
+## Interesting improvements for RoboCompâ€™s inner workings dealing with installation, deployment, math libraries, etc.
 
 ## 4\. Facilitating the deployment of RoboComp on different platforms
 
@@ -139,7 +139,7 @@ Deployment of a complex framework on different, heterogeneous platforms is alway
 
 _Technologies involved: cmake, docker, git_
 
-Mentor: Marco A. Gutiérrez
+Mentor: Marco A. GutiÃ©rrez
 
 Backup Mentors: Luis J. Manso
 
@@ -161,11 +161,11 @@ This activity deals with writing a new component in RoboComp that will provide a
 
 Technologies involved: C++, Python, Qt
 
-Mentor: Luis J. Manso Backup mentor: Marco A. Gutiérrez
+Mentor: Luis J. Manso Backup mentor: Marco A. GutiÃ©rrez
 
 ## 7\. A new graphical tool for deploying components
 
-Building on the existing python-based Manager tool in RoboComp, this activity will improve the current Python based design with more features. The new tool will facilitate the creation and modification of deployment files and will allow a much better access to the management interfaces of the componets. It will be based on Qt’s Graphics View Framework. With this new tool we expect that larger component networks with more than 50 componentes, will be easy to deploy and monitor at run time. The current tool, Manager, reads an XML file with a description of all components involved in the deployment, their localization (IP and port) and configuration parameters. With this information the program starts all the processes and detaches from them once they are up and safe. From there on, the program’s UI displays a graph of the running components, their dependencies and some basic information about them. We would like to improve this program in several ways:
+Building on the existing python-based Manager tool in RoboComp, this activity will improve the current Python based design with more features. The new tool will facilitate the creation and modification of deployment files and will allow a much better access to the management interfaces of the componets. It will be based on Qtâ€™s Graphics View Framework. With this new tool we expect that larger component networks with more than 50 componentes, will be easy to deploy and monitor at run time. The current tool, Manager, reads an XML file with a description of all components involved in the deployment, their localization (IP and port) and configuration parameters. With this information the program starts all the processes and detaches from them once they are up and safe. From there on, the programâ€™s UI displays a graph of the running components, their dependencies and some basic information about them. We would like to improve this program in several ways:
 
 *   Add a tools palette in the UI so new components can be created and dragged to the central canvas. Once there the XML file will be updated. Also, the components could be interconnected by the user as long as some basic syntactic and semantic rules are obeyed.
 *   Add a new panel in the UI to allow the user to communicate with the components through the existing CommonBehavior interface. This interfaces is created for all components and provides a common way to query their running status, memory use, iteration main period, pause, resume, abort and to change in line some of the configuration parameters.
@@ -174,7 +174,7 @@ Technologies involved: Python, PySide, Qt
 
 Mentor: Pablo Bustos Backup mentor: Luis J. Manso
 
-## 8\. Port of RoboComp’s math library, QMat, to Eigen3
+## 8\. Port of RoboCompâ€™s math library, QMat, to Eigen3
 
 Long before Eigen was out there we wrote QMat, a linear algebra library written as a wrapper to other existing math libraries such as IPP or GSL or even our own code. QMat has a lot o nice methods and functions that we have written as we needed them and that are specially suited for our other core library InnerModel. InnerModel is class that holds and allows access to the kinematic tree used by most of the components in RoboComp. This tree represents the state of the robot and the world perceived by it. It can be displayed in 3D using OpenSceneGraph (see activity 11) and used to perform many importan calculations in robotics. In this activiy We would like to:
 
@@ -193,9 +193,9 @@ We have several algorithms that are trained with information from real environme
 
 _Technologies involved: CNN, C++_
 
-Mentors: Ramón Cintas, Felilpe Cid
+Mentors: RamÃ³n Cintas, Felilpe Cid
 
-Backup Mentors: Marco A. Gutiérrez
+Backup Mentors: Marco A. GutiÃ©rrez
 
 ## 10\. Computer vision components and integration with openDetection
 
@@ -207,17 +207,17 @@ _Technologies involved: C++, OpenCV, Pointcloud Library, cmake_
 
 Mentor: Kripasindhu Sarkar
 
-Backup mentor: Marco A. Gutiérrez
+Backup mentor: Marco A. GutiÃ©rrez
 
 ## 11\. 3D visualization of internal structures in real time
 
-Current Model graphs used in RoboComp mainly for cognitive world modeling are not clear to understand, especially when they are big, which they usually are. Making these graphs easier to read and their information easier to access is a key task that will ease the task of debugging and understanding these graphs and in consequence a robot’s mind. Specific research and tests with roboticists should be performed in order to find a way of displaying this information that helps anyone understand the whole graph. Once specific key assets are detected they should be implemented one by one and properly tested with some roboticists to ensure they are widely accepted as a proper enhancement. Several of these features should be developed until the graph becomes easily readable and can be easily managed through the graphical interface provided in robocomp.
+Current Model graphs used in RoboComp mainly for cognitive world modeling are not clear to understand, especially when they are big, which they usually are. Making these graphs easier to read and their information easier to access is a key task that will ease the task of debugging and understanding these graphs and in consequence a robotâ€™s mind. Specific research and tests with roboticists should be performed in order to find a way of displaying this information that helps anyone understand the whole graph. Once specific key assets are detected they should be implemented one by one and properly tested with some roboticists to ensure they are widely accepted as a proper enhancement. Several of these features should be developed until the graph becomes easily readable and can be easily managed through the graphical interface provided in robocomp.
 
 _Techonolgies involved: python, Qt5, OSG, Active grammar-based Modeling (AGM)_
 
 Mentors: Luis J. Manso, Pablo Bustos
 
-Backup mentor: Ramon Cintas, Marco A. Gutiérrez
+Backup mentor: Ramon Cintas, Marco A. GutiÃ©rrez
 
 ## 12\. Gazebo-RoboComp integration
 
@@ -250,9 +250,9 @@ The main objective of the proposal is to successfully incorporate within the Rob
 
 **Useful links** RoboComp: https://github.com/robocomp/robocomp RTAB-MAP:http://introlab.github.io/rtabmap/ Point Cloud Library (PCL): http://pointclouds.org/ ICE:https://zeroc.com/products/ice Open Scene Graph: http://www.openscenegraph.org/
 
-Mentors: Jesús Martínez, Cristina Romero
+Mentors: JesÃºs MartÃ­nez, Cristina Romero
 
-Backup mentor: Ismael García-Varea
+Backup mentor: Ismael GarcÃ­a-Varea
 
 </div>
 
@@ -272,7 +272,7 @@ Now lets assume that you are going to upload the package for the first time into
 *   Crate a .tar.gz compressed file of the source directory, and place it outside source directory
 *   Rename the compressed file into <project_name>_<version>.orig.tar.gz</version></project_name>
 *   Now run `debuild -k<gpg_key> -S -sa` if you want to include the whole source tar in upload
-*   Or run `debuild -k<gpg_key> -S -sd` if you don’t want to include the whole source tar in upload
+*   Or run `debuild -k<gpg_key> -S -sd` if you donâ€™t want to include the whole source tar in upload
 
 ###So when should you upload the source? when you are uploading for the first time (obviously) and whenever you make some changes to your source code. but as launchpad wont allow files with same name, you should increase your version number so that the source tar get a new name. For increasing the version number you should increase it in changelog for example in this case `fcl (1.0-0ppa0) vivid; urgency=low` increase 1.0-0ppa0 to 1.1-0ppa0 also remember to rename all names accordingly (source folder and source tar)
 

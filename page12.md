@@ -20,7 +20,7 @@ A chroot is a way of isolating applications from the rest of your computer, by p
 
 This manual will follow the steps specified in the [official page of Ubuntu](https://help.ubuntu.com/community/BasicChroot). And the system we will install as tutorial is Ubuntu 14.04 Trusty amd64.
 
-##Brief Explanation Imagine you have your Robocomp version well installed and working really fine in your system (i.e. Ubuntu 14.04 amd64), but you need to upgrade your ICE or OpenCV or PCL or whatever third-party library to a new version. You donít want to risk your well functional version of Robocomp and itís dependencies removing the current version and installing the new one (this usually affects other packages and libraries), and you donít have time enough to make a whole fresh installation in other partition or virtual machine, so the fastest solution is to create a jail containing the same distribution of your main system (Ubuntu 14.04 amd64) with chroot and test Robocomp with the new version of the library you need without touching your fine Robocomp installation. Realize that creating a chrooted environment in your machine makes your system believe that your root directory (ì/î) is in another place than the actual root of the system (like I explain on the wiki, the process in which you launch chroot believes that the root directory is in / while actually it is in /var/chroot/trusty_x64/, not letting you touch anything outside that directory and therefore not risking your current installation). Another practical use for chroot is to test an especific program or library in a different distribution or architecture. For example, if you are working in Ubuntu 14.04 amd64 and you want to test if a library that you are using works fine in Debian Wheezy or Ubuntu 14.10 or Ubuntu 14.04 i386.
+##Brief Explanation Imagine you have your Robocomp version well installed and working really fine in your system (i.e. Ubuntu 14.04 amd64), but you need to upgrade your ICE or OpenCV or PCL or whatever third-party library to a new version. You don‚Äôt want to risk your well functional version of Robocomp and it‚Äôs dependencies removing the current version and installing the new one (this usually affects other packages and libraries), and you don‚Äôt have time enough to make a whole fresh installation in other partition or virtual machine, so the fastest solution is to create a jail containing the same distribution of your main system (Ubuntu 14.04 amd64) with chroot and test Robocomp with the new version of the library you need without touching your fine Robocomp installation. Realize that creating a chrooted environment in your machine makes your system believe that your root directory (‚Äú/‚Äù) is in another place than the actual root of the system (like I explain on the wiki, the process in which you launch chroot believes that the root directory is in / while actually it is in /var/chroot/trusty_x64/, not letting you touch anything outside that directory and therefore not risking your current installation). Another practical use for chroot is to test an especific program or library in a different distribution or architecture. For example, if you are working in Ubuntu 14.04 amd64 and you want to test if a library that you are using works fine in Debian Wheezy or Ubuntu 14.10 or Ubuntu 14.04 i386.
 
 ##Creating a chroot
 
@@ -59,7 +59,7 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
          - **description** is a short description of the chroot.
          - **directory** the path where the chroot is going to be installed. Note that is the same path that we specified in step 2.
          - **root-users** list of users that are allowed in our chroot without password.
-         - **type**  The type of the chroot. Valid types are ëplainí, ëdirectoryí, ëfileí, ëblock-deviceí and ëlvm-snapshotí. If empty or omitted, the default type is ëplainí.
+         - **type**  The type of the chroot. Valid types are ‚Äòplain‚Äô, ‚Äòdirectory‚Äô, ‚Äòfile‚Äô, ‚Äòblock-device‚Äô and ‚Äòlvm-snapshot‚Äô. If empty or omitted, the default type is ‚Äòplain‚Äô.
          - **users** list of users that are allowed access to the chroot.
 
     ```
@@ -119,11 +119,11 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
 
     </div>
 
-And thatís it! Now we have a whole very basic system in which we can test out programs and libraries.
+And that‚Äôs it! Now we have a whole very basic system in which we can test out programs and libraries.
 
 ##Troubleshooting
 
-*   If you get locale warnings in the chroot like **ìLocale not supported by C library.î** or **ìperl: warning: Setting locale failed.î**, then try one or more of these commands:
+*   If you get locale warnings in the chroot like **‚ÄúLocale not supported by C library.‚Äù** or **‚Äúperl: warning: Setting locale failed.‚Äù**, then try one or more of these commands:
 
 <div class="highlighter-rouge">
 
@@ -175,7 +175,7 @@ if the problem persist check out this [page](http://perlgeek.de/en/article/set-u
 
 **robocompdsl** is the new tool used in RoboComp to automatically generate components and modify their main properties once they have been generated (e.g., communication requirements, UI type). It is one of the core tools of the framework so, if you installed RoboComp, you can start using it right away.
 
-This new version can only be used from the command line, but the languages used to define components and their interfaces remain mostly the same: **CDSL** to specify components and **IDSL** to specify interfaces. The only difference with the old RoboCompDSLEditor tool is that the reserved keywords (are now case independent). Take a look to the tutorial [ìa brief introduction to Componentsî](components.md) for an introduction to the concept of component generation and the languages involved.
+This new version can only be used from the command line, but the languages used to define components and their interfaces remain mostly the same: **CDSL** to specify components and **IDSL** to specify interfaces. The only difference with the old RoboCompDSLEditor tool is that the reserved keywords (are now case independent). Take a look to the tutorial [‚Äúa brief introduction to Components‚Äù](components.md) for an introduction to the concept of component generation and the languages involved.
 
 There are three tasks we can acomplish using **robocompdsl**:
 
@@ -185,7 +185,7 @@ There are three tasks we can acomplish using **robocompdsl**:
 
 ## Generating a CDSL template file
 
-Even tough writing CDSL files is easy ñtheir structure is simple and the number of reserved words is very limitedñ robocompdsl can generate template CDSL files to be used as a guide when writing CDSL files.
+Even tough writing CDSL files is easy ‚Äìtheir structure is simple and the number of reserved words is very limited‚Äì robocompdsl can generate template CDSL files to be used as a guide when writing CDSL files.
 
 <div class="highlighter-rouge">
 
@@ -221,13 +221,13 @@ Component CHANGETHECOMPONENTNAME
 
 </div>
 
-The CDSL language is described in the tutorial [ìA brief introduction to Componentsî](components.md). Just donít forget to change the name of the component.
+The CDSL language is described in the tutorial [‚ÄúA brief introduction to Components‚Äù](components.md). Just don‚Äôt forget to change the name of the component.
 
 ## Generating a component given a CDSL file
 
-Once we have our CDSL file we can generate the componentís source code running robocompdsl with the CDSL file as first argument and the directory where the code should be placed as the second argument.
+Once we have our CDSL file we can generate the component‚Äôs source code running robocompdsl with the CDSL file as first argument and the directory where the code should be placed as the second argument.
 
-From the componentís directory: $ cd path/to/mycomponent $ robocompdsl mycomponent.cdsl .
+From the component‚Äôs directory: $ cd path/to/mycomponent $ robocompdsl mycomponent.cdsl .
 
 Or somewhere else: $ robocompdsl path/to/mycomponent/mycomponent.cdsl path/to/mycomponent
 
@@ -237,7 +237,7 @@ These commands will generate the C++ or Python code in the specified directory.
 
 Once we generated our component we might change our mind and decide to add a new connection to another interface or to publish a new topic. In these cases we can regenerate the code of the component just by changing the _.cdsl_ file and executing again the command.
 
-As you might have learned from the tutorial [ìA brief introduction to Componentsî](components.md) RoboComp components are divided in specific code (files where you write your code) and generic code (autogenerated code which doesnít need to be edited). Running robocompdsl again on the same directory will ony overwrite these generic files. To ensure robocompdsl doesnít overwrite the changes you made to the specific files these are left unchanged, so the component might not compile after regeneration (e.g., you might need to add new methods).
+As you might have learned from the tutorial [‚ÄúA brief introduction to Components‚Äù](components.md) RoboComp components are divided in specific code (files where you write your code) and generic code (autogenerated code which doesn‚Äôt need to be edited). Running robocompdsl again on the same directory will ony overwrite these generic files. To ensure robocompdsl doesn‚Äôt overwrite the changes you made to the specific files these are left unchanged, so the component might not compile after regeneration (e.g., you might need to add new methods).
 
 </div>
 
@@ -306,7 +306,7 @@ debuild -i -us -uc
 
 ####Note:
 
-If you want to upload another source package to ppa which doesnít have any changes in the source but maybe in the debian files. you can build the spackage after commenting out `set(DEB_SOURCE_CHANGES "CHANGED" CACHE STRING "source changed since last upload")` in [package_details.cmake](../cmake/package_details.cmake#L27) so that the the script will only increase the ppa version number and wont include the source package for uploading to ppa (which otherwise will give an error).
+If you want to upload another source package to ppa which doesn‚Äôt have any changes in the source but maybe in the debian files. you can build the spackage after commenting out `set(DEB_SOURCE_CHANGES "CHANGED" CACHE STRING "source changed since last upload")` in [package_details.cmake](../cmake/package_details.cmake#L27) so that the the script will only increase the ppa version number and wont include the source package for uploading to ppa (which otherwise will give an error).
 
 * * *
 

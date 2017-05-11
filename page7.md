@@ -46,13 +46,13 @@ grasping object](/website/2015/08/20/mercedes6/)
 
 <span class="post-date">20 Aug 2015</span>
 
-**Grasping object** : This post will describe the planning system that implements Robocomp in order to provide to the robot a full functionality. In order for a robot be able to carry out a mission as ìtake the cup from the table and take it to the kitchen,î it needs something that in robotics calls `planner`. In this post we move away the issue of inverse kinematics and we dive into the field of artificial intelligence, making a slight revision of existing planners and delving into the planner using robocomp.
+**Grasping object** : This post will describe the planning system that implements Robocomp in order to provide to the robot a full functionality. In order for a robot be able to carry out a mission as ‚Äútake the cup from the table and take it to the kitchen,‚Äù it needs something that in robotics calls `planner`. In this post we move away the issue of inverse kinematics and we dive into the field of artificial intelligence, making a slight revision of existing planners and delving into the planner using robocomp.
 
 ###Planning
 
 As the name suggests, the planning is to generate plans. Plans to be executed by a robot in order to reach a goal. These objectives are often complex and require the execution of a series of steps that must be organized in the best possible manner to achieve the objective with an effort and within a reasonable time.
 
-In order for a planner can build a series of plans, it needs an initial state of the world, a desired end state (or several) and a set of rules. For example, take the objective of frying an egg. We start with an initial world consisting of a kitchen with the necessary elements: an egg with a dozen eggs, a can of oil, a frying pan, a slotted spoon, a plate and a stove. And we have a set of rules, like `to pour oil`, `to water plants`, `to crack egg`, `to stir`, `to serve`, `to light fire` and `to put the fire out`. The duty of the planner is to select and order those rules that allow us to go from the initial state of the world (with raw eggs) to the final state in which a fried egg is served on a plate. Thus, the planner would eliminate the rule of ìto water plantsî, and would order the rest of rules as follows:
+In order for a planner can build a series of plans, it needs an initial state of the world, a desired end state (or several) and a set of rules. For example, take the objective of frying an egg. We start with an initial world consisting of a kitchen with the necessary elements: an egg with a dozen eggs, a can of oil, a frying pan, a slotted spoon, a plate and a stove. And we have a set of rules, like `to pour oil`, `to water plants`, `to crack egg`, `to stir`, `to serve`, `to light fire` and `to put the fire out`. The duty of the planner is to select and order those rules that allow us to go from the initial state of the world (with raw eggs) to the final state in which a fried egg is served on a plate. Thus, the planner would eliminate the rule of ‚Äúto water plants‚Äù, and would order the rest of rules as follows:
 
 1.  `to light fire`: in order to light the stove.
 2.  `to pour oil`: to pour oil into the pan
@@ -61,13 +61,13 @@ In order for a planner can build a series of plans, it needs an initial state of
 5.  `to put the fire out`: when the egg is fried the stove is turned off.
 6.  `to serve`: to serve the fried egg on the plate
 
-With these steps (very simplified) we get that our robot prepares us a fried eggÖ Although the example is miserable, we can see that any action we do and that we find it easy to execute, for a robot is quite complicated. That is why planning is a very complex field of artificial intelligence.
+With these steps (very simplified) we get that our robot prepares us a fried egg‚Ä¶ Although the example is miserable, we can see that any action we do and that we find it easy to execute, for a robot is quite complicated. That is why planning is a very complex field of artificial intelligence.
 
 ###Planning Domain Definition Language (PDDL)
 
-This section will introduce the reader slightly in the planning language more used in artificial intelligence: PDDL. It was created in 1998 by Drew McDermott and his team for use in that yearís edition of International Planning Competition. The aim of PDDL is to standardize the planning languages for greater reuse of planning domains. Its operation is relatively simple:
+This section will introduce the reader slightly in the planning language more used in artificial intelligence: PDDL. It was created in 1998 by Drew McDermott and his team for use in that year‚Äôs edition of International Planning Competition. The aim of PDDL is to standardize the planning languages for greater reuse of planning domains. Its operation is relatively simple:
 
-Take for example, the following domain to create geometric shapes: We presume that in our initial world there is always a vertex node. The rules increase the number of vertices nodes to create geometric identities. For example, the `segment` rule creates from the initial node a line segment, the rule `triangle` creates from the line segment an equilateral triangle, the rule ìsquareî creates from the equilateral triangle a squareÖ and so on until an octagon. In the PDDL file, the rules would be:
+Take for example, the following domain to create geometric shapes: We presume that in our initial world there is always a vertex node. The rules increase the number of vertices nodes to create geometric identities. For example, the `segment` rule creates from the initial node a line segment, the rule `triangle` creates from the line segment an equilateral triangle, the rule ‚Äúsquare‚Äù creates from the equilateral triangle a square‚Ä¶ and so on until an octagon. In the PDDL file, the rules would be:
 
 <div class="highlighter-rouge">
 
@@ -165,7 +165,7 @@ This language proves to be relatively intuitive, easy to develop and test. Howev
 
 ###Active Grammar-based Modeling
 
-AGM is the result of Luis Mansoís PhD thesis that ìdealt with making software systems for robots more scalable, flexible and easier to develop using software engineering for robotics [Ö] and enhancing active perception in robots using a grammar-based technique named active grammar-based modeling and a specially tailored novelty-detection algorithm named cognitive subtractionî[1](http://ljmanso.com/thesis.php). To not extend much this post, you can check the working of the AGM on its [official website](http://ljmanso.com/agm/). We will target only that AGM proves to be a useful graphical tool to program rules and to test domains and problems, and its grammar has a reminiscent of the PDDL language (has a AGM to PDDL converter). Letís look at the same example as before but now in AGM:
+AGM is the result of Luis Manso‚Äôs PhD thesis that ‚Äúdealt with making software systems for robots more scalable, flexible and easier to develop using software engineering for robotics [‚Ä¶] and enhancing active perception in robots using a grammar-based technique named active grammar-based modeling and a specially tailored novelty-detection algorithm named cognitive subtraction‚Äù[1](http://ljmanso.com/thesis.php). To not extend much this post, you can check the working of the AGM on its [official website](http://ljmanso.com/agm/). We will target only that AGM proves to be a useful graphical tool to program rules and to test domains and problems, and its grammar has a reminiscent of the PDDL language (has a AGM to PDDL converter). Let‚Äôs look at the same example as before but now in AGM:
 
 This would be the set of rules in a .aggl file:
 
@@ -280,7 +280,7 @@ Explained more or less the planners, we will explain the architecture of compone
 
 So the challenge that we have to complete is to create an agent that uses our three inverse kinematics components in order to reach a goal: that the robot take a cup. This component is called `graspingAgent` and is currently being developed by the laboratory. I would like to delve into its operation, but we still needs to implement many things and GSoC is coming to an end :(
 
-Itís a shame to have to say goodbye with the work so close to being finished. But it doesnít matters, the next year the robot will be serving coffee to Robolab guys XD.
+It‚Äôs a shame to have to say goodbye with the work so close to being finished. But it doesn‚Äôt matters, the next year the robot will be serving coffee to Robolab guys XD.
 
 Bye!
 
@@ -298,13 +298,13 @@ Bye!
 
 <span class="post-date">19 Aug 2015</span>
 
-**Experience** It has been a quite a ride through this Google Summer of Code. Writing a completely new library with complete building framework/rest framework for documentation or tutorial/and Doxygen framework for auto documentation-class diagrams was challenging. It was equally exciting as well. Because of this I believe that I have acquired quite a good ëlibrary maintainer/adminí skills. I will continue contributing into this library after the finish of this GSoC.
+**Experience** It has been a quite a ride through this Google Summer of Code. Writing a completely new library with complete building framework/rest framework for documentation or tutorial/and Doxygen framework for auto documentation-class diagrams was challenging. It was equally exciting as well. Because of this I believe that I have acquired quite a good ‚Äòlibrary maintainer/admin‚Äô skills. I will continue contributing into this library after the finish of this GSoC.
 
-After the challenges in building library support tools, the next major challenge was library design. Since, there was no previous ëcoding flavor/designí I had to come up with the polymorphic and repeatable class design. There was so much confusion in choosing one alternative among the so many choices of good design. While the progress of the library I had to redesign the framework, and and remove structures, include namespaces and several things. I initially had thought that the design will be pretty much stable after the first month, which was not true. I still feel that the main design may need to be changed in the future to have a more logical structure. I hope this constant effort of keeping a good design will be helpful for the library users, and in the end, wonít end up with an unstructured library like OpenCV. In the future Iíll always keep an eye open for the design in general.
+After the challenges in building library support tools, the next major challenge was library design. Since, there was no previous ‚Äòcoding flavor/design‚Äô I had to come up with the polymorphic and repeatable class design. There was so much confusion in choosing one alternative among the so many choices of good design. While the progress of the library I had to redesign the framework, and and remove structures, include namespaces and several things. I initially had thought that the design will be pretty much stable after the first month, which was not true. I still feel that the main design may need to be changed in the future to have a more logical structure. I hope this constant effort of keeping a good design will be helpful for the library users, and in the end, won‚Äôt end up with an unstructured library like OpenCV. In the future I‚Äôll always keep an eye open for the design in general.
 
-Now coming to the actual work of implementing different algorithm, I had really good experience in getting my hands dirty with variety of popular object detection methods. This was exactly what I had thought from this project. Taking out three months and working on the popular methods of your research topic is probably important and I hope that Iíll make a good us of this in the future.
+Now coming to the actual work of implementing different algorithm, I had really good experience in getting my hands dirty with variety of popular object detection methods. This was exactly what I had thought from this project. Taking out three months and working on the popular methods of your research topic is probably important and I hope that I‚Äôll make a good us of this in the future.
 
-**Learning** Here Iíll point out some of the tools and resources I have used while building the library.
+**Learning** Here I‚Äôll point out some of the tools and resources I have used while building the library.
 
 ####CMake building framework: I read and used ideas from the CMakeLists files of **VTK, pcl** and **OpenCV** (not that much); and chose stuffs among them depending what I thought was interesting and also modified them according to my needs. But in general, I used PCL cmake framework as my major reference.
 
@@ -349,9 +349,9 @@ That concluded the functionality of whatever planned for this summer of code. Ot
 
     a. _detectOmni_ : This is the function whose purpose is to detect an object in an entire scene. Thus, other than the type of detection we also have information about the _location_ of the detection w.r.t. the scene. This was the only function previously implemented.
 
-    b. _detect_ : The purpose of this function is to perform detection on a segmented scene or an ëobject candidateí. i.e. the entire scene is considered as an ëobjectí or an detection. This function was an extra addition for most of the classes. For global descriptor based classes like ODHOGDetector this function came very naturally.
+    b. _detect_ : The purpose of this function is to perform detection on a segmented scene or an ‚Äòobject candidate‚Äô. i.e. the entire scene is considered as an ‚Äòobject‚Äô or an detection. This function was an extra addition for most of the classes. For global descriptor based classes like ODHOGDetector this function came very naturally.
 
-*   **Standardized the training database**:. Each detection class identifies its own database (which is a unique folder as of now). Training data of all classes are now put together under a single ëtrained_dataí directory and the rest is resolved by the class automatically.
+*   **Standardized the training database**:. Each detection class identifies its own database (which is a unique folder as of now). Training data of all classes are now put together under a single ‚Äòtrained_data‚Äô directory and the rest is resolved by the class automatically.
 
 *   The class **ODDetectorMultiAlgo**: This is one of the most interesting class and interesting contribution in this project. The idea is to run multiple detection algorithm on a same segmented or unsegmented scene (i.e. run both _detect_ and _detectOmni_ function) and provide the result. That is, using this class one can do object detection/recognition using multiple algorithms and provide outcome of detections (eg. people detected by HOG, face detected by Cascade, bottle detected PnPRansac in a same image). Because of the nice polymorphic design of the detection classes, one can use the concept easily with any number of detection classes with their own parameters, but with _ODDetectorMultiAlgo_ one can only take benefit of the default parameters of the included classes.
 
@@ -359,7 +359,7 @@ That concluded the functionality of whatever planned for this summer of code. Ot
 
 ## Design changes, learning resources, and overall learning experiences:
 
-In the next blog Iíll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
+In the next blog I‚Äôll add the different sources I used to design and implement the above tasks and the things I learnt in this process.
 
 * * *
 
@@ -422,7 +422,7 @@ Here there is a scheme of the procedure performed by the `visualik`. It is very 
 3:    Ct = Xt + Ec
 4:    sendTargetToGIK(Ct)
 5:    Xv = getAprilTagPose(robot)
-6:    while (Ev = Xv- Xt) > threshold ^¨ timeOut() do
+6:    while (Ev = Xv- Xt) > threshold ^¬¨ timeOut() do
 7:         Xi = getInternalPose(robot)
 8:         Xc = Xi + Ev
 9:         sendTargetToGIK(Xc)
@@ -469,7 +469,7 @@ Ice.ACM.Server=10
 As we explain in the previous [post](http://robocomp.github.io/website/2015/08/13/mercedes4.html), the [`ikGraphGenerator`component](https://github.com/robocomp/robocomp-ursus/tree/master/components/ikGraphGenerator) creates and stores a graph representing the work 3D space of the arm, where each node stores the euclidean space pose of the end effector and the configuration of the joints that compose the arm. So the `ikGraphGenerator` waits until the `visualik` send a target to him through the `InverseKinematics` interface. In this moment, the `ikGraphGenerator` performs four steps:
 
 1.  the component searches the node A whose pose is closest to the initial end effector pose and moves the arm there.
-2.  the component finds in the graph the node B whose pose is closest to the target position, disabling those nodes which would make the robotís arm collide with external objects.
+2.  the component finds in the graph the node B whose pose is closest to the target position, disabling those nodes which would make the robot‚Äôs arm collide with external objects.
 3.  the component computes the shortest path between the node A and the node B and moves the end effector among the nodes to reach the node B.
 4.  Finally, the component moves from the graph to the actual target sending the original target to the `inversekinematic`component and taking the final values of the joints.
 
@@ -547,7 +547,7 @@ Ice.ACM.Server=10
 
 When `visualik` and `ikGraphGenerator` components submit their targets to the immediately below component, they store the identifier of the target and are waiting until the target be resolved, calling the method `getTargetState`. So, when the `inversekinematic` component ends one target execution, the `ikGraphGenerator` moves the arm with the values given by the `inversekinematic` component and then, the `visualik` continues with the corrections.
 
-Having explained the handling system, the next post will explain the planning system developed by ROBOLAB to plan the robotís actions.
+Having explained the handling system, the next post will explain the planning system developed by ROBOLAB to plan the robot‚Äôs actions.
 
 Bye!
 

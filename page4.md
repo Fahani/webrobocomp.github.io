@@ -35,7 +35,7 @@ int operation = 4 + 2;
 
 </div>
 
-Mat element = getStructuringElement( morph_elem, Size( Ö 2_morph_size + 1, 2_morph_size+1 ), Point( morph_size, morph_size ) ); morphologyEx( blt, tophat, operation, element);
+Mat element = getStructuringElement( morph_elem, Size( ‚Ä¶ 2_morph_size + 1, 2_morph_size+1 ), Point( morph_size, morph_size ) ); morphologyEx( blt, tophat, operation, element);
 
 1.  Thresholding to create binay image.
 
@@ -96,7 +96,7 @@ net_->Reshape();
 
 </div>
 
-1.  Wrap the input layer of the network in separate cv::Mat objects (one per channel). This way we save one memcpy operation and ww donít need to rely on cudaMemcpy2D. The last preprocessing operation will write the separate channels directly to the input layer.
+1.  Wrap the input layer of the network in separate cv::Mat objects (one per channel). This way we save one memcpy operation and ww don‚Äôt need to rely on cudaMemcpy2D. The last preprocessing operation will write the separate channels directly to the input layer.
 
 <div class="highlighter-rouge">
 
@@ -131,7 +131,7 @@ Harit Pandya
 
 <span class="post-date">11 Jun 2016</span>
 
-This is the second post in the series of post pertaining to the project ìAutomatic the uploading of binary files using git-annexî. This post aims to show the progress made until the mid term evaluation.
+This is the second post in the series of post pertaining to the project ‚ÄúAutomatic the uploading of binary files using git-annex‚Äù. This post aims to show the progress made until the mid term evaluation.
 
 We planned to write abstraction over git-annex to add the files to remote storage server. Git-annex provides support for external special remote, it follows a messaging based service as prescribed here [External Special Remote Protocol](https://git-annex.branchable.com/design/external_special_remote_protocol/) needs to be followed.
 
@@ -206,9 +206,9 @@ Swapnil Sharma
 
 # Basic coding
 
-Now that i am decided about the different features about the rcmaster. Pablo suggested about using something similer to how ros 2.0 is implementing node discovery. They are planning to use an external middle-ware named DDS. DDS uses an custom lightweight discovery protocol for finding other nodes. It eliminates the need for an central node keeping registry of all nodes. But after some discussion with other community members we decided to stick with rcmaster as using DDS will negate robocompís middle-ware independent policy and also it doesnít give much benefits compared to the complexity in implementation.
+Now that i am decided about the different features about the rcmaster. Pablo suggested about using something similer to how ros 2.0 is implementing node discovery. They are planning to use an external middle-ware named DDS. DDS uses an custom lightweight discovery protocol for finding other nodes. It eliminates the need for an central node keeping registry of all nodes. But after some discussion with other community members we decided to stick with rcmaster as using DDS will negate robocomp‚Äôs middle-ware independent policy and also it doesn‚Äôt give much benefits compared to the complexity in implementation.
 
-Also we discussed about different ways to implement the multi robot scenario. Multi Robot scenarios can be implemented in 2 ways. one, we could have only one robot running rcmaster and all other robots will be configured to use this rcmaster. in This case the whole load will be into this rcmaster. This doesnít require any extra coding in the rcmaster. we will only need to change the environment variable which points to the rcmaster in all robots. But the downside is there may be heavy latency as there is only one rcmaster and all the lookups and registrations are RPCís. Other downside is that if that one Robot which is hosting the rcmaster fails or gets disconnected, then all other robots will fail. The 2nd solution is to let all robots have local rcmasters and they will need to sync their registry with all other robots in th network. But in this case the issue is how will the robots find each other. One straight forward solution is to hard-code all the robots ip in each of the robots. But this may be really tedious. Hence we may use some discovery protocol like udp multicast for finding other rcmasters.
+Also we discussed about different ways to implement the multi robot scenario. Multi Robot scenarios can be implemented in 2 ways. one, we could have only one robot running rcmaster and all other robots will be configured to use this rcmaster. in This case the whole load will be into this rcmaster. This doesn‚Äôt require any extra coding in the rcmaster. we will only need to change the environment variable which points to the rcmaster in all robots. But the downside is there may be heavy latency as there is only one rcmaster and all the lookups and registrations are RPC‚Äôs. Other downside is that if that one Robot which is hosting the rcmaster fails or gets disconnected, then all other robots will fail. The 2nd solution is to let all robots have local rcmasters and they will need to sync their registry with all other robots in th network. But in this case the issue is how will the robots find each other. One straight forward solution is to hard-code all the robots ip in each of the robots. But this may be really tedious. Hence we may use some discovery protocol like udp multicast for finding other rcmasters.
 
 Also this week i wrote a basic interface for the rcmaster. Both the idsl and and the slice file. and had a discussion about them with community members. After making a few changes suggested. I will begin with rest of implementation.
 
@@ -226,7 +226,7 @@ Yash Sanap
 
 # Is CNN solution to every object classification problem?
 
-Given the hype about CNNs and how they outperform the state-of-art object classifiers it would be interesting to see how they perform on images of day-today objects placed o a table . Figure 1 shows sample images given to CNN for classification. Although being a simple non-cluttered object identification problem, it is a non-trivial and challenging for vision tasks. Because, the the resolution is low and and objects are small. CNNs are good classifiers for a primary object in the scene i.e. we need to extract the object before giving it to a CNN. So letís manually crop every object and give it to CNN and see how it performs. I have used 2 state-of-art CNNs. One is VGG16 by Oxford research group and the other is Overfeat by CILVR Lab @ NYU. I tried to qualitatively analyse the performance of both networks using top and top-5 classification results. I found that the performance is not very good for top-result, however the performance is acceptable for top-5 results.
+Given the hype about CNNs and how they outperform the state-of-art object classifiers it would be interesting to see how they perform on images of day-today objects placed o a table . Figure 1 shows sample images given to CNN for classification. Although being a simple non-cluttered object identification problem, it is a non-trivial and challenging for vision tasks. Because, the the resolution is low and and objects are small. CNNs are good classifiers for a primary object in the scene i.e. we need to extract the object before giving it to a CNN. So let‚Äôs manually crop every object and give it to CNN and see how it performs. I have used 2 state-of-art CNNs. One is VGG16 by Oxford research group and the other is Overfeat by CILVR Lab @ NYU. I tried to qualitatively analyse the performance of both networks using top and top-5 classification results. I found that the performance is not very good for top-result, however the performance is acceptable for top-5 results.
 
 ![alt tag](images/week1/week1_dataset.png)
 
@@ -234,7 +234,7 @@ Figure 1: Settings we are interested to work with. A table with some objects.
 
 # How to handle Object detections?
 
-Object detection task is different from classification task. In detection task it is required to identify where the object is in the given image compared to the classification task where given the image identification of the objectís category is required. Recently, object detection has gained lots of interest in the vision community. At present there exists NN based solutions like Segnets, FCN which do pixelwise segmentations, also there is RCNN which proposes bounding box for an object. Now several such bounding boxes are given to the classifier for category identification. Here I have used a top-hat filter for object detection and compared with RCNN. The basic idea is that for objects there is intensity difference from the table so that the object could be discriminated from table by a top-hat filter. From figure 2\. It could be seen that top-hat gives better object proposals than RCNN. Note that I have used existing pre-trained networks thus the cliam will not hold if I retrain RCNN on our dataset. So we indeed require training.
+Object detection task is different from classification task. In detection task it is required to identify where the object is in the given image compared to the classification task where given the image identification of the object‚Äôs category is required. Recently, object detection has gained lots of interest in the vision community. At present there exists NN based solutions like Segnets, FCN which do pixelwise segmentations, also there is RCNN which proposes bounding box for an object. Now several such bounding boxes are given to the classifier for category identification. Here I have used a top-hat filter for object detection and compared with RCNN. The basic idea is that for objects there is intensity difference from the table so that the object could be discriminated from table by a top-hat filter. From figure 2\. It could be seen that top-hat gives better object proposals than RCNN. Note that I have used existing pre-trained networks thus the cliam will not hold if I retrain RCNN on our dataset. So we indeed require training.
 
 ![](images/week1/week1_rcnn_71.jpg) ![](images/week1/week1_rcnn_192.jpg) ![](images/week1/week1_rcnn_445.jpg) ![](images/week1/week1_rcnn_706.jpg) ![](images/week1/week1_overfeat_71.jpg) ![](images/week1/week1_overfeat_192.jpg) ![](images/week1/week1_overfeat_445.jpg) ![](images/week1/week1_overfeat_706.jpg) ![](images/week1/week1_VGG16_71.jpg) ![](images/week1/week1_VGG16_192.jpg) ![](images/week1/week1_VGG16_445.jpg) ![](images/week1/week1_VGG16_706.jpg)
 

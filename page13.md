@@ -16,7 +16,7 @@ The problem with building these little monsters is that you need a very powerful
 
 In RoboComp (2005-) we have created our own component model, inspired by the [ORCA](http://orca-robotics.sourceforge.net/) model and making it evolve to fit our needs along these years. As a middleware, RoboComp primarily uses [Ice](www.zeroc.com) and there is ongoing experimental work to make RoboComp middleware agnostic, so its components can be re-generated to use other middlewares such as [DDS](http://portals.omg.org/dds/).
 
-RoboCompís components model is quite simple and we always try to simplify it even more. It can be best explained through two Domain Specific Languages (DSLs) that have been created to define a component at a very high level of abstraction. **IDSL** stands for ìInterface Definition Specific Languageî and currently is a subset of Iceís Slice interface language. With IDSL you write the data structures and functions that a component can implement, require, subscribe to or publish. A component can implement several interfaces, offering different views of its internal functioning. Also, the same interface can be implemented by many components. This is an example of a simple interface written in IDSL:
+RoboComp‚Äôs components model is quite simple and we always try to simplify it even more. It can be best explained through two Domain Specific Languages (DSLs) that have been created to define a component at a very high level of abstraction. **IDSL** stands for ‚ÄúInterface Definition Specific Language‚Äù and currently is a subset of Ice‚Äôs Slice interface language. With IDSL you write the data structures and functions that a component can implement, require, subscribe to or publish. A component can implement several interfaces, offering different views of its internal functioning. Also, the same interface can be implemented by many components. This is an example of a simple interface written in IDSL:
 
 <div class="highlighter-rouge">
 
@@ -34,7 +34,7 @@ module RoboCompSpeech
 
 </div>
 
-**CDSL** stands for ìComponent Definition Specific Languageî and allows the user to specifiy its name, accesible interfaces, communication connections, target language and other available modules or libraries that you want to include in the building scripts.
+**CDSL** stands for ‚ÄúComponent Definition Specific Language‚Äù and allows the user to specifiy its name, accesible interfaces, communication connections, target language and other available modules or libraries that you want to include in the building scripts.
 
 <div class="highlighter-rouge">
 

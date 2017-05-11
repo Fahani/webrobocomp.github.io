@@ -72,7 +72,7 @@ After adding the header you can proceed writing the post by using Github Markdow
 
 </div>
 
-Commit and push it to the repo, you would have successfully published a post on to the robocompís website.
+Commit and push it to the repo, you would have successfully published a post on to the robocomp‚Äôs website.
 
 </div>
 
@@ -164,7 +164,7 @@ bin/myfirstcomp --Ice.Config=etc/generic_config
 
 and there it is! your component is running.
 
-What! Dissapointed? Yeah, I know it does nothing, but it runs and it is yours! Now letís do some real programming.
+What! Dissapointed? Yeah, I know it does nothing, but it runs and it is yours! Now let‚Äôs do some real programming.
 
 Stop the component with Ctrl Z and then type:
 
@@ -193,7 +193,7 @@ Select *Makefile* and open the project
 
 In the _Project_ panel to the left of the screen, navigate to _src_ and there select _specificworker.cpp_ and open it. Open also _specificworker.h_
 
-Now replace the empty _void compute()_ method with this compact version of the classic AVOID-FORWARD-STOP architecture proposed by R. Brooks in the late 80ís:
+Now replace the empty _void compute()_ method with this compact version of the classic AVOID-FORWARD-STOP architecture proposed by R. Brooks in the late 80‚Äôs:
 
 <div class="highlighter-rouge">
 
@@ -298,7 +298,7 @@ You should see the robot maneouvring aroung the box. Now is when Robotics begin!
 
 <span class="post-date">23 May 2015</span>
 
-If you havenít already, Then do read about aprilTagsComp [here](apriltags.md) for better understanding. In this tutorial you will learn the actual functionality of apriltags.
+If you haven‚Äôt already, Then do read about aprilTagsComp [here](apriltags.md) for better understanding. In this tutorial you will learn the actual functionality of apriltags.
 
 First make sure you have installed apriltags. Please follow the steps that is given in _INSTALL_APRILTAGS_LIB.TXT_. Then move to the apriltagscomp folder
 
@@ -335,7 +335,7 @@ rcis simpleworld.xml
 
 </div>
 
-Here we will considering _simpleworld.xml_ as an example since it has virtual apriltags and a robot with a camera is present for simulation. After execution you should now see two windows, One showing the robot cameraís view pointing at one of the apriltags and the other with the site map showing the robot and two virtual apriltags.
+Here we will considering _simpleworld.xml_ as an example since it has virtual apriltags and a robot with a camera is present for simulation. After execution you should now see two windows, One showing the robot camera‚Äôs view pointing at one of the apriltags and the other with the site map showing the robot and two virtual apriltags.
 
 Now go back to the terminal where you had compiled the apriltagsComp and execute
 
@@ -403,7 +403,7 @@ FOCAL LENGHT: 480
 
 AprilTags is an augmented reality tag system developed by E. Olson at the U. of Michigan, USA. A complete explanation and related papers can be found [here](http://april.eecs.umich.edu/wiki/index.php/AprilTags). There is a C++ version written by Michael Kaes [here](http://people.csail.mit.edu/kaess/apriltags/) which is the one we use.
 
-April tags are AR tags designed to be easily detected by (robot) cameras. Understand them as a visual fiducial (artificial features) system that uses a 2D bar code style ìtagî, allowing full 6 DOF localization of features from a single image. It is designed to encode smaller data (between 4 and 12 bits) and also these tags can be detected by the camera even at odd conditions. When the tag is seen by the camera, the algorithm computes the tagís complete pose defining its own reference system relative to the camera (i.e Location of the tag is known with high accuracy). This reference system is defined as follows: If we look perpendicularly to a non rotated tag, The Z+ axis comes out towards us from the center of the tag plane, The X+ axis points leftwards and the Y+ axis points upwards (a left-hand reference system). The values computed by _apriltagsComp_ are the translation vector from the camera to the center of the tagís reference system, and the three Euler angles that encode the relative orientation of the tagís reference system wrt to the camera reference system.
+April tags are AR tags designed to be easily detected by (robot) cameras. Understand them as a visual fiducial (artificial features) system that uses a 2D bar code style ‚Äútag‚Äù, allowing full 6 DOF localization of features from a single image. It is designed to encode smaller data (between 4 and 12 bits) and also these tags can be detected by the camera even at odd conditions. When the tag is seen by the camera, the algorithm computes the tag‚Äôs complete pose defining its own reference system relative to the camera (i.e Location of the tag is known with high accuracy). This reference system is defined as follows: If we look perpendicularly to a non rotated tag, The Z+ axis comes out towards us from the center of the tag plane, The X+ axis points leftwards and the Y+ axis points upwards (a left-hand reference system). The values computed by _apriltagsComp_ are the translation vector from the camera to the center of the tag‚Äôs reference system, and the three Euler angles that encode the relative orientation of the tag‚Äôs reference system wrt to the camera reference system.
 
 The _AprilTags.cdsl_ file specifies how _apriltagsComp_ has been generated and how it can be re-generated:
 
@@ -428,7 +428,7 @@ Component AprilTagsComp{
 
 </div>
 
-This files tells us that the component requires -will be calling- three RoboComp interfaces: Camera, RGBDBus y RGBD, which are normal and depth cameraís interfaces written in RoboCompís IDSL language. You can find those files in _~/robocomp/interfaces/IDSLs_. Also, the component will publish the data defined in the _AprilTags_ interface and will implement the _GetAprilTags_ interface. This means that using images provided by a component implementing the camera or RGBD interfaces, it will try to detect any tags in them and compute their 6D pose. Finally, it will publish a vector with all the tags idís and poses to the Iceís STORM broker, and also it will attend any direct requests (remote procedure calls) received from other components through the _GetAprilTags_ interface. So it is a rather serviceable and handy component!
+This files tells us that the component requires -will be calling- three RoboComp interfaces: Camera, RGBDBus y RGBD, which are normal and depth camera‚Äôs interfaces written in RoboComp‚Äôs IDSL language. You can find those files in _~/robocomp/interfaces/IDSLs_. Also, the component will publish the data defined in the _AprilTags_ interface and will implement the _GetAprilTags_ interface. This means that using images provided by a component implementing the camera or RGBD interfaces, it will try to detect any tags in them and compute their 6D pose. Finally, it will publish a vector with all the tags id‚Äôs and poses to the Ice‚Äôs STORM broker, and also it will attend any direct requests (remote procedure calls) received from other components through the _GetAprilTags_ interface. So it is a rather serviceable and handy component!
 
 To access **apriltagsComp** you need to install from _http://github.org/robocomp_ the repository named _robocomp-robolab_.
 
@@ -515,7 +515,7 @@ ID:21-30 = 0.17   #tag size in meters                       //Tags numbers 21-30
 
 AprilTagsFamily is a set of tags, There are different families like 36h10,25h9,16h5 however _tagCodes36h11_ is recommended. Each tag has an ID that is printed inside the surrounding square using Hamming code. Instructions to print tags and other tag families can be found [here](http://april.eecs.umich.edu/wiki/index.php/AprilTags). The algorithm needs the real size of the tag to estimate its position and orientation in space. We can give the component tags of different sizes, As long as they correspond to different ranges of IDs, as specified in the configuration file above.
 
-##Starting the component To start the component we need a real camera connected to the cameraV4lComp component or the RCIS simulator started with a file that includes virtual tags, such as _simpleworld.xml_, Tutorial can be found [here](virtualapriltagstutorial.md). Once RCIS is up and running, It will provide the RGBD.idsl interface (not Camera.idsl for now) at port 10096, which is what the configuration file states. To avoid changing the _generic_config_ file in the repository, We can copy it to the componentís home directory, So changes will remain untouched by future git pulls:
+##Starting the component To start the component we need a real camera connected to the cameraV4lComp component or the RCIS simulator started with a file that includes virtual tags, such as _simpleworld.xml_, Tutorial can be found [here](virtualapriltagstutorial.md). Once RCIS is up and running, It will provide the RGBD.idsl interface (not Camera.idsl for now) at port 10096, which is what the configuration file states. To avoid changing the _generic_config_ file in the repository, We can copy it to the component‚Äôs home directory, So changes will remain untouched by future git pulls:
 
 <div class="highlighter-rouge">
 
@@ -539,7 +539,7 @@ bin/apriltagscomp --Ice.Config=config
 
 </div>
 
-If the robotís camera is pointing towards one of the tags, You should see in the terminal lines showing the ID and pose of each visible tag.
+If the robot‚Äôs camera is pointing towards one of the tags, You should see in the terminal lines showing the ID and pose of each visible tag.
 
 </div>
 
@@ -551,7 +551,7 @@ If the robotís camera is pointing towards one of the tags, You should see in the
 
 [A Brief introduction to Components](components.md)
 
-[Creation of a new component using RoboCompís Eclipse based DSLEditor](component_creation_with_DSLEditor.md)
+[Creation of a new component using RoboComp‚Äôs Eclipse based DSLEditor](component_creation_with_DSLEditor.md)
 
 [Maintaining your own repository of components](using_github.md)
 
@@ -559,13 +559,13 @@ If the robotís camera is pointing towards one of the tags, You should see in the
 
 [Using the new **robocompdsl** component generation command line tool](robocompdsl.md)
 
-[The E. Olsonís AprilTags component](https://github.com/robocomp/robocomp-robolab/blob/master/components/apriltagsComp/README.md)
+[The E. Olson‚Äôs AprilTags component](https://github.com/robocomp/robocomp-robolab/blob/master/components/apriltagsComp/README.md)
 
 [Creating a Python component using **robocompdsl** that subscribes to _apriltagsComp_](robocompdsl_python.md)
 
-[InnerModel, RoboCompís internal representation of reality]
+[InnerModel, RoboComp‚Äôs internal representation of reality]
 
-[RoboCompís robots: Ursus, Loki and the others]
+[RoboComp‚Äôs robots: Ursus, Loki and the others]
 
 [**robocomp-robolab** components]
 

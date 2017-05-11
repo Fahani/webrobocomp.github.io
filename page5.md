@@ -16,7 +16,7 @@ Hi all, my name is Harit Pandya.I am 4th year PhD student at Robotic Research Ce
 
 # Short description of the project
 
-In this project, I consider the problem of object detection using Convolutional Neural Network (CNN) for Robocomp library. The task comprises of two separate components: Firstly, I will integrate current Robocomp repository to work with Caffe library for object recognition. Secondly I will interface simulation environment of RoboComp with the detection framework. Given an image the primary task is to detect the location of the object that will be given by a bounding box around the object. That is followed by classification task where the objective is to predict the category of the object. Major challenge is object localization in the image. CNNs’ work pretty well for classification tasks, however for object localization edge and contrast based features are used by state-of-art object detection methods that generate object proposals. Another challenge is working with CAD models, since most of the model are low textured hence finding features is difficult for them.
+In this project, I consider the problem of object detection using Convolutional Neural Network (CNN) for Robocomp library. The task comprises of two separate components: Firstly, I will integrate current Robocomp repository to work with Caffe library for object recognition. Secondly I will interface simulation environment of RoboComp with the detection framework. Given an image the primary task is to detect the location of the object that will be given by a bounding box around the object. That is followed by classification task where the objective is to predict the category of the object. Major challenge is object localization in the image. CNNsâ€™ work pretty well for classification tasks, however for object localization edge and contrast based features are used by state-of-art object detection methods that generate object proposals. Another challenge is working with CAD models, since most of the model are low textured hence finding features is difficult for them.
 
 Following are the deliverables for the project:
 
@@ -42,7 +42,7 @@ Harit Pandya
 
 My first milestone is to understand the current code-base. The projected time was 2 weeks.This is the update after one week.
 
-I went through the code of current rcmanager which is written on python.This tool have only limited functionalities.But Later, I came to know that robocomp code was initially hosted on source-forge.It contained an old version of manager in the name of compmanger. I didn’t dig deep into code because right now, we should be planning about which all functionalities should we take from the old manager tools.So spending too much time on old code before coding starts seems useless.
+I went through the code of current rcmanager which is written on python.This tool have only limited functionalities.But Later, I came to know that robocomp code was initially hosted on source-forge.It contained an old version of manager in the name of compmanger. I didnâ€™t dig deep into code because right now, we should be planning about which all functionalities should we take from the old manager tools.So spending too much time on old code before coding starts seems useless.
 
 ## Current rcmanager written in python
 
@@ -60,7 +60,7 @@ Since this class is parent class of the gui tool(All others become the data memb
 
 ## In short
 
-The rcmanager tool written on the python will helps to create a tree of components and control them. Control them in the sense turning them on and off. For controlling the behavior of the components we have to check the corresponding yakuake tab. Its graph tree have a very good animations.We can drag them and it will act like pulling a big floating rope on water. But I don’t find this floating feature that useful considering this tool is supposed to control hundreds of components at a time,and I believe that this feature may require more updating frequency and will take some processing power.
+The rcmanager tool written on the python will helps to create a tree of components and control them. Control them in the sense turning them on and off. For controlling the behavior of the components we have to check the corresponding yakuake tab. Its graph tree have a very good animations.We can drag them and it will act like pulling a big floating rope on water. But I donâ€™t find this floating feature that useful considering this tool is supposed to control hundreds of components at a time,and I believe that this feature may require more updating frequency and will take some processing power.
 
 ## Old managercomp
 
@@ -76,7 +76,7 @@ This tool also contains a few other modules like mygraphtab, mytreewidget which 
 
 This tool also contains some sections for Log,attribute and Component list box in the right.
 
-Logging the data seems a cool idea.But as we are planning to embed a console to control the deployed component in our project this won’t be that useful.But still to get a brief about actions(uping of components,notifying when some component went down etc) this should be included in the new tool.
+Logging the data seems a cool idea.But as we are planning to embed a console to control the deployed component in our project this wonâ€™t be that useful.But still to get a brief about actions(uping of components,notifying when some component went down etc) this should be included in the new tool.
 
 * * *
 
@@ -100,7 +100,7 @@ So far I have compiled a list of features that can be implemented in to rcmaster
 *   **Component deployment/monitoring** - RCmaster can also launch a set of components at start which can be set in the configuration file.Also when a query comes for a component the rcmaster could launch it if its not running. Also if a component is exits unexpectedly then rcmaster could take some specific actions like restarting that component or notifying any other component etc
 *   **Load Balancing/Backup** - RCmaster may allow multiple replica of components for load balancing or backup. It could analyze the load of a component and can distribute the could resolve the future proxies to an low load component
 *   **Gui For Master** - This can be achieved by modifying rcmanager to use rcmaster (can remove the tedious config file for rc-manger).
-*   **Multiple masetrs** - This is one feature in which some effort and thought is required. we can keep them as backup and keep them in sync, may help in cases of temporary connection loses as it can handle local lookups in local master a master’s can communicate with each other to get remote name lookups. more discussion id needed on this.
+*   **Multiple masetrs** - This is one feature in which some effort and thought is required. we can keep them as backup and keep them in sync, may help in cases of temporary connection loses as it can handle local lookups in local master a masterâ€™s can communicate with each other to get remote name lookups. more discussion id needed on this.
 
 Also i am thinking if we need to allow multiple masters in the same machine. This may act as backup or could share the query load
 
@@ -138,7 +138,7 @@ Yash sanap
 
 <span class="post-date">19 May 2016</span>
 
-Hi! My name is Iván Barbecho Delgado, I’m from Extremadura and I was born on 25.04.1994 and I’m study computer engineering in School of Technology of University of Extremadura. Actually I’m working in a project wich robolab, this consist in making walk a hexapod and put sensors.
+Hi! My name is IvÃ¡n Barbecho Delgado, Iâ€™m from Extremadura and I was born on 25.04.1994 and Iâ€™m study computer engineering in School of Technology of University of Extremadura. Actually Iâ€™m working in a project wich robolab, this consist in making walk a hexapod and put sensors.
 
 I can not start my project, because I have perform exams, but when the exams are finished, I will work on the project thoroughly. For now I will work 1 to 2 hours a day in my project. In June, I will start my project seriously. This is my plan to work.
 
@@ -150,7 +150,7 @@ Qt State Machine Framework: http://doc.qt.io/qt-4.8/statemachine-api.html
 
 DSL: https://en.wikipedia.org/wiki/Domain-specific_language
 
-RoboComp’s repository: https://github.com/robocomp
+RoboCompâ€™s repository: https://github.com/robocomp
 
 </div>
 
