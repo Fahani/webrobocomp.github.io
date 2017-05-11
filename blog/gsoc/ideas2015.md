@@ -1,0 +1,21 @@
+# _GSoC,_ 2015 ideas
+
+<span class="post-date">22 Jun 2015</span>
+
+1.- **RoboComp tutorial, social management and documentation**: RoboComp’ sources has been ported to GitHub and we are building a new documentation repository there. We are using GitHub markdown language (GFM) write new docs and turorials. We want to build a set of short tutorials that guide the new users along several interconnected topics, such as component oriented programming, robotics, computer vision, robotics software modules integrating heterogeneous sources, cognitive architectures and testing and validating, all from inside RoboComp. These new tutorials will be developed using RoboComp’s robotics simulator, RCIS, so interactive examples can be created and used in the explanations. This package also includes work on automated installation scripts using CMake. Generic knowledge of linux systems, website and wiki administration is needed. This is a key task for our project as it would bring more attention to it as it will open the development to new people interested in the field.
+
+Required student level: intermediate programming and systems administration.
+
+2.- **Computer vision components and libraries management**: RoboComp is being used to build a new cognitive architecture called RoboCog. Among the different modules already in progress, the object detection module is crucially important. We are pursuing an efficient 2D/3D vision pipeline that, working with the robot body control module, is able to localize, recognize, fit a pre-existing model and track a series of daily objects that the robot might encounter. Grasping would be one target of this pipeline, or even a means to complete recognition. There are currently many components implementing computer vision algorithms and intensive work done in pipeline construction. The key tasks on this idea would be to collaborate in the creation of high level tools to organize, document and test different pipelines for an specific task. These tools will be designed in collaboration with the mentors and tested in RoboComp’s RCIS simulator and real robots.
+
+Required student level: intermediate computer vision knowledge, C++ programming, basic CMake knowledge
+
+3.- **RoboComp Building and deployment system design**: Current CMake building system in RoboComp is limited only to the core libraries, the RCIS simulator and some additional tools. A very useful task would be to come up with a more complex CMake structure that could build the entire system, including all finished components, without breaking current dependencies. Also, a few scripts will have to be built to compile individual components, run tests, search and inspect the source tree efficiently, check dependencies and documentation requirements. This code needs also to take into account the dependencies between components that can be stored in xml-like files -i,e, manifestos- within the component itself.
+
+Required student level: intermediate CMake knowledge, programming in C++, basic knowledge of shell scripting
+
+4.- **Deployment generator and run-time monitoring**: When creating a specific robot architecture, many components have to be brought into a common deployment environment. Each component has its runtime configuration and network parameters that have to be declared in a common deployment file, from where the complete system can be brought to life. This task proposes the design of a domain specific language to facilitate the creation of shellscript deployment files that are syntactically and semantically correct. Once a net of RoboComp components is up and running, additional tools are needed to monitorize their execution through an existing default interface called CommonBehavior.This tool will use the DSL as input and will show a graphical representation of the running system. It will be written in Python and will extend important efforts already made in this direction.
+
+Required student level: intermediate programming with Python and introductory knowledge of formal languages
+
+For any questions, proposals, or comments please contact RoboComp’s org admin at: marcogunex.es
