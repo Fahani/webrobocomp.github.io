@@ -39,7 +39,7 @@ rgbd_proxy->getRGB(rgbMatrix,hState,bState);
 
 1.  show camera output
 
-    imshow(“Display window”,src);
+    imshow(â€œDisplay windowâ€,src);
 
 # Specific worker constructor:
 

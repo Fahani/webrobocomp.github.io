@@ -27,7 +27,7 @@ int operation = 4 + 2;
 
 </div>
 
-Mat element = getStructuringElement( morph_elem, Size( … 2_morph_size + 1, 2_morph_size+1 ), Point( morph_size, morph_size ) ); morphologyEx( blt, tophat, operation, element);
+Mat element = getStructuringElement( morph_elem, Size( â€¦ 2_morph_size + 1, 2_morph_size+1 ), Point( morph_size, morph_size ) ); morphologyEx( blt, tophat, operation, element);
 
 1.  Thresholding to create binay image.
 

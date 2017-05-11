@@ -13,7 +13,7 @@ I have developed and thoroughly tested RCMaster. Also I have changed the C++ and
 I will list down the features of RCMaster now:
 
 *   All the components can register to RCMaster in which they will be given a free port
-*   The queries can be filtered by various parameters. e.g: A component can get the list of all the interfaces of name “test” running on the host 192.168.0.21
+*   The queries can be filtered by various parameters. e.g: A component can get the list of all the interfaces of name â€œtestâ€ running on the host 192.168.0.21
 *   RCMaster periodically saves the database so that even if the RCMaster crashes it can recover the data on restart and prevent the hassle of restarting the components.
 *   RCMaster has a cache implemented so that if a component is crashed it will be assigned the same port on restart. So that all the previous connected components can continue the connection.
 *   The components will now wait until the required interfaces are up and if any of the interfaces go down then they will suspend until they are up. This allows us to start the components in any order.
@@ -104,7 +104,7 @@ src/rcmaster.py    This will start RCMaster.    Now start client2 , then you can
 
 </div>
 
-src/client2.py –Ice.Config=etc/config
+src/client2.py â€“Ice.Config=etc/config
 
 Now start client1
 
@@ -117,7 +117,7 @@ Now start client1
 
 </div>
 
-Now you can see the client1 printing “Hello from Client2” periodically. Play around
+Now you can see the client1 printing â€œHello from Client2â€ periodically. Play around
 
 ### Demo video
 

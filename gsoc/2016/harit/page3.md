@@ -39,7 +39,7 @@ net_->Reshape();
 
 </div>
 
-1.  Wrap the input layer of the network in separate cv::Mat objects (one per channel). This way we save one memcpy operation and ww don’t need to rely on cudaMemcpy2D. The last preprocessing operation will write the separate channels directly to the input layer.
+1.  Wrap the input layer of the network in separate cv::Mat objects (one per channel). This way we save one memcpy operation and ww donâ€™t need to rely on cudaMemcpy2D. The last preprocessing operation will write the separate channels directly to the input layer.
 
 <div class="highlighter-rouge">
 
