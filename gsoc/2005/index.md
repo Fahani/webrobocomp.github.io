@@ -58,14 +58,14 @@
 
 **Mercedes Palotelli**
 
-1.  [GSoC, Symbolic planning techniques for recognizing objects domestic #1](http://robocomp.github.io/website/2015/06/12/mercedes1/)
+1.  [GSoC, Symbolic planning techniques for recognizing objects domestic #1](/webrobocomp.github.io/gsoc/2005/mercedes-palotelli/page1)
 
-2.  [GSoC, Symbolic planning techniques for recognizing objects domestic #2: Inverse Kinematics](http://robocomp.github.io/website/2015/06/15/mercedes2/)
+2.  [GSoC, Symbolic planning techniques for recognizing objects domestic #2: Inverse Kinematics](/webrobocomp.github.io/gsoc/2005/mercedes-palotelli/page2)
 
-3.  [GSoC, Symbolic planning techniques for recognizing objects domestic #3: Visual Inverse Kinematics](http://robocomp.github.io/website/2015/06/17/mercedes3/)
+3.  [GSoC, Symbolic planning techniques for recognizing objects domestic #3: Visual Inverse Kinematics](/webrobocomp.github.io/gsoc/2005/mercedes-palotelli/page3)
 
-4.  [GSoC, Symbolic planning techniques for recognizing objects domestic #4: Inverse kinematics Graph Generator](http://robocomp.github.io/website/2015/08/13/mercedes4/)
+4.  [GSoC, Symbolic planning techniques for recognizing objects domestic #4: Inverse kinematics Graph Generator](/webrobocomp.github.io/gsoc/2005/mercedes-palotelli/page4)
 
-5.  [GSoC, Symbolic planning techniques for recognizing objects domestic #5: System Review](http://robocomp.github.io/website/2015/08/16/mercedes5/)
+5.  [GSoC, Symbolic planning techniques for recognizing objects domestic #5: System Review](/webrobocomp.github.io/gsoc/2005/mercedes-palotelli/page5)
 
-6.  [GSoC, Symbolic planning techniques for recognizing objects domestic #6: Grasping object](http://robocomp.github.io/website/2015/08/20/mercedes6/)
+6.  [GSoC, Symbolic planning techniques for recognizing objects domestic #6: Grasping object](/webrobocomp.github.io/gsoc/2005/mercedes-palotelli/page6)
