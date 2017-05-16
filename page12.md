@@ -118,7 +118,6 @@ And that’s it! Now we have a whole very basic system in which we can test out 
 
 *   If you get locale warnings in the chroot like **“Locale not supported by C library.”** or **“perl: warning: Setting locale failed.”**, then try one or more of these commands:
 
-<div class="highlighter-rouge">
 
 ```
     sudo dpkg-reconfigure locales
