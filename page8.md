@@ -140,7 +140,6 @@ this will install robocomp along with basic components into /opt/robocomp.
 Nithin Murali
 
 
-<div class="post">
 
 # [_GSoC,_ Computer vision components and libraries management
 
