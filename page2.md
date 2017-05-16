@@ -1,14 +1,14 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
 
-<div class="post">
+
+
 
 # [Cog and PyParsing](/website/2016/07/14/dgallegosWeek7/)
 
-<span class="post-date">14 Jul 2016</span> 
+14 Jul 2016 
 
 Let’s go to know how RoboCompDSL works.
 
@@ -18,7 +18,6 @@ One of the most important modules used in RoboCompDSL is pyparsing. It is a Pyth
 
 **A simple example of it would be:**
 
-<div class="highlighter-rouge">
 
 ```
 from pyparsing import Word, alphas
@@ -28,18 +27,18 @@ print (hello, "->", greet.parseString( hello ))
 
 ```
 
-</div>
+
 
 **Output:**
 
-<div class="highlighter-rouge">
+
 
 ```
 $ Hello, World! -> ['Hello', ',', 'World', '!']
 
 ```
 
-</div>
+
 
 This module is used in scripts _parseIDSL.py_ and _parseCDSL.py_ to extract the files CDSL and IDSL necessary information that will be used to generate code routine.
 
@@ -49,7 +48,6 @@ Cog is a code generator written in Python that allows you to inject Python code 
 
 **An example of use is shown in a file either:**
 
-<div class="highlighter-rouge">
 
 ```
 Static part of our file
@@ -64,11 +62,9 @@ Another fragment of our file
 
 ```
 
-</div>
 
 **Running Cog:**
 
-<div class="highlighter-rouge">
 
 ```
 static part of the file
@@ -79,15 +75,10 @@ Another fragment of our file
 
 ```
 
-</div>
-
-</div>
-
-<div class="post">
 
 # [Update State Machine Code Generation in C++](/website/2016/07/11/ibarbechWeek6/)
 
-<span class="post-date">11 Jul 2016</span>
+11 Jul 2016
 
 # Update State Machine Code Generation in C++
 
@@ -102,13 +93,10 @@ This portion disappears of files generated:
 *   **specificworker.h**
 *   **specificworker.cpp**
 
-</div>
-
-<div class="post">
 
 # [Progress with RoboCompDSL](/website/2016/07/08/dgallegosWeek6/)
 
-<span class="post-date">08 Jul 2016</span>
+08 Jul 2016
 
 Hi! I am back. It’s been weeks since my last post, because there was not much to say. In this post I will summarize the progress with RoboCompDSL. Now I finished the biggest work, we can communicate two Robocomp components using ROS middleware or ICE middleware and it is as simple as has been done so far. We just need write an IDSL(s) with some restrictions and a CDSL for our component.
 
@@ -124,13 +112,10 @@ Finally I would like to highlight a further set of additions that I made:
 
 **Support QT5** completed and tested (an example of use in the image above).
 
-</div>
-
-<div class="post">
 
 # [Creating test for CNN object detection component in simulation enviornment (rcis)](/website/2016/06/25/HaritWeek5/)
 
-<span class="post-date">25 Jun 2016</span>
+25 Jun 2016
 
 # Design Specifications:
 
@@ -138,7 +123,6 @@ The primary goal is to detect objects in simulation environment using CNN. This 
 
 # CSDL interface file for the component:
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/RGBD.idsl";
@@ -159,7 +143,6 @@ Component testODCNNsimulation
 
 ```
 
-</div>
 
 # Specific worker compute method:
 
@@ -175,7 +158,7 @@ rgbd_proxy->getRGB(rgbMatrix,hState,bState);
 
 callback declaration when button pressed.
 
-<div class="highlighter-rouge">
+
 
 ```
 connect(pushButtonLeft, SIGNAL(clicked()), this, SLOT(moveleft()));
@@ -188,11 +171,10 @@ connect(pushButtonLeft, SIGNAL(clicked()), this, SLOT(moveleft()));
 
 ```
 
-</div>
 
 # Callback methods:
 
-<div class="highlighter-rouge">
+
 
 ```
 void SpecificWorker::moveleft()
@@ -216,19 +198,17 @@ catch(const Ice::Exception& ex)
 
 ```
 
-</div>
 
 # Results:
 
 ![](images/week5/week5_Simulation1.png) ![](images/week5/week5_Simulation2.png) ![](images/week5/week5_Simulation3.png)
 
-</div>
 
-<div class="post">
+
 
 # [Update](/website/2016/06/22/BasilWeek6/)
 
-<span class="post-date">22 Jun 2016</span>
+22 Jun 2016
 
 # Update –Week 6
 
@@ -244,10 +224,6 @@ I have also decided to use subclasses of all three main classes in qt Graphics V
 
 Basil M Varghese
 
-</div>
 
-</div>
 
-<div class="pagination">[Older](/webrobocomp.github.io/page3) [Newer](/webrobocomp.github.io)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page3) [Newer](/webrobocomp.github.io)
