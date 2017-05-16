@@ -1,6 +1,6 @@
 # Review of current Rcmanager
 
-<span class="post-date">30 May 2016</span>
+30 May 2016
 
 My first milestone is to understand the current code-base. The projected time was 2 weeks.This is the update after one week.
 

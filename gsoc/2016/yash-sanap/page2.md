@@ -1,6 +1,6 @@
 # week 2 updates
 
-<span class="post-date">29 May 2016</span>
+29 May 2016
 
 # conceptualization
 

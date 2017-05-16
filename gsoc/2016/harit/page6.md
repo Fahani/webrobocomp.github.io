@@ -1,6 +1,6 @@
 # Creating test for CNN object detection component
 
-<span class="post-date">21 Jun 2016</span>
+21 Jun 2016
 
 # Design Specifications:
 
@@ -8,7 +8,6 @@ This components has following tasks: firstly, read an image from command line ar
 
 # CSDL interface file for the component:
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/objectDetection.idsl";
@@ -25,7 +24,6 @@ Component testObjectDetectionComp
 
 ```
 
-</div>
 
 # Specific worker compute method:
 
@@ -43,7 +41,6 @@ objectdetectioncnn_proxy->getLabelsFromImage(rgbMatrix, src.rows, src.cols, resu
 
 1.  Display detection Bounding boxes.
 
-    <div class="highlighter-rouge">
 
     ```
          for(unsigned int i=0; i < result.size();i++ )
@@ -63,5 +60,3 @@ objectdetectioncnn_proxy->getLabelsFromImage(rgbMatrix, src.rows, src.cols, resu
      	imshow("Source image", src ); Results: ============     <img src="images/week5/week5_Real1.png" alt="" width="400"/>  <img src="images/week5/week5_Real2.png" alt="" width="400"/>  <img src="images/week5/week5_Real3.png" alt="" width="400"/> 
 
     ```
-
-    </div>

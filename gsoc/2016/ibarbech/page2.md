@@ -1,12 +1,11 @@
 # State Machine Code Generation in C++
 
-<span class="post-date">21 Jun 2016</span>
+21 Jun 2016
 
 # Definition Language
 
 Hi all. This time I write to explain the work done during these first three weeks. In principle, and after talking with my mentor, I began to study as defined a formal language. Finally after learning the steps to the definition I started building an example of this language. This would be contained in a file .smdsl, this language is a domain-specific language:
 
-<div class="highlighter-rouge">
 
 ```
 name_machine{
@@ -31,7 +30,6 @@ name_machine{
 
 ```
 
-</div>
 
 []→ optionality *→ Item List
 
@@ -41,7 +39,6 @@ I then created the parseSMDSL.py file that parses this code. This code creates a
 
 To parse the code I have taken into account several things.
 
-<div class="highlighter-rouge">
 
 ```
 Machine: *	The machine must have a name. *	The machine must have a mandatory initial state. *	The initial state can not be on the list states. *	The final state can not be on the list states. *	The initial state can not be the same as the final state.
@@ -49,7 +46,6 @@ Substates: *	Must have a parent state.
 
 ```
 
-</div>
 
 If it is parallel:
 
@@ -112,7 +108,6 @@ Implementation of the functions executed by each of the states.
 
 Example statemachine.smdsl:
 
-<div class="highlighter-rouge">
 
 ```
 Machine_testcpp{
@@ -163,13 +158,11 @@ Machine_testcpp{
 
 ```
 
-</div>
 
 *   **genericworker.h**
 
 Example genericworker.h:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -300,13 +293,12 @@ signals:
 
 ```
 
-</div>
+
 
 *   **genericworker.cpp**
 
 Example genericworker.cpp:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -416,13 +408,11 @@ void GenericWorker::setPeriod(int p)
 
 ```
 
-</div>
 
 *   **specificworker.h**
 
 Example specificworker.h:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -494,13 +484,11 @@ private slots:
 
 ```
 
-</div>
 
 *   **specificworker.cpp**
 
 Example specificworke.cpp:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -626,5 +614,3 @@ void SpecificWorker::fun_test5sub2()
 }
 
 ```
-
-</div>

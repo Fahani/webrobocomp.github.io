@@ -1,6 +1,6 @@
 # Introduction, Problem Statement and deliverables
 
-<span class="post-date">11 May 2016</span>
+11 May 2016
 
 # Introduction
 

@@ -1,6 +1,6 @@
 # final week updates
 
-<span class="post-date">20 Aug 2016</span>
+20 Aug 2016
 
 # Final Evaluation Updates
 
@@ -25,7 +25,6 @@ Here I will describe how to generate a sample component and how to run it
 
 First write the cdsl description of the component client1.cdsl
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/RCMaster.idsl";
@@ -42,13 +41,11 @@ Component client1{
 
 ```
 
-</div>
 
 Now generate the component by running `robocompdsl client1.cdsl ./`
 
 Now generate another component client2.cdsl by running `robocompdsl client2.cdsl ./`
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/RCMaster.idsl";
@@ -64,11 +61,9 @@ Component client2{
 
 ```
 
-</div>
 
 Edit the client to `src/specificworker.py` in client 2 and add the below code in the compute function.
 
-<div class="highlighter-rouge">
 
 ```
 try:
@@ -78,44 +73,38 @@ try:
 
 ```
 
-</div>
 
 Now edit the printmsg() in `src/specificworker` to add the below line
 
-<div class="highlighter-rouge">
 
 ```
 print message
 
 ```
 
-</div>
+
 
 Now we can run all the components.
 
 First start the RCMaster and then the components
 
-<div class="highlighter-rouge">
 
 ```
 src/rcmaster.py    This will start RCMaster.    Now start client2 , then you can see that the client 2 is waiting for client1
 
 ```
 
-</div>
 
 src/client2.py –Ice.Config=etc/config
 
 Now start client1
 
-<div class="highlighter-rouge">
 
 ```
     src/client1.py --Ice.Config=etc/config
 
 ```
 
-</div>
 
 Now you can see the client1 printing “Hello from Client2” periodically. Play around
 
@@ -129,9 +118,9 @@ You can see the video of the above demo [here](https://github.com/robocomp/websi
 
 [Pullrequest1](https://github.com/robocomp/robocomp/pull/78)
 
-<a href="">Pullrequest2</a>
+Pullrequest2
 
-<a href="">Pullrequest3</a>
+Pullrequest3
 
 * * *
 

@@ -1,6 +1,6 @@
 # Creating test for CNN object detection component in simulation enviornment (rcis)
 
-<span class="post-date">25 Jun 2016</span>
+25 Jun 2016
 
 # Design Specifications:
 
@@ -8,7 +8,6 @@ The primary goal is to detect objects in simulation environment using CNN. This 
 
 # CSDL interface file for the component:
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/RGBD.idsl";
@@ -29,7 +28,6 @@ Component testODCNNsimulation
 
 ```
 
-</div>
 
 # Specific worker compute method:
 
@@ -45,7 +43,6 @@ rgbd_proxy->getRGB(rgbMatrix,hState,bState);
 
 callback declaration when button pressed.
 
-<div class="highlighter-rouge">
 
 ```
 connect(pushButtonLeft, SIGNAL(clicked()), this, SLOT(moveleft()));
@@ -58,11 +55,9 @@ connect(pushButtonLeft, SIGNAL(clicked()), this, SLOT(moveleft()));
 
 ```
 
-</div>
 
 # Callback methods:
 
-<div class="highlighter-rouge">
 
 ```
 void SpecificWorker::moveleft()
@@ -86,7 +81,6 @@ catch(const Ice::Exception& ex)
 
 ```
 
-</div>
 
 # Results:
 

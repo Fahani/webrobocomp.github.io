@@ -1,6 +1,6 @@
 # Update
 
-<span class="post-date">22 Jun 2016</span>
+22 Jun 2016
 
 # Update –Week 6
 

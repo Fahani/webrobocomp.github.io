@@ -1,6 +1,6 @@
 # Caffe C++ API
 
-<span class="post-date">11 Jun 2016</span>
+11 Jun 2016
 
 # Working with Caffe CPP API:
 
@@ -30,25 +30,22 @@ Pipeline:
 
 2.  Forward dimension change to all layers.
 
-<div class="highlighter-rouge">
+
 
 ```
 net_->Reshape();
 
 ```
 
-</div>
 
 1.  Wrap the input layer of the network in separate cv::Mat objects (one per channel). This way we save one memcpy operation and ww don’t need to rely on cudaMemcpy2D. The last preprocessing operation will write the separate channels directly to the input layer.
 
-<div class="highlighter-rouge">
 
 ```
 WrapInputLayer(&input_channels);
 
 ```
 
-</div>
 
 1.  Convert the input image to the input image format of the network and write the separate BGR planes directly to the input layer of the network.
 

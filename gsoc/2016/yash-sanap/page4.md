@@ -1,6 +1,6 @@
 # week 6 updates
 
-<span class="post-date">20 Jun 2016</span>
+20 Jun 2016
 
 # MidTerm Updates
 

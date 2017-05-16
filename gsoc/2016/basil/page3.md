@@ -1,6 +1,6 @@
 # Introduction
 
-<span class="post-date">19 Jun 2016</span>
+19 Jun 2016
 
 # UPDATES
 

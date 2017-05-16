@@ -1,6 +1,6 @@
 # week 3 updates
 
-<span class="post-date">05 Jun 2016</span>
+05 Jun 2016
 
 # Basic coding
 

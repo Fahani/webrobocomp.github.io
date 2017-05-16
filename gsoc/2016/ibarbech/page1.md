@@ -1,6 +1,6 @@
 # Who I am? What will I make?
 
-<span class="post-date">19 May 2016</span>
+19 May 2016
 
 Hi! My name is Iván Barbecho Delgado, I’m from Extremadura and I was born on 25.04.1994 and I’m study computer engineering in School of Technology of University of Extremadura. Actually I’m working in a project wich robolab, this consist in making walk a hexapod and put sensors.
 

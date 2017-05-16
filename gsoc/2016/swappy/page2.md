@@ -1,6 +1,6 @@
 # Progress -- Automatic the uploading of binary files using git-annex
 
-<span class="post-date">11 Jun 2016</span>
+11 Jun 2016
 
 This is the second post in the series of post pertaining to the project “Automatic the uploading of binary files using git-annex”. This post aims to show the progress made until the mid term evaluation.
 
@@ -14,7 +14,7 @@ It was showing an error `"Remote origin not usable by git-annex; setting annex-i
 
 Now the tool works and all, but as already present in the problem statment, we need to build a tool which can further ease the process, so if we can create a little bit of more abstraction it will work best. So we decided to built a little bit of more abstraction according to following steps:
 
-<div class="highlighter-rouge">
+
 
 ```
 Installing rlcone [Once only]
@@ -40,11 +40,9 @@ Cloning repos
 
 ```
 
-</div>
 
 The abstraction over the above steps will be as follows:
 
-<div class="highlighter-rouge">
 
 ```
 Install Robocomp
@@ -63,6 +61,5 @@ Cloning repos
 
 ```
 
-</div>
 
 Swapnil Sharma

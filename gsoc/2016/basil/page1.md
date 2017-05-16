@@ -1,6 +1,6 @@
 # Introduction
 
-<span class="post-date">18 May 2016</span>
+18 May 2016
 
 # INTRODUCTION
 

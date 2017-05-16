@@ -1,6 +1,6 @@
 # State Machine Code Generation in Python
 
-<span class="post-date">19 Jul 2016</span>
+19 Jul 2016
 
 # Equality between State Machine Code Generation in C++ and in Python
 
@@ -29,7 +29,6 @@ This file containd the code that is executed when the state machine active a sta
 
 Example genericworker.py:
 
-<div class="highlighter-rouge">
 
 ```
 #
@@ -244,13 +243,11 @@ class GenericWorker(QtCore.QObject):
 
 ```
 
-</div>
 
 *   **specificworker.py**
 
 Example specificworker.py:
 
-<div class="highlighter-rouge">
 
 ```
 #
@@ -415,17 +412,14 @@ class SpecificWorker(GenericWorker):
 
 ```
 
-</div>
 
 # Emit Signal
 
 For realice a transition between states we has emit the corresponding signal. The signal is emit as follows:
 
-<div class="highlighter-rouge">
 
 ```
 self.statesrctostatedst.emit
 
 ```
 
-</div>

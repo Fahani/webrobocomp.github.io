@@ -1,6 +1,6 @@
 # Top-Hat filter based object proposal generation
 
-<span class="post-date">15 Jun 2016</span>
+15 Jun 2016
 
 # Top-Hat filter based object proposal generation:
 
@@ -18,14 +18,12 @@ The pipeline is as follows:
 
 3.  Apply the specified morphology operation (tophat).
 
-<div class="highlighter-rouge">
 
 ```
 int operation = 4 + 2;
 
 ```
 
-</div>
 
 Mat element = getStructuringElement( morph_elem, Size( … 2_morph_size + 1, 2_morph_size+1 ), Point( morph_size, morph_size ) ); morphologyEx( blt, tophat, operation, element);
 

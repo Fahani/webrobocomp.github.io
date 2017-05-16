@@ -1,6 +1,6 @@
 # Update State Machine Code Generation in C++
 
-<span class="post-date">11 Jul 2016</span>
+11 Jul 2016
 
 # Update State Machine Code Generation in C++
 
