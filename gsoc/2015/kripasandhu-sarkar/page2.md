@@ -2,7 +2,7 @@
 
 #2
 
-<span class="post-date">02 Jul 2015</span>
+02 Jul 2015
 
 **Open Detection:** Following the idea that it is better to have an independent library for Object Detection than contributing directly to Robocomp, I created the new library ‘Open Detection’. It is available now in the following links
 

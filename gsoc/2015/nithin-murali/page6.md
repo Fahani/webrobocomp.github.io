@@ -2,7 +2,7 @@
 
 #2
 
-<span class="post-date">25 Jun 2015</span>
+25 Jun 2015
 
 For managing these components we would need different utilities. So i started compiling a list of different utilities keeping a reference to other frameworks. Finally i have decide on my list
 

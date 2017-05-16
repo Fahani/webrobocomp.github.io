@@ -1,6 +1,6 @@
 # _GSoC,_ Building and deployment system design
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 ###About Me:
 

@@ -1,6 +1,6 @@
 # Till now ... after midterm
 
-<span class="post-date">08 Aug 2015</span>
+08 Aug 2015
 
 Hi all , In this post i will talk about what i have been working on after midterm evaluation. I have spend my time working mostly on packaging supporting libraries for Robocomp.This includes FCL and libccd. FCL is a library for performing three types of proximity queries on a pair of geometric models composed of triangles. libccd is a library for collision detection between two convex shapes.Technically Robocomp is only using FCL but libccd is an dependency of fcl, as i couldn’t find an updated ppa for it i decided to package it too. you can see those packages [here](https://launchpad.net/~imnmfotmal)
 

@@ -2,7 +2,7 @@
 
 #4
 
-<span class="post-date">19 Aug 2015</span>
+19 Aug 2015
 
 **Experience** It has been a quite a ride through this Google Summer of Code. Writing a completely new library with complete building framework/rest framework for documentation or tutorial/and Doxygen framework for auto documentation-class diagrams was challenging. It was equally exciting as well. Because of this I believe that I have acquired quite a good ‘library maintainer/admin’ skills. I will continue contributing into this library after the finish of this GSoC.
 

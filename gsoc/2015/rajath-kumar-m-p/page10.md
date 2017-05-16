@@ -1,6 +1,6 @@
 # _GSoC,_ Till Now..., (Before Midterms)
 
-<span class="post-date">25 Jun 2015</span>
+25 Jun 2015
 
 **Summary:** Built a website for robocomp using jekyll.
 

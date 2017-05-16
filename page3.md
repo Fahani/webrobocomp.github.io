@@ -1,20 +1,16 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [State Machine Code Generation in C++](/website/2016/06/21/ibarbechWeek3/)
 
-<span class="post-date">21 Jun 2016</span> 
+21 Jun 2016
 
 # Definition Language
 
 Hi all. This time I write to explain the work done during these first three weeks. In principle, and after talking with my mentor, I began to study as defined a formal language. Finally after learning the steps to the definition I started building an example of this language. This would be contained in a file .smdsl, this language is a domain-specific language:
 
-<div class="highlighter-rouge">
 
 ```
 name_machine{
@@ -39,7 +35,7 @@ name_machine{
 
 ```
 
-</div>
+
 
 []? optionality *? Item List
 
@@ -49,7 +45,6 @@ I then created the parseSMDSL.py file that parses this code. This code creates a
 
 To parse the code I have taken into account several things.
 
-<div class="highlighter-rouge">
 
 ```
 Machine: *	The machine must have a name. *	The machine must have a mandatory initial state. *	The initial state can not be on the list states. *	The final state can not be on the list states. *	The initial state can not be the same as the final state.
@@ -57,7 +52,6 @@ Substates: *	Must have a parent state.
 
 ```
 
-</div>
 
 If it is parallel:
 
@@ -120,7 +114,6 @@ Implementation of the functions executed by each of the states.
 
 Example statemachine.smdsl:
 
-<div class="highlighter-rouge">
 
 ```
 Machine_testcpp{
@@ -171,13 +164,11 @@ Machine_testcpp{
 
 ```
 
-</div>
 
 *   **genericworker.h**
 
 Example genericworker.h:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -308,13 +299,11 @@ signals:
 
 ```
 
-</div>
 
 *   **genericworker.cpp**
 
 Example genericworker.cpp:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -424,13 +413,11 @@ void GenericWorker::setPeriod(int p)
 
 ```
 
-</div>
 
 *   **specificworker.h**
 
 Example specificworker.h:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -502,13 +489,11 @@ private slots:
 
 ```
 
-</div>
 
 *   **specificworker.cpp**
 
 Example specificworke.cpp:
 
-<div class="highlighter-rouge">
 
 ```
 /*
@@ -635,15 +620,11 @@ void SpecificWorker::fun_test5sub2()
 
 ```
 
-</div>
 
-</div>
-
-<div class="post">
 
 # [Creating test for CNN object detection component](/website/2016/06/21/HaritWeek5/)
 
-<span class="post-date">21 Jun 2016</span>
+21 Jun 2016
 
 # Design Specifications:
 
@@ -651,7 +632,6 @@ This components has following tasks: firstly, read an image from command line ar
 
 # CSDL interface file for the component:
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/objectDetection.idsl";
@@ -668,7 +648,6 @@ Component testObjectDetectionComp
 
 ```
 
-</div>
 
 # Specific worker compute method:
 
@@ -686,7 +665,7 @@ objectdetectioncnn_proxy->getLabelsFromImage(rgbMatrix, src.rows, src.cols, resu
 
 1.  Display detection Bounding boxes.
 
-    <div class="highlighter-rouge">
+
 
     ```
          for(unsigned int i=0; i < result.size();i++ )
@@ -707,15 +686,11 @@ objectdetectioncnn_proxy->getLabelsFromImage(rgbMatrix, src.rows, src.cols, resu
 
     ```
 
-    </div>
 
-</div>
-
-<div class="post">
 
 # [week 6 updates](/website/2016/06/20/yashWeek6/)
 
-<span class="post-date">20 Jun 2016</span>
+20 Jun 2016
 
 # MidTerm Updates
 
@@ -739,13 +714,10 @@ Also while coding the post assignment, one dilemma was whether the rcmasetr shou
 
 Yash Sanap
 
-</div>
-
-<div class="post">
 
 # [Introduction](/website/2016/06/19/BasilWeek5/)
 
-<span class="post-date">19 Jun 2016</span>
+19 Jun 2016
 
 # UPDATES
 
@@ -767,19 +739,17 @@ I have not sent any pull request even though I have pushed it into my repo.Since
 
 Basil M Varghese
 
-</div>
 
-<div class="post">
 
 # [Creating CNN object detection component in robocomp](/website/2016/06/18/HaritWeek4/)
 
-<span class="post-date">18 Jun 2016</span>
+18 Jun 2016
 
 # Design Specifications:
 
 This component will be online and wait for image to be passed in form of RGB pixel values. The basic idea is to have a asynchronously triggerable remote procedure call. So that when the robot reaches any frontier for example a table where it can find objects, the object detection module is ready. Also this setting provides opportunity to load CNN apriori which is a time consuming process. Thus the object detection requires computing just the forward pass of the network and could be done at 0.3-0.4 Hz that is near real-time. ISDL interface file for the component: ============ module RoboCompobjectDetectionCNN {
 
-<div class="highlighter-rouge">
+
 
 ```
 struct BoundingBox
@@ -816,13 +786,11 @@ interface objectDetectionCNN
 
 ```
 
-</div>
 
 # CSDL interface file for the component:
 
 import “/robocomp/interfaces/IDSLs/objectDetectionCNN.idsl”; Component objectDetectionCNN { Communications { implements objectDetectionCNN;
 
-<div class="highlighter-rouge">
 
 ```
 };
@@ -831,7 +799,6 @@ gui Qt(QWidget); };
 
 ```
 
-</div>
 
 # Specific worker compute method:
 
@@ -839,7 +806,6 @@ void SpecificWorker::compute() { ///initialize caffe model only once ///read the
 
 if(first) { first=false;
 
-<div class="highlighter-rouge">
 
 ```
 ::google::InitGoogleLogging("objectDetectionCNN");
@@ -848,7 +814,6 @@ classifier= new Classifier(model_file, trained_file, mean_file, label_file);
 
 ```
 
-</div>
 
 }
 
@@ -867,10 +832,5 @@ classifier= new Classifier(model_file, trained_file, mean_file, label_file);
 
 Harit Pandya
 
-</div>
 
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page4) [Newer](/webrobocomp.github.io/page2)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page4) [Newer](/webrobocomp.github.io/page2)

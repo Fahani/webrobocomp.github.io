@@ -1,6 +1,6 @@
 # _GSoC,_ 2015 ideas
 
-<span class="post-date">22 Jun 2015</span>
+22 Jun 2015
 
 1.- **RoboComp tutorial, social management and documentation**: RoboComp’ sources has been ported to GitHub and we are building a new documentation repository there. We are using GitHub markdown language (GFM) write new docs and turorials. We want to build a set of short tutorials that guide the new users along several interconnected topics, such as component oriented programming, robotics, computer vision, robotics software modules integrating heterogeneous sources, cognitive architectures and testing and validating, all from inside RoboComp. These new tutorials will be developed using RoboComp’s robotics simulator, RCIS, so interactive examples can be created and used in the explanations. This package also includes work on automated installation scripts using CMake. Generic knowledge of linux systems, website and wiki administration is needed. This is a key task for our project as it would bring more attention to it as it will open the development to new people interested in the field.
 

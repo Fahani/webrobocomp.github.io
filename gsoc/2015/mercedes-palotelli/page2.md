@@ -4,7 +4,7 @@
 
 , Inverse Kinematics
 
-<span class="post-date">15 Jun 2015</span>
+15 Jun 2015
 
 **What is inverse kinematics?** : In this second post, although it may seem begin the house from the roof, let’s talk about how a robot moves its arms and hands in order to manipulate daily objects.
 
@@ -33,7 +33,7 @@ An example of kinematic chain in robotic is the arm of the robot, that is compos
 
 One of the problems of robot manipulators is to know where their structural elements are arranged in the space in which they move. We therefore need a referral system that puts or position the elements of the robot in the workspace. So, a `reference system` is a set of agreements or conventions used by an observer to measure positions, rotations and other physical parameters of the system being studied. In our case, the arm of the robot is into the three-dimensional workspace (R³, with the axis X, Y and Z), where each components (for example, each joint) has one traslation (tx, ty, tz) and one rotation (rx, ry, rz). Therefore, the position of each component is given by a vector of six elements: `P=[tx, ty, tz, rx, ry, rz]` (the first three translational and three rotational recent). Normally, we represent the poses by homogeneous trasnformation matrices, which are of the form:
 
-<div class="highlighter-rouge">
+
 
 ```
     | R  T |
@@ -41,13 +41,11 @@ P = | 0  1 |
 
 ```
 
-</div>
 
 where `R` is the rotation matrix and `T` the traslation coordenates.
 
 One of the kinematic problems is that each motor (which can be moved and/or rotated with respect to the previous motor of the chain) has his own reference system, so if we want to calculate the position of a particular point or joint, we will have to make a number of changes (`transformations`) to move from one reference system to another. For example, if we have the newt arm:
 
-<div class="highlighter-rouge">
 
 ```
 X_1--------------X_2--------X_3-----O
@@ -55,18 +53,15 @@ X_1--------------X_2--------X_3-----O
 
 ```
 
-</div>
 
 where `X_n` represents the position of the joints, `-` is the link that connects the joints, `o` is the end effector of the arm and `M_n>m` are the transformation matrices to change the reference system n to the system m, and we want to calculate the position of the end effector in the reference system of the joint X_1, we have to calculate this equation:
 
-<div class="highlighter-rouge">
 
 ```
 Po_inX_1 = M_2>1 * M_3>2 * M_o>3 * Po_inO.
 
 ```
 
-</div>
 
 ###Problems to solve the inverse kinematics.
 
@@ -84,7 +79,6 @@ Originally, this component receives three types of targets:
 
 To solve these various inverse kinematic problems, the component uses as main base the `Levenberg-Marquardt` algorithm proposed in the article `SBA: A Software Package for Generic Sparse Bundle Adjustment` by Lourakis and Argyros:
 
-<div class="highlighter-rouge">
 
 ```
 Input: A vector functon f: R^m → R^n with n≥m, a measurement vector x ∈ R^n and an initial parameters estimate p_0 ∈ R^m.
@@ -122,7 +116,6 @@ Algorithm:
 
 ```
 
-</div>
 
 Where `A` is the hessian matrix, `J` is the jacobian matrix, `g` is the gradient descent, `δ_p` is the increments, `ρ` is the ratio of profit that tells us if we are approaching a minimum or not, `μ` is the damping factor, and `t` and `ε1, ε2, ε3, ε4` are different thresholds. But the IK component of Robocomp adds several concepts to the original L-M algorithm, in order to complete the proper operation of the component:
 

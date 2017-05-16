@@ -1,14 +1,11 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [_GSoC,_ After Midterms](/website/2015/08/20/rajath3/)
 
-<span class="post-date">20 Aug 2015</span> 
+20 Aug 2015
 
 At the start of the second term, I finished developing the version-2 of the website.
 
@@ -34,9 +31,6 @@ Future : I will be writing starter components for each of the available interfac
 
 Rajath Kumar M.P
 
-</div>
-
-<div class="post">
 
 # [_GSoC,_ Symbolic planning techniques for recognizing objects domestic
 
@@ -44,7 +38,7 @@ Rajath Kumar M.P
 
 grasping object](/website/2015/08/20/mercedes6/)
 
-<span class="post-date">20 Aug 2015</span>
+20 Aug 2015
 
 **Grasping object** : This post will describe the planning system that implements Robocomp in order to provide to the robot a full functionality. In order for a robot be able to carry out a mission as “take the cup from the table and take it to the kitchen,” it needs something that in robotics calls `planner`. In this post we move away the issue of inverse kinematics and we dive into the field of artificial intelligence, making a slight revision of existing planners and delving into the planner using robocomp.
 
@@ -69,7 +63,6 @@ This section will introduce the reader slightly in the planning language more us
 
 Take for example, the following domain to create geometric shapes: We presume that in our initial world there is always a vertex node. The rules increase the number of vertices nodes to create geometric identities. For example, the `segment` rule creates from the initial node a line segment, the rule `triangle` creates from the line segment an equilateral triangle, the rule “square” creates from the equilateral triangle a square… and so on until an octagon. In the PDDL file, the rules would be:
 
-<div class="highlighter-rouge">
 
 ```
 (define (domain AGGL)
@@ -113,11 +106,9 @@ Take for example, the following domain to create geometric shapes: We presume th
 
 ```
 
-</div>
 
 To represent the initial world from which we start and the final world that we want to go, we should implement a file like this:
 
-<div class="highlighter-rouge">
 
 ```
 (define (problem myProblemPDDL)
@@ -159,7 +150,6 @@ To represent the initial world from which we start and the final world that we w
 
 ```
 
-</div>
 
 This language proves to be relatively intuitive, easy to develop and test. However, in Robocomp we opted to do our own planning language: AGM.
 
@@ -169,7 +159,6 @@ AGM is the result of Luis Manso’s PhD thesis that “dealt with making softwar
 
 This would be the set of rules in a .aggl file:
 
-<div class="highlighter-rouge">
 
 ```
 // START OF THE FILE:
@@ -229,11 +218,9 @@ square : active(1)
 
 ```
 
-</div>
 
 The initial world model is stored in a xml file:
 
-<div class="highlighter-rouge">
 
 ```
 <AGMModel>
@@ -242,11 +229,9 @@ The initial world model is stored in a xml file:
 
 ```
 
-</div>
 
 The goal or target world is stored in another xml file:
 
-<div class="highlighter-rouge">
 
 ```
 <AGMModel>
@@ -264,7 +249,6 @@ The goal or target world is stored in another xml file:
 
 ```
 
-</div>
 
 ###Component architecture
 
@@ -286,9 +270,6 @@ Bye!
 
 ![Alt text](http://photos.gograph.com/thumbs/CSP/CSP705/k24410287.jpg)
 
-</div>
-
-<div class="post">
 
 # [GSoC, Computer vision components and libraries management -Open Detection
 
@@ -296,7 +277,7 @@ Bye!
 
 ](/website/2015/08/19/kripasindhu_sarkar_blog_4/)
 
-<span class="post-date">19 Aug 2015</span>
+19 Aug 2015
 
 **Experience** It has been a quite a ride through this Google Summer of Code. Writing a completely new library with complete building framework/rest framework for documentation or tutorial/and Doxygen framework for auto documentation-class diagrams was challenging. It was equally exciting as well. Because of this I believe that I have acquired quite a good ‘library maintainer/admin’ skills. I will continue contributing into this library after the finish of this GSoC.
 
@@ -321,9 +302,7 @@ Now coming to the actual work of implementing different algorithm, I had really 
 
 * * *
 
-</div>
 
-<div class="post">
 
 # [GSoC, Computer vision components and libraries management - Open Detction
 
@@ -331,7 +310,7 @@ Now coming to the actual work of implementing different algorithm, I had really 
 
 ](/website/2015/08/19/kripasindhu_sarkar_blog_3/)
 
-<span class="post-date">19 Aug 2015</span>
+19 Aug 2015
 
 **Contributions after Mid-term** Following are the contributions towards the project _after_ the mid-term evaluations:
 
@@ -363,9 +342,6 @@ In the next blog I’ll add the different sources I used to design and implement
 
 * * *
 
-</div>
-
-<div class="post">
 
 # [_GSoC,_ Symbolic planning techniques for recognizing objects domestic
 
@@ -373,7 +349,7 @@ In the next blog I’ll add the different sources I used to design and implement
 
 System Review](/website/2015/08/16/mercedes5/)
 
-<span class="post-date">16 Aug 2015</span>
+16 Aug 2015
 
 **Full object manipulation system** : In this post we will describe the full system developed for manipulating objects using a robotic arm. We start at the highest level, VisualIK (the correction system), and we will go down to the base of the system, the IK (which calculates the final angle of the joints of the robotic arm).
 
@@ -414,7 +390,6 @@ Its goal remains the same, correct errors produced by the inaccuracies of the jo
 
 Here there is a scheme of the procedure performed by the `visualik`. It is very summarized to facilitate the understanding of the procedure by the reader:
 
-<div class="highlighter-rouge">
 
 ```
 1: procedure VISUAL CALIBRATION
@@ -433,11 +408,9 @@ Here there is a scheme of the procedure performed by the `visualik`. It is very 
 
 ```
 
-</div>
 
 Like all components developed by robocomp, the `visualik` needs a configuration file in which the components required (the [`ikGraphGenerator`](https://github.com/robocomp/robocomp-ursus/tree/master/components/ikGraphGenerator)) and the components to subscribe (the [`apriltagsComp`](https://github.com/robocomp/robocomp-robolab/tree/master/components/apriltagsComp)) and other configuration parameters are determined. In this case, a configuration file may have the following elements:
 
-<div class="highlighter-rouge">
 
 ```
 CommonBehavior.Endpoints=tcp -p 14537
@@ -462,7 +435,6 @@ Ice.ACM.Server=10
 
 ```
 
-</div>
 
 ###The `ikGraphGenerator` component
 
@@ -475,7 +447,6 @@ As we explain in the previous [post](http://robocomp.github.io/website/2015/08/1
 
 The `ikGraphGenerator`needs a config file too:
 
-<div class="highlighter-rouge">
 
 ```
 CommonBehavior.Endpoints=tcp -p 14536
@@ -496,7 +467,6 @@ Ice.ACM.Server=10
 
 ```
 
-</div>
 
 ###The `inversekinematic` component
 
@@ -512,7 +482,6 @@ Targets received are stored into the queues of the corresponding robot part and 
 
 The config file of the `inversekinematic`component is the next:
 
-<div class="highlighter-rouge">
 
 ```
 CommonBehavior.Endpoints=tcp -p 12207
@@ -543,7 +512,6 @@ Ice.ACM.Server=10
 
 ```
 
-</div>
 
 When `visualik` and `ikGraphGenerator` components submit their targets to the immediately below component, they store the identifier of the target and are waiting until the target be resolved, calling the method `getTargetState`. So, when the `inversekinematic` component ends one target execution, the `ikGraphGenerator` moves the arm with the values given by the `inversekinematic` component and then, the `visualik` continues with the corrections.
 
@@ -551,10 +519,5 @@ Having explained the handling system, the next post will explain the planning sy
 
 Bye!
 
-</div>
 
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page8) [Newer](/webrobocomp.github.io/page6)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page8) [Newer](/webrobocomp.github.io/page6)

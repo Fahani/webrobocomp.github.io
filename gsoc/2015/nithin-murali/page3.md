@@ -1,6 +1,6 @@
 # Debian Packaging 2
 
-<span class="post-date">12 Jun 2015</span>
+12 Jun 2015
 
 ##What is a binary package? A binary package in a is an application package which contains (pre-built) executables, as opposed to source code. Basically a binary package is an archive which contains executables some other info like rules on how to install them, dependencies etc. debian binary package is also a type of binary package. You can use a package manger to install these packages.I have explained I have explained it in tutorial [Debian packaging](http://robocomp.github.io/website/2015/05/23/nithin1.html).
 

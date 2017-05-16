@@ -2,7 +2,7 @@
 
 #3
 
-<span class="post-date">19 Aug 2015</span>
+19 Aug 2015
 
 **Contributions after Mid-term** Following are the contributions towards the project _after_ the mid-term evaluations:
 

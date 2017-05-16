@@ -4,7 +4,7 @@
 
 , Inverse kinematics Graph Generator
 
-<span class="post-date">13 Aug 2015</span>
+13 Aug 2015
 
 **ikGraphGenerator, an alternative to ik** : As the project has progressed, many improvements have emerged. One of them is the new component, `ikGraphGenerator`. This component has been developed by Professor Luis Manso, and its goal is to remove weight to the inverse kinematics in the process of handling objects with a robotic effector.
 

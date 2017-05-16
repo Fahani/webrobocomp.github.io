@@ -4,7 +4,7 @@
 
 System Review
 
-<span class="post-date">16 Aug 2015</span>
+16 Aug 2015
 
 **Full object manipulation system** : In this post we will describe the full system developed for manipulating objects using a robotic arm. We start at the highest level, VisualIK (the correction system), and we will go down to the base of the system, the IK (which calculates the final angle of the joints of the robotic arm).
 
@@ -45,7 +45,6 @@ Its goal remains the same, correct errors produced by the inaccuracies of the jo
 
 Here there is a scheme of the procedure performed by the `visualik`. It is very summarized to facilitate the understanding of the procedure by the reader:
 
-<div class="highlighter-rouge">
 
 ```
 1: procedure VISUAL CALIBRATION
@@ -64,11 +63,9 @@ Here there is a scheme of the procedure performed by the `visualik`. It is very 
 
 ```
 
-</div>
 
 Like all components developed by robocomp, the `visualik` needs a configuration file in which the components required (the [`ikGraphGenerator`](https://github.com/robocomp/robocomp-ursus/tree/master/components/ikGraphGenerator)) and the components to subscribe (the [`apriltagsComp`](https://github.com/robocomp/robocomp-robolab/tree/master/components/apriltagsComp)) and other configuration parameters are determined. In this case, a configuration file may have the following elements:
 
-<div class="highlighter-rouge">
 
 ```
 CommonBehavior.Endpoints=tcp -p 14537
@@ -93,7 +90,6 @@ Ice.ACM.Server=10
 
 ```
 
-</div>
 
 ###The `ikGraphGenerator` component
 
@@ -106,7 +102,6 @@ As we explain in the previous [post](http://robocomp.github.io/website/2015/08/1
 
 The `ikGraphGenerator`needs a config file too:
 
-<div class="highlighter-rouge">
 
 ```
 CommonBehavior.Endpoints=tcp -p 14536
@@ -127,7 +122,6 @@ Ice.ACM.Server=10
 
 ```
 
-</div>
 
 ###The `inversekinematic` component
 
@@ -143,7 +137,6 @@ Targets received are stored into the queues of the corresponding robot part and 
 
 The config file of the `inversekinematic`component is the next:
 
-<div class="highlighter-rouge">
 
 ```
 CommonBehavior.Endpoints=tcp -p 12207
@@ -174,7 +167,6 @@ Ice.ACM.Server=10
 
 ```
 
-</div>
 
 When `visualik` and `ikGraphGenerator` components submit their targets to the immediately below component, they store the identifier of the target and are waiting until the target be resolved, calling the method `getTargetState`. So, when the `inversekinematic` component ends one target execution, the `ikGraphGenerator` moves the arm with the values given by the `inversekinematic` component and then, the `visualik` continues with the corrections.
 

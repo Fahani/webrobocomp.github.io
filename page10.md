@@ -1,10 +1,7 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [_GSoC,_ Symbolic planning techniques for recognizing objects domestic
 
@@ -12,7 +9,7 @@
 
 , Visual Inverse Kinematics](/website/2015/06/17/mercedes3/)
 
-<span class="post-date">17 Jun 2015</span>
+17 Jun 2015
 
 **Visual inverse kinematics, Basic understanding :** In the previous post we anticipate the problems caused by the gaps and inaccuracies of motors in the inverse kinematics of the robot. Now, in this third post we will talk about the solution implemented during the GSoC15 project.
 
@@ -78,9 +75,6 @@ Bye!
 
 [2] OLson, E. `AprilTag: A robust and flexible visual fiducial system`, Robotics and Automation (ICRA), 2011 IEEE International Conference on, 3400-3407
 
-</div>
-
-<div class="post">
 
 # [_GSoC,_ Symbolic planning techniques for recognizing objects domestic
 
@@ -88,7 +82,7 @@ Bye!
 
 , Inverse Kinematics](/website/2015/06/15/mercedes2/)
 
-<span class="post-date">15 Jun 2015</span>
+15 Jun 2015
 
 **What is inverse kinematics?** : In this second post, although it may seem begin the house from the roof, let’s talk about how a robot moves its arms and hands in order to manipulate daily objects.
 
@@ -117,7 +111,6 @@ An example of kinematic chain in robotic is the arm of the robot, that is compos
 
 One of the problems of robot manipulators is to know where their structural elements are arranged in the space in which they move. We therefore need a referral system that puts or position the elements of the robot in the workspace. So, a `reference system` is a set of agreements or conventions used by an observer to measure positions, rotations and other physical parameters of the system being studied. In our case, the arm of the robot is into the three-dimensional workspace (R³, with the axis X, Y and Z), where each components (for example, each joint) has one traslation (tx, ty, tz) and one rotation (rx, ry, rz). Therefore, the position of each component is given by a vector of six elements: `P=[tx, ty, tz, rx, ry, rz]` (the first three translational and three rotational recent). Normally, we represent the poses by homogeneous trasnformation matrices, which are of the form:
 
-<div class="highlighter-rouge">
 
 ```
     | R  T |
@@ -125,13 +118,11 @@ P = | 0  1 |
 
 ```
 
-</div>
 
 where `R` is the rotation matrix and `T` the traslation coordenates.
 
 One of the kinematic problems is that each motor (which can be moved and/or rotated with respect to the previous motor of the chain) has his own reference system, so if we want to calculate the position of a particular point or joint, we will have to make a number of changes (`transformations`) to move from one reference system to another. For example, if we have the newt arm:
 
-<div class="highlighter-rouge">
 
 ```
 X_1--------------X_2--------X_3-----O
@@ -139,18 +130,15 @@ X_1--------------X_2--------X_3-----O
 
 ```
 
-</div>
 
 where `X_n` represents the position of the joints, `-` is the link that connects the joints, `o` is the end effector of the arm and `M_n>m` are the transformation matrices to change the reference system n to the system m, and we want to calculate the position of the end effector in the reference system of the joint X_1, we have to calculate this equation:
 
-<div class="highlighter-rouge">
 
 ```
 Po_inX_1 = M_2>1 * M_3>2 * M_o>3 * Po_inO.
 
 ```
 
-</div>
 
 ###Problems to solve the inverse kinematics.
 
@@ -168,7 +156,6 @@ Originally, this component receives three types of targets:
 
 To solve these various inverse kinematic problems, the component uses as main base the `Levenberg-Marquardt` algorithm proposed in the article `SBA: A Software Package for Generic Sparse Bundle Adjustment` by Lourakis and Argyros:
 
-<div class="highlighter-rouge">
 
 ```
 Input: A vector functon f: R^m ? R^n with n=m, a measurement vector x ? R^n and an initial parameters estimate p_0 ? R^m.
@@ -206,7 +193,6 @@ Algorithm:
 
 ```
 
-</div>
 
 Where `A` is the hessian matrix, `J` is the jacobian matrix, `g` is the gradient descent, `d_p` is the increments, `?` is the ratio of profit that tells us if we are approaching a minimum or not, `µ` is the damping factor, and `t` and `e1, e2, e3, e4` are different thresholds. But the IK component of Robocomp adds several concepts to the original L-M algorithm, in order to complete the proper operation of the component:
 
@@ -234,13 +220,10 @@ Bye!
 
 [4] Lourakis, M. I., Argyros, A. (2009). `SBA: A Software Package for Generic Sparse Bundle Adjustment`. Article of ACM Transactions on Mathematical Software, volume 36, issue 1, pages 1-30\. Download in http://doi.acm.org/10.1145/1486527
 
-</div>
-
-<div class="post">
 
 # [Debian Packaging 2](/website/2015/06/12/nithin8/)
 
-<span class="post-date">12 Jun 2015</span>
+12 Jun 2015
 
 ##What is a binary package? A binary package in a is an application package which contains (pre-built) executables, as opposed to source code. Basically a binary package is an archive which contains executables some other info like rules on how to install them, dependencies etc. debian binary package is also a type of binary package. You can use a package manger to install these packages.I have explained I have explained it in tutorial [Debian packaging](http://robocomp.github.io/website/2015/05/23/nithin1.html).
 
@@ -266,9 +249,6 @@ After creating the source packages one trouble i faces was in setting up (regist
 
 Nithin Murali
 
-</div>
-
-<div class="post">
 
 # [_GSoC,_ Symbolic planning techniques for recognizing objects domestic
 
@@ -276,7 +256,7 @@ Nithin Murali
 
 ](/website/2015/06/12/mercedes1/)
 
-<span class="post-date">12 Jun 2015</span>
+12 Jun 2015
 
 **About Me** : Hello! My name is Mercedes Paoletti Ávila, and I would like to introduce me a little in this first post. I’m graduate in engineering from the University of Extremadura, and currently I study the Master in computer engineering and ICT management in the same University. Over the past two years I have been working in the Robotics Laboratory of the UEx, Robolab. There I developed my end grade work, “inverse kinematics in social robots”, using the robotic framework implemented by the laboratory, Robocomp, and now I’m doing my Master’s Thesis, that is about robots planners and is part of the project of LJ Manso, AGM.
 
@@ -304,30 +284,24 @@ You can acces to the code of these components in the Robocomp repository: https:
 
 [2] AprilTags: http://april.eecs.umich.edu/papers/details.php?name=olson2011tags
 
-</div>
-
-<div class="post">
 
 # [Maintaining your own repository of components in GitHub](/website/2015/05/23/using_github/)
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 We recommend that you create a repository for your components (i.e. _mycomponents_ directory in the example before) in your GitHub account (or other similar site) and pull/clone it in _~/robocomp/components_ whenever yo need it. For example, if your GitHub account is _myaccount_, first log in with your browser and create a new repository named _mycomponents_ following this instructions:
 
-<div class="highlighter-rouge">
 
 ```
 https://help.github.com/articles/create-a-repo/
 
 ```
 
-</div>
 
 Now is good time to write down a short description of what your component does in the README.md file.
 
 Then we need to clean up the binary and generated files in _myfirstcomp_. Note that this is not necessary if you upload the component to the repo just after creating it with DSLEditor and before you type _cmake ._
 
-<div class="highlighter-rouge">
 
 ```
 cd ~/robocomp/components/mycomponents/myfirstcomp
@@ -344,11 +318,9 @@ rm src/Makefile
 
 ```
 
-</div>
 
 now we are ready:
 
-<div class="highlighter-rouge">
 
 ```
 cd ~/robocomp/components/mycomponents
@@ -359,14 +331,8 @@ git push -u origin master
 
 ```
 
-</div>
 
 You can go now to GitHub and chek that your sources are there!
 
-</div>
 
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page11) [Newer](/webrobocomp.github.io/page9)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page11) [Newer](/webrobocomp.github.io/page9)

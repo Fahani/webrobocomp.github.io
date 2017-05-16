@@ -1,6 +1,6 @@
 # Setting up ppa
 
-<span class="post-date">25 Jul 2015</span>
+25 Jul 2015
 
 ##Setting up an ppa in launchpad
 
@@ -44,7 +44,6 @@ The main CMakeLists.txt file defines a target `spackage` that builds the source 
 
 For uploading the package to ppa, First change the **PPA_PGP_KEY** in [package_details.cmake](../cmake/package_details.cmake#L26) to details to the full-name of the PGP key details registered with your ppa account For more details on setting up the pgp key see the [tutorial](./setting_up_ppa.md).Then create a source package by building the target _spackage_.Once the Source package is build successfully, upload it to your ppa by:
 
-<div class="highlighter-rouge">
 
 ```
 cd Debian/
@@ -52,11 +51,9 @@ dput ppa:<lp-username>/<ppa-name> <packet->source.changes
 
 ```
 
-</div>
 
 building of source package can be tested with:
 
-<div class="highlighter-rouge">
 
 ```
 cd Debian/robocomp-<version>
@@ -64,7 +61,6 @@ debuild -i -us -uc -S
 
 ```
 
-</div>
 
 If you are uploading a new version of robocomp, change the version number accordingly in the [toplevel cmake](../CMakeLists.txt#L31) before building, and then upload the source package as mentioned.
 
@@ -76,7 +72,6 @@ If you want to upload another source package to ppa which doesn’t have any cha
 
 First you will need to add the ppa in your sources, and then install robocomp package.
 
-<div class="highlighter-rouge">
 
 ```
 sudo add-apt-repository ppa:<lp-username>/robocomp
@@ -84,8 +79,6 @@ sudo apt-get update
 sudo apt-get install robocomp
 
 ```
-
-</div>
 
 this will install robocomp along with basic components into /opt/robocomp.
 

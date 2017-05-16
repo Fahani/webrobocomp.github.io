@@ -1,6 +1,6 @@
 # Debian Packaging 1
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 ##What is a package By definition _Debian packages are standard Unix ar archives that include two tar archives optionally compressed with gzip (zlib), Bzip2, lzma, or xz (lzma2): one archive holds the control information and another contains the program data._ All debain packages should follow certain conventions. The root source directory should contain a directory named _debian_. This directory contains files which stores info about the package. These are the required files under the debian directory
 
@@ -38,25 +38,21 @@
 
 Now once you have the source directory in the prescribed format. you will need a _.tar.gz_ archive of the source in the same folder.Then we can create a debian binary package using
 
-<div class="highlighter-rouge">
 
 ```
 debuild -i -us -uc -b
 
 ```
 
-</div>
 
 Or a debian source package using
 
-<div class="highlighter-rouge">
 
 ```
 debuild -i -us -uc -S
 
 ```
 
-</div>
 
 * * *
 

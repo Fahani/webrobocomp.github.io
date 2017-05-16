@@ -1,6 +1,6 @@
 # Packaging FCL and libccd
 
-<span class="post-date">21 Aug 2015</span>
+21 Aug 2015
 
 I assume that you have an debian package folder in your source directory. If not refer to the intro to debian packaging tutorial.
 
@@ -20,14 +20,12 @@ but if you have only changed some file in the debian directory. For example, edi
 
 ###uploading Now once you have generated the .source_changes file use dput to upload
 
-<div class="highlighter-rouge">
 
 ```
 dput ppa:<your-lp-id>/<name> <file_name>.source_changes
 
 ```
 
-</div>
 
 ###NB
 

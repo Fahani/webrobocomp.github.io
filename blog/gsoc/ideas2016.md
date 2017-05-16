@@ -1,6 +1,6 @@
 # GSoC 2016 Ideas
 
-<span class="post-date">25 Apr 2016</span>
+25 Apr 2016
 
 ## RoboComp’s DSL based code generator
 

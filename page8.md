@@ -1,10 +1,7 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [_GSoC,_ Symbolic planning techniques for recognizing objects domestic
 
@@ -12,7 +9,7 @@
 
 , Inverse kinematics Graph Generator](/website/2015/08/13/mercedes4/) 
 
-<span class="post-date">13 Aug 2015</span>
+13 Aug 2015
 
 **ikGraphGenerator, an alternative to ik** : As the project has progressed, many improvements have emerged. One of them is the new component, `ikGraphGenerator`. This component has been developed by Professor Luis Manso, and its goal is to remove weight to the inverse kinematics in the process of handling objects with a robotic effector.
 
@@ -37,13 +34,10 @@ In the next post I will describe how the whole system works with all the compone
 
 Bye!
 
-</div>
-
-<div class="post">
 
 # [Till now ... after midterm](/website/2015/08/08/nithin9/)
 
-<span class="post-date">08 Aug 2015</span>
+08 Aug 2015
 
 Hi all , In this post i will talk about what i have been working on after midterm evaluation. I have spend my time working mostly on packaging supporting libraries for Robocomp.This includes FCL and libccd. FCL is a library for performing three types of proximity queries on a pair of geometric models composed of triangles. libccd is a library for collision detection between two convex shapes.Technically Robocomp is only using FCL but libccd is an dependency of fcl, as i couldn’t find an updated ppa for it i decided to package it too. you can see those packages [here](https://launchpad.net/~imnmfotmal)
 
@@ -55,13 +49,10 @@ well i guess thats all for now
 
 Nithin Murali
 
-</div>
-
-<div class="post">
 
 # [Setting up ppa](/website/2015/07/25/nithin10/)
 
-<span class="post-date">25 Jul 2015</span>
+25 Jul 2015
 
 ##Setting up an ppa in launchpad
 
@@ -105,7 +96,6 @@ The main CMakeLists.txt file defines a target `spackage` that builds the source 
 
 For uploading the package to ppa, First change the **PPA_PGP_KEY** in [package_details.cmake](../cmake/package_details.cmake#L26) to details to the full-name of the PGP key details registered with your ppa account For more details on setting up the pgp key see the [tutorial](./setting_up_ppa.md).Then create a source package by building the target _spackage_.Once the Source package is build successfully, upload it to your ppa by:
 
-<div class="highlighter-rouge">
 
 ```
 cd Debian/
@@ -113,11 +103,9 @@ dput ppa:<lp-username>/<ppa-name> <packet->source.changes
 
 ```
 
-</div>
 
 building of source package can be tested with:
 
-<div class="highlighter-rouge">
 
 ```
 cd Debian/robocomp-<version>
@@ -125,7 +113,6 @@ debuild -i -us -uc -S
 
 ```
 
-</div>
 
 If you are uploading a new version of robocomp, change the version number accordingly in the [toplevel cmake](../CMakeLists.txt#L31) before building, and then upload the source package as mentioned.
 
@@ -137,7 +124,6 @@ If you want to upload another source package to ppa which doesn’t have any cha
 
 First you will need to add the ppa in your sources, and then install robocomp package.
 
-<div class="highlighter-rouge">
 
 ```
 sudo add-apt-repository ppa:<lp-username>/robocomp
@@ -146,7 +132,6 @@ sudo apt-get install robocomp
 
 ```
 
-</div>
 
 this will install robocomp along with basic components into /opt/robocomp.
 
@@ -154,7 +139,6 @@ this will install robocomp along with basic components into /opt/robocomp.
 
 Nithin Murali
 
-</div>
 
 <div class="post">
 
@@ -164,7 +148,7 @@ Nithin Murali
 
 ](/website/2015/07/02/kripa1/)
 
-<span class="post-date">02 Jul 2015</span>
+02 Jul 2015
 
 **About me**:Hello, I am Kripasindhu Sarkar, a new PhD student at German Research Center for Artificial Intelligence (DFKI), Kaiserslautern working in the topic of Object Detection in simple and depth images. I am extremely interested in the topic of object detection and computer vision; specifically in solving the problem by using theories from human cognition and perception to simulate human way of visualizing the problem. But for now, I am focused on getting a very good grasp at the existing engineering (mostly) techniques in the field of computer vision and object detection. Before joining here as a PhD student I worked as a Software Engineer at Paypal for 2 years and, prior to that I did my masters and graduation from Indian Institute of Technology Kharagpur (IIT Kharagpur).
 
@@ -198,9 +182,7 @@ The project is about designing and implementing a system for object detection an
 
 [1] I. Gordon and D. G. Lowe, “What and where: 3d object recognition with accurate pose,” in Toward Category-Level Object Recognition, ser. Lecture Notes in Computer Science, J. Ponce, M. Hebert, C. Schmid, and A. Zisserman, Eds., vol. 4170\. Springer, 2006, pp. 67–82. [2] MOPED: A Scalable and Low Latency Object Recognition and Pose Estimation System [3] Object Detection with Discriminatively Trained Part Based Models [4] Aldoma, A.; Marton, Zoltan-Csaba; Tombari, F.; Wohlkinger, W.; Potthast, C.; Zeisl, B.; Rusu, R.B.; Gedikli, S.; Vincze, M., “Tutorial: Point Cloud Library: Three-Dimensional Object Recognition and 6 DOF Pose Estimation,” Robotics & Automation Magazine, IEEE , vol.19, no.3,
 
-</div>
 
-<div class="post">
 
 # [_GSoC,_ Computer vision components and libraries management
 
@@ -208,7 +190,7 @@ The project is about designing and implementing a system for object detection an
 
 ](/website/2015/07/02/Kripa2/)
 
-<span class="post-date">02 Jul 2015</span>
+02 Jul 2015
 
 **Open Detection:** Following the idea that it is better to have an independent library for Object Detection than contributing directly to Robocomp, I created the new library ‘Open Detection’. It is available now in the following links
 
@@ -254,10 +236,5 @@ The class diagrams providing a good reference is provided here:
 
 Kripasandhu Sarkar
 
-</div>
 
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page9) [Newer](/webrobocomp.github.io/page7)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page9) [Newer](/webrobocomp.github.io/page7)

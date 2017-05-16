@@ -2,7 +2,7 @@
 
 #1
 
-<span class="post-date">02 Jul 2015</span>
+02 Jul 2015
 
 **About me**:Hello, I am Kripasindhu Sarkar, a new PhD student at German Research Center for Artificial Intelligence (DFKI), Kaiserslautern working in the topic of Object Detection in simple and depth images. I am extremely interested in the topic of object detection and computer vision; specifically in solving the problem by using theories from human cognition and perception to simulate human way of visualizing the problem. But for now, I am focused on getting a very good grasp at the existing engineering (mostly) techniques in the field of computer vision and object detection. Before joining here as a PhD student I worked as a Software Engineer at Paypal for 2 years and, prior to that I did my masters and graduation from Indian Institute of Technology Kharagpur (IIT Kharagpur).
 

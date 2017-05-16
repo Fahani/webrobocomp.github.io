@@ -4,7 +4,7 @@
 
 , Visual Inverse Kinematics
 
-<span class="post-date">17 Jun 2015</span>
+17 Jun 2015
 
 **Visual inverse kinematics, Basic understanding :** In the previous post we anticipate the problems caused by the gaps and inaccuracies of motors in the inverse kinematics of the robot. Now, in this third post we will talk about the solution implemented during the GSoC15 project.
 

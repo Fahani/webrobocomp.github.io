@@ -1,14 +1,11 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [Introduction](/website/2016/05/18/BasilWeek1/)
 
-<span class="post-date">18 May 2016</span> 
+18 May 2016
 
 # INTRODUCTION
 
@@ -30,13 +27,11 @@ So In my plan, I will be able to build a working, fairly documented Gui tool in 
 
 Basil M Varghese
 
-</div>
 
-<div class="post">
 
 # [Introduction about me and my project](/website/2016/05/16/dgallegosWeek0/)
 
-<span class="post-date">16 May 2016</span>
+16 May 2016
 
 Hello! My name is Daniel Gallego Sánchez, and I’m going to introduce me in this post. My date of birth is 11/08/1994, I’m ending computer engineering from the University of Extremadura, and actually I am refining my final degree project. Since last year, I have been working in the Robotics Laboratory of the UEx, Robolab. Today, I am using the robotic framework implemented by the laboratory, Robocomp, to perform my degree project which consists in improvement to robocompDSL tool.
 
@@ -58,13 +53,10 @@ DSL: https://en.wikipedia.org/wiki/Domain-specific_language
 
 RoboComp’s repository: https://github.com/robocomp
 
-</div>
-
-<div class="post">
 
 # [Introduction, Problem Statement and deliverables](/website/2016/05/11/swapsharmaWeek0/)
 
-<span class="post-date">11 May 2016</span>
+11 May 2016
 
 # Introduction
 
@@ -84,13 +76,10 @@ The end product of this project will be a command line utility that will take th
 
 Swapnil Sharma
 
-</div>
-
-<div class="post">
 
 # [GSoC 2016 Ideas](/website/2016/04/25/gsoc16ideas/)
 
-<span class="post-date">25 Apr 2016</span>
+25 Apr 2016
 
 ## RoboComp’s DSL based code generator
 
@@ -254,13 +243,10 @@ Mentors: Jesús Martínez, Cristina Romero
 
 Backup mentor: Ismael García-Varea
 
-</div>
-
-<div class="post">
 
 # [Packaging FCL and libccd](/website/2015/08/21/nithin11/)
 
-<span class="post-date">21 Aug 2015</span>
+21 Aug 2015
 
 I assume that you have an debian package folder in your source directory. If not refer to the intro to debian packaging tutorial.
 
@@ -280,14 +266,13 @@ but if you have only changed some file in the debian directory. For example, edi
 
 ###uploading Now once you have generated the .source_changes file use dput to upload
 
-<div class="highlighter-rouge">
+
 
 ```
 dput ppa:<your-lp-id>/<name> <file_name>.source_changes
 
 ```
 
-</div>
 
 ###NB
 
@@ -298,10 +283,4 @@ dput ppa:<your-lp-id>/<name> <file_name>.source_changes
 
 Nithin Murali
 
-</div>
-
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page7) [Newer](/webrobocomp.github.io/page5)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page7) [Newer](/webrobocomp.github.io/page5)

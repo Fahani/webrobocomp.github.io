@@ -1,14 +1,11 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [Introduction](/website/2016/06/02/HaritWeek1/)
  
-<span class="post-date">02 Jun 2016</span>
+02 Jun 2016
 
 # About myself
 
@@ -32,13 +29,10 @@ Following are the deliverables for the project:
 
 Harit Pandya
 
-</div>
-
-<div class="post">
 
 # [Review of current Rcmanager](/website/2016/05/30/BasilWeek2/)
 
-<span class="post-date">30 May 2016</span>
+30 May 2016
 
 My first milestone is to understand the current code-base. The projected time was 2 weeks.This is the update after one week.
 
@@ -82,13 +76,10 @@ Logging the data seems a cool idea.But as we are planning to embed a console to 
 
 Basil M Varghese
 
-</div>
-
-<div class="post">
 
 # [week 2 updates](/website/2016/05/29/yashWeek2/)
 
-<span class="post-date">29 May 2016</span>
+29 May 2016
 
 # conceptualization
 
@@ -108,13 +99,10 @@ Also i am thinking if we need to allow multiple masters in the same machine. Thi
 
 Yash Sanap
 
-</div>
-
-<div class="post">
 
 # [Introduction](/website/2016/05/21/yashWeek1/)
 
-<span class="post-date">21 May 2016</span>
+21 May 2016
 
 # INTRODUCTION
 
@@ -130,13 +118,10 @@ I will be working mainly in CDSL, IDSL and python.
 
 Yash sanap
 
-</div>
-
-<div class="post">
 
 # [Who I am? What will I make?](/website/2016/05/19/ibarbechWeek0/)
 
-<span class="post-date">19 May 2016</span>
+19 May 2016
 
 Hi! My name is Iván Barbecho Delgado, I’m from Extremadura and I was born on 25.04.1994 and I’m study computer engineering in School of Technology of University of Extremadura. Actually I’m working in a project wich robolab, this consist in making walk a hexapod and put sensors.
 
@@ -152,10 +137,4 @@ DSL: https://en.wikipedia.org/wiki/Domain-specific_language
 
 RoboComp’s repository: https://github.com/robocomp
 
-</div>
-
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page6) [Newer](/webrobocomp.github.io/page4)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page6) [Newer](/webrobocomp.github.io/page4)

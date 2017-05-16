@@ -1,14 +1,12 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
 
-<div class="post">
 
 # [Software components in RoboComp, A brief introduction](/website/2015/05/23/components/)
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 Two major problems encountered when creating large, complex software are scalability and reusability. These problems become especially acute when it comes to writing the software that controls today robots. Robotics is the mixed bag of technology, where almost everything finds its way through. Also, Robotics is the place where our dreams of intelligent machines meet, in an endless attempt to build a truly useful tool for our daily lives. Because of this, we organize the software for our robots in big architectures that try to reproduce whatever we understand by intelligent behavior. The most audacious architectures are called _cognitive architectures_ and try to integrate all levels of behavior and reasoning needed to achieve intelligence. Some of them have been with us for more than 30 years, [SOAR.](http://soar.eecs.umich.edu/)
 
@@ -18,7 +16,6 @@ In RoboComp (2005-) we have created our own component model, inspired by the [OR
 
 RoboComp’s components model is quite simple and we always try to simplify it even more. It can be best explained through two Domain Specific Languages (DSLs) that have been created to define a component at a very high level of abstraction. **IDSL** stands for “Interface Definition Specific Language” and currently is a subset of Ice’s Slice interface language. With IDSL you write the data structures and functions that a component can implement, require, subscribe to or publish. A component can implement several interfaces, offering different views of its internal functioning. Also, the same interface can be implemented by many components. This is an example of a simple interface written in IDSL:
 
-<div class="highlighter-rouge">
 
 ```
 module RoboCompSpeech
@@ -32,11 +29,9 @@ module RoboCompSpeech
 
 ```
 
-</div>
 
 **CDSL** stands for “Component Definition Specific Language” and allows the user to specifiy its name, accesible interfaces, communication connections, target language and other available modules or libraries that you want to include in the building scripts.
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/DifferentialRobot.idsl";
@@ -53,14 +48,7 @@ Component prueba
 
 ```
 
-</div>
 
 Using these two DSLs, RoboComp can generate the source code of the component using a tool designed to this end. The complete, functioning code of a component is created ready to be compiled and executed. We use a smart inheritance mechanism to separate the generic stuff from the user specific stuff and, based on it, the next time you generate a component, your code will remain untouched but access to new defined proxies will be there.
 
-</div>
-
-</div>
-
-<div class="pagination"><span class="pagination-item older">Older</span> [Newer](/webrobocomp.github.io/page12)</div>
-
-</div>
+Older [Newer](/webrobocomp.github.io/page12)

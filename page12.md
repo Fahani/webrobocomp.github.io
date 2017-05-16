@@ -1,14 +1,12 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
 
-<div class="post">
 
 # [Chroot environment](/website/2015/05/23/How_To_Make_Chroot_Environment/)
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 A chroot is a way of isolating applications from the rest of your computer, by putting them in a jail. This is particularly useful if you are testing an application which could potentially alter important system files, or which may be insecure. A chroot is basically a special directory on your computer which prevents applications, if run from inside that directory, from accessing files outside the directory. In many ways, a chroot is like installing another operating system inside your existing operating system. The following are some possible uses of chroots:
 
@@ -38,7 +36,7 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
 
     And write the following inside: (Change the <username>to actual username, example "root-users=abhi"</username>
 
-    <div class="highlighter-rouge">
+    
 
     ```
      [trusty_x64]
@@ -50,9 +48,7 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
 
     ```
 
-    </div>
-
-    <div class="highlighter-rouge"> 
+    
 
     ```
          - The first line is the name of the chroot thatis going to be created.
@@ -64,8 +60,7 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
 
     ```
 
-    </div>
-
+    
     see [schroot.config](http://manpages.ubuntu.com/manpages/hardy/man5/schroot.conf.5.html) for further information.
 
 4.  Run Debootstrap. This step will download and unpack a basic ubuntu or debian system to the chroot directory we created in step 2.
@@ -100,8 +95,7 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
 
     And comment the /home line:
 
-    <div class="highlighter-rouge">
-
+    
     ```
     # fstab: static file system information for chroots.
     # Note that the mount point will be prefixed by the chroot path
@@ -117,8 +111,7 @@ This manual will follow the steps specified in the [official page of Ubuntu](htt
 
     ```
 
-    </div>
-
+    
 And that’s it! Now we have a whole very basic system in which we can test out programs and libraries.
 
 ##Troubleshooting
@@ -135,7 +128,6 @@ And that’s it! Now we have a whole very basic system in which we can test out 
 
 ```
 
-</div>
 
 if the problem persist check out this [page](http://perlgeek.de/en/article/set-up-a-clean-utf8-environment).
 
@@ -165,13 +157,10 @@ if the problem persist check out this [page](http://perlgeek.de/en/article/set-u
 
 [Sources.list for Debian](http://debgen.simplylinux.ch/)
 
-</div>
-
-<div class="post">
 
 # [Using robocompdsl, The command line component generator](/website/2015/05/23/robocompdsl/)
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 **robocompdsl** is the new tool used in RoboComp to automatically generate components and modify their main properties once they have been generated (e.g., communication requirements, UI type). It is one of the core tools of the framework so, if you installed RoboComp, you can start using it right away.
 
@@ -187,18 +176,15 @@ There are three tasks we can acomplish using **robocompdsl**:
 
 Even tough writing CDSL files is easy –their structure is simple and the number of reserved words is very limited– robocompdsl can generate template CDSL files to be used as a guide when writing CDSL files.
 
-<div class="highlighter-rouge">
 
 ```
 $ robocompdsl path/to/mycomponent/mycomponent.cdsl
 
 ```
 
-</div>
 
 This will generate a CDSL file with the following content:
 
-<div class="highlighter-rouge">
 
 ```
 import "/robocomp/interfaces/IDSLs/import1.idsl";
@@ -219,7 +205,6 @@ Component CHANGETHECOMPONENTNAME
 
 ```
 
-</div>
 
 The CDSL language is described in the tutorial [“A brief introduction to Components”](components.md). Just don’t forget to change the name of the component.
 
@@ -239,19 +224,15 @@ Once we generated our component we might change our mind and decide to add a new
 
 As you might have learned from the tutorial [“A brief introduction to Components”](components.md) RoboComp components are divided in specific code (files where you write your code) and generic code (autogenerated code which doesn’t need to be edited). Running robocompdsl again on the same directory will ony overwrite these generic files. To ensure robocompdsl doesn’t overwrite the changes you made to the specific files these are left unchanged, so the component might not compile after regeneration (e.g., you might need to add new methods).
 
-</div>
-
-<div class="post">
 
 # [Packaging RoboComp](/website/2015/05/23/nithin3/)
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 ###deb packages
 
 For creating a robocomp debian package :
 
-<div class="highlighter-rouge">
 
 ```
 cd ~/robocomp
@@ -261,18 +242,15 @@ make package
 
 ```
 
-</div>
 
 will create a .deb package in the build directory, which we can install using any packaging application like dpkg. To install the created package, just double click on it(open with Software Center) or in terminal type
 
-<div class="highlighter-rouge">
 
 ```
 sudo dpkg -i <packagename>.deb
 
 ```
 
-</div>
 
 ###source packages for ppa
 
@@ -282,7 +260,6 @@ The main CMakeLists.txt file defines a target `spackage` that builds the source 
 
 For uploading the package to ppa, First change the **PPA_PGP_KEY** in [package_details.cmake](../cmake/package_details.cmake#L26) to the contact of the PGP key details registered with your ppa account.Then create a source package by building the target _spackage_.Once the Source package is build successfully, upload it to your ppa by:
 
-<div class="highlighter-rouge">
 
 ```
 cd Debian/
@@ -290,11 +267,9 @@ dput ppa:<lp-username>/<ppa-name> package-source.changes
 
 ```
 
-</div>
 
 building of source package can be tested with:
 
-<div class="highlighter-rouge">
 
 ```
 cd Debian/robocomp-<version>
@@ -302,7 +277,6 @@ debuild -i -us -uc
 
 ```
 
-</div>
 
 ####Note:
 
@@ -312,13 +286,10 @@ If you want to upload another source package to ppa which doesn’t have any cha
 
 Nithin Murali
 
-</div>
-
-<div class="post">
 
 # [_GSoC,_ Building and deployment system design](/website/2015/05/23/nithin2/)
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 ###About Me:
 
@@ -336,13 +307,10 @@ Currently Robocomp dosent have any tests written nor is it using any testinf fra
 
 Nithin Murali
 
-</div>
-
-<div class="post">
 
 # [Debian Packaging 1](/website/2015/05/23/nithin1/)
 
-<span class="post-date">23 May 2015</span>
+23 May 2015
 
 ##What is a package By definition _Debian packages are standard Unix ar archives that include two tar archives optionally compressed with gzip (zlib), Bzip2, lzma, or xz (lzma2): one archive holds the control information and another contains the program data._ All debain packages should follow certain conventions. The root source directory should contain a directory named _debian_. This directory contains files which stores info about the package. These are the required files under the debian directory
 
@@ -380,34 +348,24 @@ Nithin Murali
 
 Now once you have the source directory in the prescribed format. you will need a _.tar.gz_ archive of the source in the same folder.Then we can create a debian binary package using
 
-<div class="highlighter-rouge">
+
 
 ```
 debuild -i -us -uc -b
 
 ```
 
-</div>
 
 Or a debian source package using
 
-<div class="highlighter-rouge">
 
 ```
 debuild -i -us -uc -S
 
 ```
 
-</div>
 
 * * *
 
 Nithin Murali
-
-</div>
-
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page13) [Newer](/webrobocomp.github.io/page11)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page13) [Newer](/webrobocomp.github.io/page11)

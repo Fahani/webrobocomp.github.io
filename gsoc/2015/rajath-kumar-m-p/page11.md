@@ -1,6 +1,6 @@
 # _GSoC,_ After Midterms
 
-<span class="post-date">20 Aug 2015</span>
+20 Aug 2015
 
 At the start of the second term, I finished developing the version-2 of the website.
 

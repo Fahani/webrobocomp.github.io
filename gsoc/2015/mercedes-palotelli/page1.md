@@ -2,7 +2,7 @@
 
 #1
 
-<span class="post-date">12 Jun 2015</span>
+12 Jun 2015
 
 **About Me** : Hello! My name is Mercedes Paoletti Ávila, and I would like to introduce me a little in this first post. I’m graduate in engineering from the University of Extremadura, and currently I study the Master in computer engineering and ICT management in the same University. Over the past two years I have been working in the Robotics Laboratory of the UEx, Robolab. There I developed my end grade work, “inverse kinematics in social robots”, using the robotic framework implemented by the laboratory, Robocomp, and now I’m doing my Master’s Thesis, that is about robots planners and is part of the project of LJ Manso, AGM.
 

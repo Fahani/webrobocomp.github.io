@@ -1,36 +1,30 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [Build tools](/website/2015/06/26/nithin6/)
 
-<span class="post-date">26 Jun 2015</span>
+26 Jun 2015
 
 ###rc_init_ws This will initialize a Robocomp workspace in the current/specified directory.
 
-<div class="highlighter-rouge">
 
 ```
 rc_init_ws [path]
 
 ```
 
-</div> 
 
 ###rcbuild When invoked form workspace without any arguments if not inside source path, it will build all the non-ignored components inside the workspace, if inside any component source directory it will build only that component. But if a component is specified it will build it.
 
-<div class="highlighter-rouge">
+
 
 ```
  rcbuild [-h] [-i | --doc | --installdoc] [component]
 
 ```
 
-</div>
 
 The `doc` will generate documentation, `installdoc` will install the docs to install path, `install` will build and install the components. currently you can only generate docs for one component at a time.
 
@@ -38,48 +32,39 @@ The `doc` will generate documentation, `installdoc` will install the docs to ins
 
 ###rced when invoked as component-name file-name. it will open the the file in the component. if multiple files with same name exists, it will give choices and will ask you to choose one. It uses the editor specified in $EDITOR by default, if not present it will use `vim`.
 
-<div class="highlighter-rouge">
 
 ```
 rced [-h] component file
 
 ```
 
-</div>
 
 ###rcrun Using rcrun you can start, stop or force stop any component from anywhere. You can also start a component in debug mode, given you have the required _config file_ in the _etc_ directory. If you have specified a config file then rcrun will use it to start the component. By default rcrun will use the `config` config file in `etc` directory, if not found it will search for `generic_config` if not found it will use any of config files present.If the debug flag is set, it will search for a config file that ends with _.debug_.
 
-<div class="highlighter-rouge">
 
 ```
 rcrun [-h] [-s START |-st STOP | -fst FSTOP] [-d | -cf CFILE | -c CONFIG] [-is] [component]
 
 ```
 
-</div>
 
 ###rccd Using this you can cd into the component directory given the component name.
 
-<div class="highlighter-rouge">
 
 ```
 rccd component
 
 ```
 
-</div>
 
 * * *
 
 Nithin Murali
 
-</div>
-
-<div class="post">
 
 # [_GSoC,_ Till Now..., (Before Midterms)](/website/2015/06/25/rajath1/)
 
-<span class="post-date">25 Jun 2015</span>
+25 Jun 2015
 
 **Summary:** Built a website for robocomp using jekyll.
 
@@ -95,9 +80,6 @@ Version-1 : https://github.com/robocomp/website/tree/version-1
 
 Rajath Kumar M.P
 
-</div>
-
-<div class="post">
 
 # [New build system and workspace model in Robocomp
 
@@ -105,7 +87,7 @@ Rajath Kumar M.P
 
 ](/website/2015/06/25/nithin5/)
 
-<span class="post-date">25 Jun 2015</span>
+25 Jun 2015
 
 For managing these components we would need different utilities. So i started compiling a list of different utilities keeping a reference to other frameworks. Finally i have decide on my list
 
@@ -126,13 +108,11 @@ One useful feature that needs to be implemented is auto complete for the argumen
 
 Nithin Murali
 
-</div>
 
-<div class="post">
 
 # [_GSoC,_ 2015 ideas](/website/2015/06/22/gsoc15/)
 
-<span class="post-date">22 Jun 2015</span>
+22 Jun 2015
 
 1.- **RoboComp tutorial, social management and documentation**: RoboComp’ sources has been ported to GitHub and we are building a new documentation repository there. We are using GitHub markdown language (GFM) write new docs and turorials. We want to build a set of short tutorials that guide the new users along several interconnected topics, such as component oriented programming, robotics, computer vision, robotics software modules integrating heterogeneous sources, cognitive architectures and testing and validating, all from inside RoboComp. These new tutorials will be developed using RoboComp’s robotics simulator, RCIS, so interactive examples can be created and used in the explanations. This package also includes work on automated installation scripts using CMake. Generic knowledge of linux systems, website and wiki administration is needed. This is a key task for our project as it would bring more attention to it as it will open the development to new people interested in the field.
 
@@ -152,13 +132,11 @@ Required student level: intermediate programming with Python and introductory kn
 
 For any questions, proposals, or comments please contact RoboComp’s org admin at: marcogunex.es
 
-</div>
 
-<div class="post">
 
 # [Robocomp Workspace Model](/website/2015/06/20/nithin4/)
 
-<span class="post-date">20 Jun 2015</span>
+20 Jun 2015
 
 The Robocomp workspace is for those who are developing components rather than the framework itself. The main advantage of having a workspace is that it will make the work-flow much easier. Workspace basically organizes the development. For example, currently for building or running a component you have to go to its directory, create a build directory and then use cmake, while by using workspace and build tools you could achieve the same in a single command.
 
@@ -191,10 +169,4 @@ Referring to other similar workspace models i came up with the following model.
 
 Nithin Murali
 
-</div>
-
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page10) [Newer](/webrobocomp.github.io/page8)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page10) [Newer](/webrobocomp.github.io/page8)

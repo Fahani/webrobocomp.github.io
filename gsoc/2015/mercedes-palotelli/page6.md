@@ -4,7 +4,7 @@
 
 grasping object
 
-<span class="post-date">20 Aug 2015</span>
+20 Aug 2015
 
 **Grasping object** : This post will describe the planning system that implements Robocomp in order to provide to the robot a full functionality. In order for a robot be able to carry out a mission as “take the cup from the table and take it to the kitchen,” it needs something that in robotics calls `planner`. In this post we move away the issue of inverse kinematics and we dive into the field of artificial intelligence, making a slight revision of existing planners and delving into the planner using robocomp.
 
@@ -29,7 +29,6 @@ This section will introduce the reader slightly in the planning language more us
 
 Take for example, the following domain to create geometric shapes: We presume that in our initial world there is always a vertex node. The rules increase the number of vertices nodes to create geometric identities. For example, the `segment` rule creates from the initial node a line segment, the rule `triangle` creates from the line segment an equilateral triangle, the rule “square” creates from the equilateral triangle a square… and so on until an octagon. In the PDDL file, the rules would be:
 
-<div class="highlighter-rouge">
 
 ```
 (define (domain AGGL)
@@ -73,11 +72,9 @@ Take for example, the following domain to create geometric shapes: We presume th
 
 ```
 
-</div>
 
 To represent the initial world from which we start and the final world that we want to go, we should implement a file like this:
 
-<div class="highlighter-rouge">
 
 ```
 (define (problem myProblemPDDL)
@@ -119,7 +116,6 @@ To represent the initial world from which we start and the final world that we w
 
 ```
 
-</div>
 
 This language proves to be relatively intuitive, easy to develop and test. However, in Robocomp we opted to do our own planning language: AGM.
 
@@ -129,7 +125,6 @@ AGM is the result of Luis Manso’s PhD thesis that “dealt with making softwar
 
 This would be the set of rules in a .aggl file:
 
-<div class="highlighter-rouge">
 
 ```
 // START OF THE FILE:
@@ -189,11 +184,9 @@ square : active(1)
 
 ```
 
-</div>
 
 The initial world model is stored in a xml file:
 
-<div class="highlighter-rouge">
 
 ```
 <AGMModel>
@@ -202,11 +195,10 @@ The initial world model is stored in a xml file:
 
 ```
 
-</div>
 
 The goal or target world is stored in another xml file:
 
-<div class="highlighter-rouge">
+
 
 ```
 <AGMModel>
@@ -224,7 +216,6 @@ The goal or target world is stored in another xml file:
 
 ```
 
-</div>
 
 ###Component architecture
 

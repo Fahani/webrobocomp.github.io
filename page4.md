@@ -1,14 +1,11 @@
-<div class="content container">_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
+_**RoboComp** is an open-source Robotics framework providing the tools to create and modify software components that communicate through public interfaces. Components may require, subscribe, implement or publish interfaces in a seamless way. Building new components is done using two domain specific languages, IDSL and CDSL. With IDSL you define an interface and with CDSL you specify how the component will communicate with the world. With this information, a code generator creates C++ and/or Python sources, based on CMake, that compile and execute flawlessly. When some of these features have to be changed, the component can be easily regenerated and all the user specific code is preserved thanks to a simple inheritance mechanism._
 
 * * *
 
-<div class="posts">
-
-<div class="post">
 
 # [Top-Hat filter based object proposal generation](/website/2016/06/15/HaritWeek4/)
  
-<span class="post-date">15 Jun 2016</span>
+15 Jun 2016
 
 # Top-Hat filter based object proposal generation:
 
@@ -26,14 +23,12 @@ The pipeline is as follows:
 
 3.  Apply the specified morphology operation (tophat).
 
-<div class="highlighter-rouge">
 
 ```
 int operation = 4 + 2;
 
 ```
 
-</div>
 
 Mat element = getStructuringElement( morph_elem, Size( … 2_morph_size + 1, 2_morph_size+1 ), Point( morph_size, morph_size ) ); morphologyEx( blt, tophat, operation, element);
 
@@ -51,13 +46,10 @@ Mat element = getStructuringElement( morph_elem, Size( … 2_morph_size + 1, 2_m
 
 Harit Pandya
 
-</div>
-
-<div class="post">
 
 # [Caffe C++ API](/website/2016/06/11/HaritWeek3/)
 
-<span class="post-date">11 Jun 2016</span>
+11 Jun 2016
 
 # Working with Caffe CPP API:
 
@@ -87,25 +79,21 @@ Pipeline:
 
 2.  Forward dimension change to all layers.
 
-<div class="highlighter-rouge">
 
 ```
 net_->Reshape();
 
 ```
 
-</div>
 
 1.  Wrap the input layer of the network in separate cv::Mat objects (one per channel). This way we save one memcpy operation and ww don’t need to rely on cudaMemcpy2D. The last preprocessing operation will write the separate channels directly to the input layer.
 
-<div class="highlighter-rouge">
 
 ```
 WrapInputLayer(&input_channels);
 
 ```
 
-</div>
 
 1.  Convert the input image to the input image format of the network and write the separate BGR planes directly to the input layer of the network.
 
@@ -123,13 +111,10 @@ WrapInputLayer(&input_channels);
 
 Harit Pandya
 
-</div>
-
-<div class="post">
 
 # [Progress -- Automatic the uploading of binary files using git-annex](/website/2016/06/11/swapsharmaPost2/)
 
-<span class="post-date">11 Jun 2016</span>
+11 Jun 2016
 
 This is the second post in the series of post pertaining to the project “Automatic the uploading of binary files using git-annex”. This post aims to show the progress made until the mid term evaluation.
 
@@ -143,7 +128,6 @@ It was showing an error `"Remote origin not usable by git-annex; setting annex-i
 
 Now the tool works and all, but as already present in the problem statment, we need to build a tool which can further ease the process, so if we can create a little bit of more abstraction it will work best. So we decided to built a little bit of more abstraction according to following steps:
 
-<div class="highlighter-rouge">
 
 ```
 Installing rlcone [Once only]
@@ -169,11 +153,9 @@ Cloning repos
 
 ```
 
-</div>
 
 The abstraction over the above steps will be as follows:
 
-<div class="highlighter-rouge">
 
 ```
 Install Robocomp
@@ -192,17 +174,13 @@ Cloning repos
 
 ```
 
-</div>
 
 Swapnil Sharma
 
-</div>
-
-<div class="post">
 
 # [week 3 updates](/website/2016/06/05/yashWeek3/)
 
-<span class="post-date">05 Jun 2016</span>
+05 Jun 2016
 
 # Basic coding
 
@@ -216,13 +194,11 @@ Also this week i wrote a basic interface for the rcmaster. Both the idsl and and
 
 Yash Sanap
 
-</div>
 
-<div class="post">
 
 # [Object detection using caffe](/website/2016/06/04/HaritWeek2/)
 
-<span class="post-date">04 Jun 2016</span>
+04 Jun 2016
 
 # Is CNN solution to every object classification problem?
 
@@ -248,10 +224,4 @@ Next I will use RCNN and train on our dataset or another approach is to use bett
 
 Harit Pandya
 
-</div>
-
-</div>
-
-<div class="pagination">[Older](/webrobocomp.github.io/page5) [Newer](/webrobocomp.github.io/page3)</div>
-
-</div>
+[Older](/webrobocomp.github.io/page5) [Newer](/webrobocomp.github.io/page3)
